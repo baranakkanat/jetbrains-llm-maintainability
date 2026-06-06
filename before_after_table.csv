@@ -59,12 +59,12 @@ Developer Tools,ideavim,Bug-Fix Ratio,0.1311,0.2186,+66.7%,0.0000,✓
 Developer Tools,ideavim,Comment Density,0.012,0.0246,+104.5%,0.0000,✓
 Developer Tools,ideavim,Cyclomatic Complexity,2.1284,2.6995,+26.8%,0.0000,✓
 Developer Tools,ideavim,Del/Add Ratio,1.1735,2.6299,+124.1%,0.0681,
-Developer Tools,intellij-plugins,Avg Function Length,11.2711,11.5389,+2.4%,0.0000,✓
-Developer Tools,intellij-plugins,Avg Lines/Commit,734.8512,590.0542,-19.7%,0.7389,
-Developer Tools,intellij-plugins,Bug-Fix Ratio,0.1522,0.1532,+0.7%,0.8614,
-Developer Tools,intellij-plugins,Comment Density,0.0256,0.0262,+2.3%,0.0000,✓
-Developer Tools,intellij-plugins,Cyclomatic Complexity,2.5358,2.4717,-2.5%,0.0000,✓
-Developer Tools,intellij-plugins,Del/Add Ratio,3.1207,1.4217,-54.4%,0.0000,✓
+Developer Tools,intellij-plugins,Avg Function Length,11.2711,11.5488,+2.5%,0.0000,✓
+Developer Tools,intellij-plugins,Avg Lines/Commit,734.8512,630.0476,-14.3%,0.6533,
+Developer Tools,intellij-plugins,Bug-Fix Ratio,0.1522,0.1528,+0.4%,0.9247,
+Developer Tools,intellij-plugins,Comment Density,0.0256,0.0262,+2.4%,0.0000,✓
+Developer Tools,intellij-plugins,Cyclomatic Complexity,2.5358,2.4687,-2.6%,0.0000,✓
+Developer Tools,intellij-plugins,Del/Add Ratio,3.1207,33.3937,+970.1%,0.0000,✓
 Developer Tools,markdown,Avg Function Length,12.7306,12.4869,-1.9%,0.6312,
 Developer Tools,markdown,Avg Lines/Commit,489.7788,55.9438,-88.6%,0.0863,
 Developer Tools,markdown,Bug-Fix Ratio,0.1731,0.1011,-41.6%,0.1525,
