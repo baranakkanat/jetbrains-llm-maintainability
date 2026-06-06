@@ -1,0 +1,8 @@
+.venv/
+.venv-1/
+.venv-2/
+__pycache__/
+*.pyc
+cache_files.csv
+cache_commits.csv
+*.DS_Store

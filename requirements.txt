@@ -1,0 +1,6 @@
+pydriller==2.9
+matplotlib>=3.10
+pandas>=3.0
+lizard>=1.23
+scipy>=1.17
+numpy>=2.4

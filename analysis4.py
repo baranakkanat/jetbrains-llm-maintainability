@@ -8,7 +8,7 @@ import lizard
 
 print("Full analysis starting... (may take 1-2 hours for 20 repos)")
 
-REPOS = {
+EPOS = {
     # Group 1: Static Analysis & Code Quality
     "astminer": "https://github.com/JetBrains-Research/astminer",
     "refactorinsight": "https://github.com/JetBrains-Research/refactorinsight",
