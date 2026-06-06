@@ -15,6 +15,58 @@ REPOS = {
     "kotlin-ref-miner": "https://github.com/JetBrains-Research/kotlin-ref-miner",
     "code-change-miner": "https://github.com/JetBrains-Research/code-change-miner",
     "bug-finder": "https://github.com/JetBrains-Research/bug-finder",
+    "buckwheat": "https://github.com/JetBrains-Research/buckwheat",
+    "authorship-detection": "https://github.com/JetBrains-Research/authorship-detection",
+    "kotlinRMiner": "https://github.com/JetBrains-Research/kotlinRMiner",
+    # Group 2: AI & ML Research
+    "reflekt": "https://github.com/JetBrains-Research/reflekt",
+    "commit_message_generation": "https://github.com/JetBrains-Research/commit_message_generation",
+    "washu": "https://github.com/JetBrains-Research/washu",
+    "codetracker": "https://github.com/JetBrains-Research/codetracker",
+    "formal-lang-course": "https://github.com/JetBrains-Research/formal-lang-course",
+    # Group 3: Developer Tools & Infrastructure
+    "compose-multiplatform": "https://github.com/JetBrains/compose-multiplatform",
+    "educational-plugin": "https://github.com/JetBrains/educational-plugin",
+    "intellij-plugins": "https://github.com/JetBrains/intellij-plugins",
+    "markdown": "https://github.com/JetBrains/markdown",
+    "ideavim": "https://github.com/JetBrains/ideavim",
+    "plugin-utilities": "https://github.com/JetBrains-Research/plugin-utilities",
+    "spla": "https://github.com/JetBrains-Research/spla",
+}
+
+REPOS = {
+    # Group 1: Static Analysis & Code Quality
+    "astminer": "https://github.com/JetBrains-Research/astminer",
+    "refactorinsight": "https://github.com/JetBrains-Research/refactorinsight",
+    "kotlin-ref-miner": "https://github.com/JetBrains-Research/kotlin-ref-miner",
+    "code-change-miner": "https://github.com/JetBrains-Research/code-change-miner",
+    "bug-finder": "https://github.com/JetBrains-Research/bug-finder",
+    "buckwheat": "https://github.com/JetBrains-Research/buckwheat",
+    "authorship-detection": "https://github.com/JetBrains-Research/authorship-detection",
+    "kotlinRMiner": "https://github.com/JetBrains-Research/kotlinRMiner",
+    # Group 2: AI & ML Research
+    "reflekt": "https://github.com/JetBrains-Research/reflekt",
+    "commit_message_generation": "https://github.com/JetBrains-Research/commit_message_generation",
+    "washu": "https://github.com/JetBrains-Research/washu",
+    "codetracker": "https://github.com/JetBrains-Research/codetracker",
+    "formal-lang-course": "https://github.com/JetBrains-Research/formal-lang-course",
+    # Group 3: Developer Tools & Infrastructure
+    "compose-multiplatform": "https://github.com/JetBrains/compose-multiplatform",
+    "educational-plugin": "https://github.com/JetBrains/educational-plugin",
+    "intellij-plugins": "https://github.com/JetBrains/intellij-plugins",
+    "markdown": "https://github.com/JetBrains/markdown",
+    "ideavim": "https://github.com/JetBrains/ideavim",
+    "plugin-utilities": "https://github.com/JetBrains-Research/plugin-utilities",
+    "spla": "https://github.com/JetBrains-Research/spla",
+}
+
+REPOS = {
+    # Group 1: Static Analysis & Code Quality
+    "astminer": "https://github.com/JetBrains-Research/astminer",
+    "refactorinsight": "https://github.com/JetBrains-Research/refactorinsight",
+    "kotlin-ref-miner": "https://github.com/JetBrains-Research/kotlin-ref-miner",
+    "code-change-miner": "https://github.com/JetBrains-Research/code-change-miner",
+    "bug-finder": "https://github.com/JetBrains-Research/bug-finder",
     # Group 2: AI & ML Research
     "TestSpark": "https://github.com/JetBrains-Research/TestSpark",
     "lca-baselines": "https://github.com/JetBrains-Research/lca-baselines",
@@ -66,8 +118,17 @@ def get_complexity(source_code, filename):
     except Exception as e:
         return None, None
 
+from cache_utils import cache_exists, save_cache, load_cache
+import os
+
 file_results = []
 commit_results = []
+
+if cache_exists():
+    print("Cache found! Loading from cache...")
+    df_files, df_commits = load_cache()
+else:
+    print("No cache found, scanning repos...")
 
 for repo_name, repo_url in REPOS.items():
     print(f"\n-> Scanning {repo_name}...")
@@ -109,6 +170,8 @@ for repo_name, repo_url in REPOS.items():
         print(f"   Done: {commit_count} commits, {file_count} files")
     except Exception as e:
         print(f"   Error: {e}")
+
+    save_cache(pd.DataFrame(file_results), pd.DataFrame(commit_results))
 
 df_files = pd.DataFrame(file_results)
 df_files["date"] = pd.to_datetime(df_files["date"], utc=True)
@@ -173,7 +236,7 @@ make_chart("Comment Density — 20 JetBrains Repositories", "chart1_comment_dens
 make_chart("Avg Lines Changed per Commit — 20 JetBrains Repositories", "chart2_commit_size.png", monthly_commits, "avg_lines_changed", "Lines Changed")
 make_chart("Bug-Fix Commit Ratio — 20 JetBrains Repositories", "chart3_bugfix_ratio.png", monthly_commits, "bugfix_ratio", "Bug-Fix Ratio")
 make_chart("Cyclomatic Complexity — 20 JetBrains Repositories", "chart4_cyclomatic.png", monthly_files, "cyclomatic_complexity", "Cyclomatic Complexity")
-make_chart("Avg Function Length — 20 JetBrains Repositories", "chart5_cognitive.png", monthly_files, "cognitive_complexity", "Avg Lines per Function")
+make_chart("Avg Function Length — 20 JetBrains Repositories", "chart5_avg_function_length.png", monthly_files, "cognitive_complexity", "Avg Lines per Function")
 make_chart("Deletion/Addition Ratio — 20 JetBrains Repositories", "chart6_del_add_ratio.png", monthly_commits, "del_add_ratio", "Del/Add Ratio")
 
 print("\nAll done! 6 charts saved.")

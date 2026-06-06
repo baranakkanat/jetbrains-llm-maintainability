@@ -8,6 +8,58 @@ import re
 import lizard
 
 REPOS = {
+    # Group 1: Static Analysis & Code Quality
+    "astminer": "https://github.com/JetBrains-Research/astminer",
+    "refactorinsight": "https://github.com/JetBrains-Research/refactorinsight",
+    "kotlin-ref-miner": "https://github.com/JetBrains-Research/kotlin-ref-miner",
+    "code-change-miner": "https://github.com/JetBrains-Research/code-change-miner",
+    "bug-finder": "https://github.com/JetBrains-Research/bug-finder",
+    "buckwheat": "https://github.com/JetBrains-Research/buckwheat",
+    "authorship-detection": "https://github.com/JetBrains-Research/authorship-detection",
+    "kotlinRMiner": "https://github.com/JetBrains-Research/kotlinRMiner",
+    # Group 2: AI & ML Research
+    "reflekt": "https://github.com/JetBrains-Research/reflekt",
+    "commit_message_generation": "https://github.com/JetBrains-Research/commit_message_generation",
+    "washu": "https://github.com/JetBrains-Research/washu",
+    "codetracker": "https://github.com/JetBrains-Research/codetracker",
+    "formal-lang-course": "https://github.com/JetBrains-Research/formal-lang-course",
+    # Group 3: Developer Tools & Infrastructure
+    "compose-multiplatform": "https://github.com/JetBrains/compose-multiplatform",
+    "educational-plugin": "https://github.com/JetBrains/educational-plugin",
+    "intellij-plugins": "https://github.com/JetBrains/intellij-plugins",
+    "markdown": "https://github.com/JetBrains/markdown",
+    "ideavim": "https://github.com/JetBrains/ideavim",
+    "plugin-utilities": "https://github.com/JetBrains-Research/plugin-utilities",
+    "spla": "https://github.com/JetBrains-Research/spla",
+}
+
+REPOS = {
+    # Group 1: Static Analysis & Code Quality
+    "astminer": "https://github.com/JetBrains-Research/astminer",
+    "refactorinsight": "https://github.com/JetBrains-Research/refactorinsight",
+    "kotlin-ref-miner": "https://github.com/JetBrains-Research/kotlin-ref-miner",
+    "code-change-miner": "https://github.com/JetBrains-Research/code-change-miner",
+    "bug-finder": "https://github.com/JetBrains-Research/bug-finder",
+    "buckwheat": "https://github.com/JetBrains-Research/buckwheat",
+    "authorship-detection": "https://github.com/JetBrains-Research/authorship-detection",
+    "kotlinRMiner": "https://github.com/JetBrains-Research/kotlinRMiner",
+    # Group 2: AI & ML Research
+    "reflekt": "https://github.com/JetBrains-Research/reflekt",
+    "commit_message_generation": "https://github.com/JetBrains-Research/commit_message_generation",
+    "washu": "https://github.com/JetBrains-Research/washu",
+    "codetracker": "https://github.com/JetBrains-Research/codetracker",
+    "formal-lang-course": "https://github.com/JetBrains-Research/formal-lang-course",
+    # Group 3: Developer Tools & Infrastructure
+    "compose-multiplatform": "https://github.com/JetBrains/compose-multiplatform",
+    "educational-plugin": "https://github.com/JetBrains/educational-plugin",
+    "intellij-plugins": "https://github.com/JetBrains/intellij-plugins",
+    "markdown": "https://github.com/JetBrains/markdown",
+    "ideavim": "https://github.com/JetBrains/ideavim",
+    "plugin-utilities": "https://github.com/JetBrains-Research/plugin-utilities",
+    "spla": "https://github.com/JetBrains-Research/spla",
+}
+
+REPOS = {
     "astminer": "https://github.com/JetBrains-Research/astminer",
     "refactorinsight": "https://github.com/JetBrains-Research/refactorinsight",
     "kotlin-ref-miner": "https://github.com/JetBrains-Research/kotlin-ref-miner",
