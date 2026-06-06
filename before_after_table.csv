@@ -48,11 +48,11 @@ Developer Tools,compose-multiplatform,Comment Density,0.0092,0.0126,+37.7%,0.000
 Developer Tools,compose-multiplatform,Cyclomatic Complexity,1.5292,1.5712,+2.7%,0.0039,✓
 Developer Tools,compose-multiplatform,Del/Add Ratio,0.7994,3.2097,+301.5%,0.5239,
 Developer Tools,educational-plugin,Avg Function Length,11.0021,12.5932,+14.5%,0.0000,✓
-Developer Tools,educational-plugin,Avg Lines/Commit,90.9287,122.0895,+34.3%,0.0000,✓
-Developer Tools,educational-plugin,Bug-Fix Ratio,0.1327,0.1103,-16.9%,0.0028,✓
+Developer Tools,educational-plugin,Avg Lines/Commit,90.9287,122.0645,+34.2%,0.0000,✓
+Developer Tools,educational-plugin,Bug-Fix Ratio,0.1327,0.1103,-16.9%,0.0027,✓
 Developer Tools,educational-plugin,Comment Density,0.0103,0.0167,+61.7%,0.0000,✓
 Developer Tools,educational-plugin,Cyclomatic Complexity,2.2003,2.096,-4.7%,0.0000,✓
-Developer Tools,educational-plugin,Del/Add Ratio,1.3778,5.5681,+304.1%,0.0464,✓
+Developer Tools,educational-plugin,Del/Add Ratio,1.3778,5.5668,+304.0%,0.0455,✓
 Developer Tools,ideavim,Avg Function Length,10.7766,13.6622,+26.8%,0.0000,✓
 Developer Tools,ideavim,Avg Lines/Commit,130.7574,201.6051,+54.2%,0.8624,
 Developer Tools,ideavim,Bug-Fix Ratio,0.1311,0.2186,+66.7%,0.0000,✓
