@@ -1,10 +1,10 @@
 Group,Repository,Metric,Pre-LLM Mean,Post-LLM Mean,Change %,p-value,Significant,Cohen d,Effect Size
-AI & ML Research,TestSpark,Avg Function Length,N/A,20.7038,N/A,N/A,,N/A,N/A
-AI & ML Research,TestSpark,Avg Lines/Commit,N/A,107.5765,N/A,N/A,,N/A,N/A
-AI & ML Research,TestSpark,Bug-Fix Ratio,N/A,0.3317,N/A,N/A,,N/A,N/A
-AI & ML Research,TestSpark,Comment Density,N/A,0.0329,N/A,N/A,,N/A,N/A
-AI & ML Research,TestSpark,Cyclomatic Complexity,N/A,2.6495,N/A,N/A,,N/A,N/A
-AI & ML Research,TestSpark,Del/Add Ratio,N/A,1.2021,N/A,N/A,,N/A,N/A
+AI & ML Research,code-completion-benchmark-toolkit,Avg Function Length,4.0263,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,code-completion-benchmark-toolkit,Avg Lines/Commit,123.3636,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,code-completion-benchmark-toolkit,Bug-Fix Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,code-completion-benchmark-toolkit,Comment Density,0.0116,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,code-completion-benchmark-toolkit,Cyclomatic Complexity,1.2818,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,code-completion-benchmark-toolkit,Del/Add Ratio,0.9225,N/A,N/A,N/A,,N/A,N/A
 AI & ML Research,code-summarization-dataset,Avg Function Length,11.6462,N/A,N/A,N/A,,N/A,N/A
 AI & ML Research,code-summarization-dataset,Avg Lines/Commit,7665.0625,N/A,N/A,N/A,,N/A,N/A
 AI & ML Research,code-summarization-dataset,Bug-Fix Ratio,0.3438,N/A,N/A,N/A,,N/A,N/A
@@ -17,105 +17,567 @@ AI & ML Research,commit_message_generation,Bug-Fix Ratio,0.1749,0.3714,+112.4%,0
 AI & ML Research,commit_message_generation,Comment Density,0.0684,0.0353,-48.5%,0.0000,✓,-0.471,small
 AI & ML Research,commit_message_generation,Cyclomatic Complexity,2.8236,6.1052,+116.2%,0.0000,✓,0.847,large
 AI & ML Research,commit_message_generation,Del/Add Ratio,7.0052,66.0026,+842.2%,0.0537,,0.153,negligible
-AI & ML Research,docs-fine-tuning,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
-AI & ML Research,docs-fine-tuning,Avg Lines/Commit,N/A,N/A,N/A,N/A,,N/A,N/A
-AI & ML Research,docs-fine-tuning,Bug-Fix Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
-AI & ML Research,docs-fine-tuning,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
-AI & ML Research,docs-fine-tuning,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
-AI & ML Research,docs-fine-tuning,Del/Add Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
-AI & ML Research,lca-baselines,Avg Function Length,N/A,16.9686,N/A,N/A,,N/A,N/A
-AI & ML Research,lca-baselines,Avg Lines/Commit,N/A,1246.5625,N/A,N/A,,N/A,N/A
-AI & ML Research,lca-baselines,Bug-Fix Ratio,N/A,0.2361,N/A,N/A,,N/A,N/A
-AI & ML Research,lca-baselines,Comment Density,N/A,0.1049,N/A,N/A,,N/A,N/A
-AI & ML Research,lca-baselines,Cyclomatic Complexity,N/A,2.3258,N/A,N/A,,N/A,N/A
-AI & ML Research,lca-baselines,Del/Add Ratio,N/A,1.0115,N/A,N/A,,N/A,N/A
-AI & ML Research,reflekt,Avg Function Length,9.0374,12.2239,+35.3%,0.0462,✓,0.285,small
-AI & ML Research,reflekt,Avg Lines/Commit,111.3738,375.4,+237.1%,0.2324,,0.662,medium
-AI & ML Research,reflekt,Bug-Fix Ratio,0.2767,N/A,-100.0%,0.1711,,-0.873,large
-AI & ML Research,reflekt,Comment Density,0.0202,0.0339,+68.1%,0.0945,,0.169,negligible
-AI & ML Research,reflekt,Cyclomatic Complexity,1.4169,1.4594,+3.0%,0.0242,✓,0.062,negligible
-AI & ML Research,reflekt,Del/Add Ratio,1.3369,0.6981,-47.8%,N/A,,-0.162,negligible
-AI & ML Research,similar-python-dependencies,Avg Function Length,25.839,N/A,N/A,N/A,,N/A,N/A
-AI & ML Research,similar-python-dependencies,Avg Lines/Commit,5768.35,N/A,N/A,N/A,,N/A,N/A
-AI & ML Research,similar-python-dependencies,Bug-Fix Ratio,0.1,N/A,N/A,N/A,,N/A,N/A
-AI & ML Research,similar-python-dependencies,Comment Density,0.0747,N/A,N/A,N/A,,N/A,N/A
-AI & ML Research,similar-python-dependencies,Cyclomatic Complexity,4.8278,N/A,N/A,N/A,,N/A,N/A
-AI & ML Research,similar-python-dependencies,Del/Add Ratio,0.4229,N/A,N/A,N/A,,N/A,N/A
-Developer Tools,compose-multiplatform,Avg Function Length,13.6471,14.9067,+9.2%,0.0009,✓,0.080,negligible
-Developer Tools,compose-multiplatform,Avg Lines/Commit,137.1103,2648.8242,+1831.9%,0.0009,✓,0.095,negligible
-Developer Tools,compose-multiplatform,Bug-Fix Ratio,0.1027,0.3608,+251.4%,0.0000,✓,0.642,medium
-Developer Tools,compose-multiplatform,Comment Density,0.0092,0.0129,+40.2%,0.0000,✓,0.109,negligible
-Developer Tools,compose-multiplatform,Cyclomatic Complexity,1.5292,1.5739,+2.9%,0.0023,✓,0.047,negligible
-Developer Tools,compose-multiplatform,Del/Add Ratio,0.7994,3.1792,+297.7%,0.5241,,0.095,negligible
+AI & ML Research,contrastive-learning-framework,Avg Function Length,16.339,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,contrastive-learning-framework,Avg Lines/Commit,36.4487,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,contrastive-learning-framework,Bug-Fix Ratio,0.4316,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,contrastive-learning-framework,Comment Density,0.0172,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,contrastive-learning-framework,Cyclomatic Complexity,3.1254,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,contrastive-learning-framework,Del/Add Ratio,0.9291,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,dataset-anonymizer,Avg Function Length,6.6313,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,dataset-anonymizer,Avg Lines/Commit,109.6531,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,dataset-anonymizer,Bug-Fix Ratio,0.3878,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,dataset-anonymizer,Comment Density,0.0165,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,dataset-anonymizer,Cyclomatic Complexity,1.5386,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,dataset-anonymizer,Del/Add Ratio,0.7327,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,deep-gene,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,deep-gene,Avg Lines/Commit,N/A,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,deep-gene,Bug-Fix Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,deep-gene,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,deep-gene,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,deep-gene,Del/Add Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,dotnet-project-model,Avg Function Length,22.1495,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,dotnet-project-model,Avg Lines/Commit,320.8438,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,dotnet-project-model,Bug-Fix Ratio,0.0625,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,dotnet-project-model,Comment Density,0.0179,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,dotnet-project-model,Cyclomatic Complexity,1.7431,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,dotnet-project-model,Del/Add Ratio,1.4596,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,embeddings-for-trees,Avg Function Length,20.4022,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,embeddings-for-trees,Avg Lines/Commit,63.2902,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,embeddings-for-trees,Bug-Fix Ratio,0.1205,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,embeddings-for-trees,Comment Density,0.0412,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,embeddings-for-trees,Cyclomatic Complexity,3.1289,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,embeddings-for-trees,Del/Add Ratio,1.3357,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,fishbone,Avg Function Length,12.4095,14.6233,+17.8%,0.0196,✓,0.320,small
+AI & ML Research,fishbone,Avg Lines/Commit,305.9925,47.8182,-84.4%,0.0017,✓,-0.462,small
+AI & ML Research,fishbone,Bug-Fix Ratio,0.0902,0.1515,+67.9%,0.3019,,0.187,negligible
+AI & ML Research,fishbone,Comment Density,0.0136,0.0833,+511.9%,0.0000,✓,0.784,medium
+AI & ML Research,fishbone,Cyclomatic Complexity,1.6915,1.4255,-15.7%,0.0305,✓,-0.314,small
+AI & ML Research,fishbone,Del/Add Ratio,12.8159,0.6177,-95.2%,0.8975,,-0.135,negligible
+AI & ML Research,kinference,Avg Function Length,11.0671,12.4429,+12.4%,0.2698,,0.087,negligible
+AI & ML Research,kinference,Avg Lines/Commit,190.8727,145.1225,-24.0%,0.8688,,-0.120,negligible
+AI & ML Research,kinference,Bug-Fix Ratio,0.1882,0.1463,-22.3%,0.0638,,-0.112,negligible
+AI & ML Research,kinference,Comment Density,0.015,0.0067,-55.6%,0.0000,✓,-0.220,small
+AI & ML Research,kinference,Cyclomatic Complexity,2.4117,4.2461,+76.1%,0.0529,,0.246,small
+AI & ML Research,kinference,Del/Add Ratio,1.0633,0.7985,-24.9%,0.0368,✓,-0.078,negligible
+AI & ML Research,kinference-primitives,Avg Function Length,10.3704,14.965,+44.3%,0.0129,✓,0.368,small
+AI & ML Research,kinference-primitives,Avg Lines/Commit,209.62,252.2353,+20.3%,0.0578,,0.074,negligible
+AI & ML Research,kinference-primitives,Bug-Fix Ratio,0.26,0.3529,+35.7%,0.3664,,0.200,small
+AI & ML Research,kinference-primitives,Comment Density,0.0019,0.001,-47.4%,0.1487,,-0.168,negligible
+AI & ML Research,kinference-primitives,Cyclomatic Complexity,1.8834,2.3032,+22.3%,0.0438,✓,0.396,small
+AI & ML Research,kinference-primitives,Del/Add Ratio,1.4876,1.1328,-23.8%,0.0885,,-0.118,negligible
+AI & ML Research,nlc2cmd,Avg Function Length,17.8179,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,nlc2cmd,Avg Lines/Commit,725.3333,11.0,-98.5%,N/A,,-0.804,large
+AI & ML Research,nlc2cmd,Bug-Fix Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,nlc2cmd,Comment Density,0.0153,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,nlc2cmd,Cyclomatic Complexity,3.0864,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,nlc2cmd,Del/Add Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,optimization-methods,Avg Function Length,24.9337,20.5874,-17.4%,0.4834,,-0.224,small
+AI & ML Research,optimization-methods,Avg Lines/Commit,136.8276,1748.8333,+1178.1%,0.1654,,0.557,medium
+AI & ML Research,optimization-methods,Bug-Fix Ratio,0.1034,N/A,-100.0%,0.4247,,-0.476,small
+AI & ML Research,optimization-methods,Comment Density,0.0528,0.0494,-6.4%,0.5383,,-0.066,negligible
+AI & ML Research,optimization-methods,Cyclomatic Complexity,3.4799,3.3513,-3.7%,0.6785,,-0.061,negligible
+AI & ML Research,optimization-methods,Del/Add Ratio,0.5301,0.3,-43.4%,0.1034,,-0.390,small
+AI & ML Research,python-ml-type-hints,Avg Function Length,9.9038,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,python-ml-type-hints,Avg Lines/Commit,84.5,4.0,-95.3%,N/A,,N/A,N/A
+AI & ML Research,python-ml-type-hints,Bug-Fix Ratio,0.2778,N/A,-100.0%,N/A,,N/A,N/A
+AI & ML Research,python-ml-type-hints,Comment Density,0.0173,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,python-ml-type-hints,Cyclomatic Complexity,1.7465,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,python-ml-type-hints,Del/Add Ratio,0.3699,N/A,-100.0%,N/A,,N/A,N/A
+AI & ML Research,ruby-type-inference,Avg Function Length,14.244,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,ruby-type-inference,Avg Lines/Commit,29.0465,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,ruby-type-inference,Bug-Fix Ratio,0.1395,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,ruby-type-inference,Comment Density,0.0121,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,ruby-type-inference,Cyclomatic Complexity,2.0597,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,ruby-type-inference,Del/Add Ratio,0.9678,N/A,N/A,N/A,,N/A,N/A
+AI & ML Research,span,Avg Function Length,16.8821,25.5924,+51.6%,0.0000,✓,0.809,large
+AI & ML Research,span,Avg Lines/Commit,94.5848,105.0986,+11.1%,0.0050,✓,0.036,negligible
+AI & ML Research,span,Bug-Fix Ratio,0.2076,0.1127,-45.7%,0.0152,✓,-0.260,small
+AI & ML Research,span,Comment Density,0.018,0.0239,+32.8%,0.1003,,0.249,small
+AI & ML Research,span,Cyclomatic Complexity,1.6133,2.472,+53.2%,0.0000,✓,0.612,medium
+AI & ML Research,span,Del/Add Ratio,1.0247,0.8985,-12.3%,0.6077,,-0.077,negligible
+AI & ML Research,teamcity-search-ql,Avg Function Length,9.539,9.8689,+3.5%,0.0890,,0.046,negligible
+AI & ML Research,teamcity-search-ql,Avg Lines/Commit,295.5275,37.7895,-87.2%,0.0000,✓,-0.439,small
+AI & ML Research,teamcity-search-ql,Bug-Fix Ratio,0.2982,0.3158,+5.9%,0.8742,,0.038,negligible
+AI & ML Research,teamcity-search-ql,Comment Density,0.0041,0.001,-74.8%,0.1546,,-0.230,small
+AI & ML Research,teamcity-search-ql,Cyclomatic Complexity,1.5395,1.209,-21.5%,0.4367,,-0.326,small
+AI & ML Research,teamcity-search-ql,Del/Add Ratio,1.7189,0.8346,-51.4%,0.0029,✓,-0.095,negligible
+AI & ML Research,teamcity-xml-tests-reporting,Avg Function Length,8.1139,7.7549,-4.4%,0.6022,,-0.054,negligible
+AI & ML Research,teamcity-xml-tests-reporting,Avg Lines/Commit,928.0952,895.0,-3.6%,0.8194,,-0.011,negligible
+AI & ML Research,teamcity-xml-tests-reporting,Bug-Fix Ratio,0.1429,N/A,-100.0%,0.4109,,-0.563,medium
+AI & ML Research,teamcity-xml-tests-reporting,Comment Density,0.0045,0.0056,+24.9%,0.9630,,0.063,negligible
+AI & ML Research,teamcity-xml-tests-reporting,Cyclomatic Complexity,1.7373,1.6481,-5.1%,0.2622,,-0.073,negligible
+AI & ML Research,teamcity-xml-tests-reporting,Del/Add Ratio,0.6763,1.9213,+184.1%,0.2570,,0.437,small
+AI & ML Research,viktor,Avg Function Length,9.048,9.4774,+4.7%,0.1628,,0.068,negligible
+AI & ML Research,viktor,Avg Lines/Commit,69.5479,319.8333,+359.9%,0.6669,,0.426,small
+AI & ML Research,viktor,Bug-Fix Ratio,0.0548,N/A,-100.0%,0.4117,,-0.339,small
+AI & ML Research,viktor,Comment Density,0.0087,0.0517,+492.0%,0.5326,,0.375,small
+AI & ML Research,viktor,Cyclomatic Complexity,1.6448,1.6322,-0.8%,0.4173,,-0.020,negligible
+AI & ML Research,viktor,Del/Add Ratio,1.1225,0.7588,-32.4%,0.7265,,-0.191,negligible
+Developer Tools,IntelliJDeodorant,Avg Function Length,11.0234,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,IntelliJDeodorant,Avg Lines/Commit,660.4842,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,IntelliJDeodorant,Bug-Fix Ratio,0.3037,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,IntelliJDeodorant,Comment Density,0.006,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,IntelliJDeodorant,Cyclomatic Complexity,2.9096,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,IntelliJDeodorant,Del/Add Ratio,2.6465,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,ReSharperPowerToys,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,ReSharperPowerToys,Avg Lines/Commit,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,ReSharperPowerToys,Bug-Fix Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,ReSharperPowerToys,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,ReSharperPowerToys,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,ReSharperPowerToys,Del/Add Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,TeamCity.SESPlugin,Avg Function Length,11.2126,11.2126,+0.0%,1.0000,,0.000,N/A
+Developer Tools,TeamCity.SESPlugin,Avg Lines/Commit,371.1429,771.0,+107.7%,N/A,,0.360,small
+Developer Tools,TeamCity.SESPlugin,Bug-Fix Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,TeamCity.SESPlugin,Comment Density,0.0063,0.0097,+52.5%,0.9753,,0.063,negligible
+Developer Tools,TeamCity.SESPlugin,Cyclomatic Complexity,1.8388,1.8388,-0.0%,1.0000,,-0.000,negligible
+Developer Tools,TeamCity.SESPlugin,Del/Add Ratio,0.8571,6.875,+702.1%,N/A,,0.875,large
 Developer Tools,educational-plugin,Avg Function Length,11.0021,12.6023,+14.5%,0.0000,✓,0.141,negligible
 Developer Tools,educational-plugin,Avg Lines/Commit,90.9287,122.0926,+34.3%,0.0000,✓,0.029,negligible
 Developer Tools,educational-plugin,Bug-Fix Ratio,0.1327,0.1106,-16.7%,0.0030,✓,-0.068,negligible
 Developer Tools,educational-plugin,Comment Density,0.0103,0.0168,+62.8%,0.0000,✓,0.207,small
 Developer Tools,educational-plugin,Cyclomatic Complexity,2.2003,2.0941,-4.8%,0.0000,✓,-0.086,negligible
 Developer Tools,educational-plugin,Del/Add Ratio,1.3778,5.5588,+303.5%,0.0354,✓,0.059,negligible
-Developer Tools,ideavim,Avg Function Length,10.7766,13.6603,+26.8%,0.0000,✓,0.285,small
-Developer Tools,ideavim,Avg Lines/Commit,130.7574,198.9207,+52.1%,0.9004,,0.037,negligible
-Developer Tools,ideavim,Bug-Fix Ratio,0.1311,0.2136,+62.9%,0.0000,✓,0.220,small
-Developer Tools,ideavim,Comment Density,0.012,0.025,+107.3%,0.0000,✓,0.359,small
-Developer Tools,ideavim,Cyclomatic Complexity,2.1284,2.6946,+26.6%,0.0000,✓,0.250,small
-Developer Tools,ideavim,Del/Add Ratio,1.1735,2.5658,+118.6%,0.0235,✓,0.037,negligible
-Developer Tools,intellij-plugins,Avg Function Length,11.2711,11.562,+2.6%,0.0000,✓,0.022,negligible
-Developer Tools,intellij-plugins,Avg Lines/Commit,734.8512,614.951,-16.3%,0.5156,,-0.014,negligible
-Developer Tools,intellij-plugins,Bug-Fix Ratio,0.1522,0.1524,+0.2%,0.9687,,0.001,negligible
-Developer Tools,intellij-plugins,Comment Density,0.0256,0.0263,+2.5%,0.0000,✓,0.015,negligible
-Developer Tools,intellij-plugins,Cyclomatic Complexity,2.5358,2.4607,-3.0%,0.0000,✓,-0.020,negligible
-Developer Tools,intellij-plugins,Del/Add Ratio,3.1207,32.1822,+931.3%,0.0000,✓,0.015,negligible
-Developer Tools,markdown,Avg Function Length,13.011,13.5231,+3.9%,0.9277,,0.055,negligible
-Developer Tools,markdown,Avg Lines/Commit,489.7788,54.9677,-88.8%,0.0875,,-0.358,small
-Developer Tools,markdown,Bug-Fix Ratio,0.1731,0.1075,-37.9%,0.1902,,-0.189,negligible
-Developer Tools,markdown,Comment Density,0.0088,0.0109,+24.8%,0.0106,✓,0.108,negligible
-Developer Tools,markdown,Cyclomatic Complexity,2.5204,2.6312,+4.4%,0.7789,,0.054,negligible
-Developer Tools,markdown,Del/Add Ratio,0.9694,0.7775,-19.8%,0.1234,,-0.108,negligible
-Developer Tools,paddle,Avg Function Length,N/A,11.1264,N/A,N/A,,N/A,N/A
-Developer Tools,paddle,Avg Lines/Commit,N/A,44.0638,N/A,N/A,,N/A,N/A
-Developer Tools,paddle,Bug-Fix Ratio,N/A,0.1915,N/A,N/A,,N/A,N/A
-Developer Tools,paddle,Comment Density,N/A,0.0139,N/A,N/A,,N/A,N/A
-Developer Tools,paddle,Cyclomatic Complexity,N/A,1.8088,N/A,N/A,,N/A,N/A
-Developer Tools,paddle,Del/Add Ratio,N/A,0.6994,N/A,N/A,,N/A,N/A
-Developer Tools,spbla,Avg Function Length,12.6966,N/A,N/A,N/A,,N/A,N/A
-Developer Tools,spbla,Avg Lines/Commit,359811.0,N/A,N/A,N/A,,N/A,N/A
-Developer Tools,spbla,Bug-Fix Ratio,0.08,N/A,N/A,N/A,,N/A,N/A
-Developer Tools,spbla,Comment Density,0.0282,N/A,N/A,N/A,,N/A,N/A
-Developer Tools,spbla,Cyclomatic Complexity,1.8539,N/A,N/A,N/A,,N/A,N/A
-Developer Tools,spbla,Del/Add Ratio,0.8408,N/A,N/A,N/A,,N/A,N/A
-Developer Tools,spla,Avg Function Length,N/A,20.1866,N/A,N/A,,N/A,N/A
-Developer Tools,spla,Avg Lines/Commit,N/A,956.1837,N/A,N/A,,N/A,N/A
-Developer Tools,spla,Bug-Fix Ratio,N/A,0.1939,N/A,N/A,,N/A,N/A
-Developer Tools,spla,Comment Density,N/A,0.0512,N/A,N/A,,N/A,N/A
-Developer Tools,spla,Cyclomatic Complexity,N/A,1.8599,N/A,N/A,,N/A,N/A
-Developer Tools,spla,Del/Add Ratio,N/A,0.5169,N/A,N/A,,N/A,N/A
+Developer Tools,gradle-changelog-plugin,Avg Function Length,16.653,28.4895,+71.1%,0.0001,✓,0.363,small
+Developer Tools,gradle-changelog-plugin,Avg Lines/Commit,32.113,25.0341,-22.0%,0.1860,,-0.088,negligible
+Developer Tools,gradle-changelog-plugin,Bug-Fix Ratio,0.0395,0.233,+489.0%,0.0000,✓,0.586,medium
+Developer Tools,gradle-changelog-plugin,Comment Density,0.0003,0.0129,+3839.6%,0.0000,✓,1.088,large
+Developer Tools,gradle-changelog-plugin,Cyclomatic Complexity,1.1671,1.3067,+12.0%,0.0075,✓,0.434,small
+Developer Tools,gradle-changelog-plugin,Del/Add Ratio,0.7038,0.9607,+36.5%,0.0032,✓,0.227,small
+Developer Tools,hub-dashboard-addons,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,hub-dashboard-addons,Avg Lines/Commit,404.1538,762.8333,+88.7%,0.2428,,0.175,negligible
+Developer Tools,hub-dashboard-addons,Bug-Fix Ratio,0.0769,N/A,-100.0%,0.3785,,-0.392,small
+Developer Tools,hub-dashboard-addons,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,hub-dashboard-addons,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,hub-dashboard-addons,Del/Add Ratio,0.4145,0.4168,+0.6%,0.7072,,0.007,negligible
+Developer Tools,hub-widget-ui,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,hub-widget-ui,Avg Lines/Commit,661.1739,10.0,-98.5%,0.0419,✓,-0.437,small
+Developer Tools,hub-widget-ui,Bug-Fix Ratio,0.0435,0.2,+360.0%,0.2533,,0.449,small
+Developer Tools,hub-widget-ui,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,hub-widget-ui,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,hub-widget-ui,Del/Add Ratio,21.761,0.2955,-98.6%,N/A,,-0.299,small
+Developer Tools,ij_tutorial_gradle,Avg Function Length,6.55,5.4167,-17.3%,N/A,,-0.728,medium
+Developer Tools,ij_tutorial_gradle,Avg Lines/Commit,136.4286,174.0,+27.5%,N/A,,0.188,negligible
+Developer Tools,ij_tutorial_gradle,Bug-Fix Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,ij_tutorial_gradle,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,ij_tutorial_gradle,Cyclomatic Complexity,1.8,1.6667,-7.4%,N/A,,-0.130,negligible
+Developer Tools,ij_tutorial_gradle,Del/Add Ratio,0.2818,0.4658,+65.3%,N/A,,0.361,small
+Developer Tools,intellij-arend,Avg Function Length,14.5203,13.4948,-7.1%,0.2606,,-0.082,negligible
+Developer Tools,intellij-arend,Avg Lines/Commit,56.5593,119.3275,+111.0%,0.0983,,0.239,small
+Developer Tools,intellij-arend,Bug-Fix Ratio,0.2813,0.597,+112.2%,0.0000,✓,0.670,medium
+Developer Tools,intellij-arend,Comment Density,0.0051,0.0028,-44.3%,0.0000,✓,-0.182,negligible
+Developer Tools,intellij-arend,Cyclomatic Complexity,3.8886,3.5271,-9.3%,0.0000,✓,-0.077,negligible
+Developer Tools,intellij-arend,Del/Add Ratio,0.7891,1.2141,+53.9%,0.5473,,0.068,negligible
+Developer Tools,intellij-compiler-indices,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,intellij-compiler-indices,Avg Lines/Commit,13.9348,51.9286,+272.7%,0.0294,✓,0.737,medium
+Developer Tools,intellij-compiler-indices,Bug-Fix Ratio,0.1087,N/A,-100.0%,0.2079,,-0.488,small
+Developer Tools,intellij-compiler-indices,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,intellij-compiler-indices,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,intellij-compiler-indices,Del/Add Ratio,0.9486,1.1542,+21.7%,0.2958,,0.193,negligible
+Developer Tools,intellij-deps-trove4j,Avg Function Length,7.4321,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,intellij-deps-trove4j,Avg Lines/Commit,18.1667,11.0,-39.4%,N/A,,N/A,N/A
+Developer Tools,intellij-deps-trove4j,Bug-Fix Ratio,0.3333,N/A,-100.0%,N/A,,N/A,N/A
+Developer Tools,intellij-deps-trove4j,Comment Density,0.0782,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,intellij-deps-trove4j,Cyclomatic Complexity,1.8642,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,intellij-deps-trove4j,Del/Add Ratio,1.3133,0.2222,-83.1%,N/A,,N/A,N/A
+Developer Tools,intellij-kotlin,Avg Function Length,11.071,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,intellij-kotlin,Avg Lines/Commit,448.6549,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,intellij-kotlin,Bug-Fix Ratio,0.2224,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,intellij-kotlin,Comment Density,0.07,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,intellij-kotlin,Cyclomatic Complexity,2.0625,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,intellij-kotlin,Del/Add Ratio,2.2434,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,intellij-micropython,Avg Function Length,9.1316,8.9957,-1.5%,0.9964,,-0.026,negligible
+Developer Tools,intellij-micropython,Avg Lines/Commit,173.5938,32.9643,-81.0%,0.5556,,-0.315,small
+Developer Tools,intellij-micropython,Bug-Fix Ratio,0.1042,0.2143,+105.7%,0.0640,,0.302,small
+Developer Tools,intellij-micropython,Comment Density,0.0328,0.0213,-35.1%,0.1113,,-0.141,negligible
+Developer Tools,intellij-micropython,Cyclomatic Complexity,2.3425,1.806,-22.9%,0.0108,✓,-0.538,medium
+Developer Tools,intellij-micropython,Del/Add Ratio,1.4453,1.2782,-11.6%,0.1277,,-0.027,negligible
+Developer Tools,intellij-obsolete-plugins,Avg Function Length,9.2932,10.3425,+11.3%,0.0037,✓,0.110,negligible
+Developer Tools,intellij-obsolete-plugins,Avg Lines/Commit,5166.5532,7050.5789,+36.5%,0.0012,✓,0.089,negligible
+Developer Tools,intellij-obsolete-plugins,Bug-Fix Ratio,0.1489,0.1842,+23.7%,0.6200,,0.094,negligible
+Developer Tools,intellij-obsolete-plugins,Comment Density,0.0118,0.0226,+92.1%,0.0000,✓,0.334,small
+Developer Tools,intellij-obsolete-plugins,Cyclomatic Complexity,2.0249,2.3173,+14.4%,0.5723,,0.146,negligible
+Developer Tools,intellij-obsolete-plugins,Del/Add Ratio,0.6798,1.1381,+67.4%,0.6991,,0.220,small
+Developer Tools,intellij-platform-plugin-template,Avg Function Length,2.945,4.2679,+44.9%,0.2712,,0.767,medium
+Developer Tools,intellij-platform-plugin-template,Avg Lines/Commit,16.9073,9.8255,-41.9%,0.9455,,-0.230,small
+Developer Tools,intellij-platform-plugin-template,Bug-Fix Ratio,0.0383,0.0765,+99.5%,0.0277,✓,0.164,negligible
+Developer Tools,intellij-platform-plugin-template,Comment Density,N/A,N/A,N/A,1.0000,,N/A,N/A
+Developer Tools,intellij-platform-plugin-template,Cyclomatic Complexity,1.0,1.0714,+7.1%,0.2562,,0.378,small
+Developer Tools,intellij-platform-plugin-template,Del/Add Ratio,1.1376,1.2507,+9.9%,0.0018,✓,0.023,negligible
+Developer Tools,intellij-scala,Avg Function Length,8.5473,8.9377,+4.6%,0.0401,✓,0.049,negligible
+Developer Tools,intellij-scala,Avg Lines/Commit,180.3286,1511.2436,+738.0%,0.0000,✓,0.041,negligible
+Developer Tools,intellij-scala,Bug-Fix Ratio,0.1494,0.1357,-9.2%,0.0213,✓,-0.039,negligible
+Developer Tools,intellij-scala,Comment Density,0.0209,0.0269,+28.8%,0.2090,,0.097,negligible
+Developer Tools,intellij-scala,Cyclomatic Complexity,2.1795,2.4126,+10.7%,0.0696,,0.096,negligible
+Developer Tools,intellij-scala,Del/Add Ratio,1.4031,2.5582,+82.3%,0.0000,✓,0.019,negligible
+Developer Tools,intellij-scala-historical,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,intellij-scala-historical,Avg Lines/Commit,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,intellij-scala-historical,Bug-Fix Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,intellij-scala-historical,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,intellij-scala-historical,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,intellij-scala-historical,Del/Add Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,intellij-sdk-code-samples,Avg Function Length,7.7047,9.9428,+29.0%,0.0002,✓,0.293,small
+Developer Tools,intellij-sdk-code-samples,Avg Lines/Commit,114.1389,92.7188,-18.8%,0.2637,,-0.082,negligible
+Developer Tools,intellij-sdk-code-samples,Bug-Fix Ratio,0.0833,0.1354,+62.5%,0.0676,,0.167,negligible
+Developer Tools,intellij-sdk-code-samples,Comment Density,0.0567,0.0617,+8.8%,0.0980,,0.092,negligible
+Developer Tools,intellij-sdk-code-samples,Cyclomatic Complexity,1.7371,1.9816,+14.1%,0.0003,✓,0.171,negligible
+Developer Tools,intellij-sdk-code-samples,Del/Add Ratio,6.704,1.8968,-71.7%,0.4040,,-0.072,negligible
+Developer Tools,intellij-stats-collector,Avg Function Length,10.9318,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,intellij-stats-collector,Avg Lines/Commit,47.9091,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,intellij-stats-collector,Bug-Fix Ratio,0.1818,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,intellij-stats-collector,Comment Density,0.0013,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,intellij-stats-collector,Cyclomatic Complexity,1.9742,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,intellij-stats-collector,Del/Add Ratio,3.4647,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,js-graphql-intellij-plugin,Avg Function Length,10.5726,11.2344,+6.3%,0.0000,✓,0.056,negligible
+Developer Tools,js-graphql-intellij-plugin,Avg Lines/Commit,556.5455,1784.1574,+220.6%,0.0000,✓,0.088,negligible
+Developer Tools,js-graphql-intellij-plugin,Bug-Fix Ratio,0.0596,0.0797,+33.8%,0.2770,,0.079,negligible
+Developer Tools,js-graphql-intellij-plugin,Comment Density,0.018,0.0123,-31.5%,0.0000,✓,-0.174,negligible
+Developer Tools,js-graphql-intellij-plugin,Cyclomatic Complexity,2.5012,2.3143,-7.5%,0.0001,✓,-0.060,negligible
+Developer Tools,js-graphql-intellij-plugin,Del/Add Ratio,0.8581,2.7952,+225.7%,0.0046,✓,0.098,negligible
+Developer Tools,mocha-intellij,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,mocha-intellij,Avg Lines/Commit,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,mocha-intellij,Bug-Fix Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,mocha-intellij,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,mocha-intellij,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,mocha-intellij,Del/Add Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,phpstorm-phpstan-plugin,Avg Function Length,5.006,6.4757,+29.4%,0.0086,✓,0.469,small
+Developer Tools,phpstorm-phpstan-plugin,Avg Lines/Commit,28.7688,32.4655,+12.8%,0.4562,,0.048,negligible
+Developer Tools,phpstorm-phpstan-plugin,Bug-Fix Ratio,0.0578,0.1207,+108.8%,0.0582,,0.221,small
+Developer Tools,phpstorm-phpstan-plugin,Comment Density,0.0015,0.0008,-45.8%,0.9159,,-0.110,negligible
+Developer Tools,phpstorm-phpstan-plugin,Cyclomatic Complexity,1.377,1.6825,+22.2%,0.0110,✓,0.420,small
+Developer Tools,phpstorm-phpstan-plugin,Del/Add Ratio,1.4105,0.6998,-50.4%,0.0015,✓,-0.325,small
+Developer Tools,plugin-blockmap-patches,Avg Function Length,9.0989,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,plugin-blockmap-patches,Avg Lines/Commit,69.4,9.6429,-86.1%,0.0457,✓,-0.783,medium
+Developer Tools,plugin-blockmap-patches,Bug-Fix Ratio,0.125,0.7143,+471.4%,0.0000,✓,1.446,large
+Developer Tools,plugin-blockmap-patches,Comment Density,0.0105,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,plugin-blockmap-patches,Cyclomatic Complexity,1.8954,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,plugin-blockmap-patches,Del/Add Ratio,0.7034,0.8421,+19.7%,0.9919,,0.197,negligible
+Developer Tools,plugin-repository-rest-client,Avg Function Length,9.1683,9.1408,-0.3%,0.6155,,-0.007,negligible
+Developer Tools,plugin-repository-rest-client,Avg Lines/Commit,32.5475,33.6,+3.2%,0.1896,,0.016,negligible
+Developer Tools,plugin-repository-rest-client,Bug-Fix Ratio,0.162,0.7,+332.1%,0.0000,✓,1.283,large
+Developer Tools,plugin-repository-rest-client,Comment Density,0.0015,0.0002,-88.1%,0.0194,✓,-0.283,small
+Developer Tools,plugin-repository-rest-client,Cyclomatic Complexity,2.4577,1.7488,-28.8%,0.0042,✓,-0.628,medium
+Developer Tools,plugin-repository-rest-client,Del/Add Ratio,0.7721,1.3326,+72.6%,0.3677,,0.345,small
+Developer Tools,projector-markdown-plugin,Avg Function Length,8.5803,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,projector-markdown-plugin,Avg Lines/Commit,2292.8571,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,projector-markdown-plugin,Bug-Fix Ratio,0.2857,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,projector-markdown-plugin,Comment Density,0.0018,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,projector-markdown-plugin,Cyclomatic Complexity,2.1167,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,projector-markdown-plugin,Del/Add Ratio,0.2222,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,projector-server,Avg Function Length,9.2519,8.1962,-11.4%,0.0004,✓,-0.110,negligible
+Developer Tools,projector-server,Avg Lines/Commit,112.9143,52.8333,-53.2%,0.4896,,-0.128,negligible
+Developer Tools,projector-server,Bug-Fix Ratio,0.1469,N/A,-100.0%,0.3135,,-0.586,medium
+Developer Tools,projector-server,Comment Density,0.0075,0.0084,+11.0%,0.8493,,0.041,negligible
+Developer Tools,projector-server,Cyclomatic Complexity,1.508,1.5286,+1.4%,0.0007,✓,0.018,negligible
+Developer Tools,projector-server,Del/Add Ratio,2.0542,0.3571,-82.6%,0.1612,,-0.214,small
+Developer Tools,resharper-nuget,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,resharper-nuget,Avg Lines/Commit,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,resharper-nuget,Bug-Fix Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,resharper-nuget,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,resharper-nuget,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,resharper-nuget,Del/Add Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,resharper-plugins,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,resharper-plugins,Avg Lines/Commit,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,resharper-plugins,Bug-Fix Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,resharper-plugins,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,resharper-plugins,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,resharper-plugins,Del/Add Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,sample-resharper-plugin,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,sample-resharper-plugin,Avg Lines/Commit,N/A,202.0,N/A,N/A,,N/A,N/A
+Developer Tools,sample-resharper-plugin,Bug-Fix Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,sample-resharper-plugin,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,sample-resharper-plugin,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,sample-resharper-plugin,Del/Add Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,sbt-idea-shell,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,sbt-idea-shell,Avg Lines/Commit,33.0,18.625,-43.6%,N/A,,N/A,N/A
+Developer Tools,sbt-idea-shell,Bug-Fix Ratio,N/A,0.025,N/A,N/A,,N/A,N/A
+Developer Tools,sbt-idea-shell,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,sbt-idea-shell,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,sbt-idea-shell,Del/Add Ratio,0.5714,1.5289,+167.6%,N/A,,N/A,N/A
+Developer Tools,sbt-intellij,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,sbt-intellij,Avg Lines/Commit,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,sbt-intellij,Bug-Fix Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,sbt-intellij,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,sbt-intellij,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,sbt-intellij,Del/Add Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-aws-codepipeline-plugin,Avg Function Length,9.4146,9.6259,+2.2%,0.8786,,0.053,negligible
+Developer Tools,teamcity-aws-codepipeline-plugin,Avg Lines/Commit,57.8,149.5,+158.7%,N/A,,0.477,small
+Developer Tools,teamcity-aws-codepipeline-plugin,Bug-Fix Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-aws-codepipeline-plugin,Comment Density,0.0008,0.001,+27.2%,0.7137,,0.133,negligible
+Developer Tools,teamcity-aws-codepipeline-plugin,Cyclomatic Complexity,2.1091,2.1333,+1.1%,1.0000,,0.042,negligible
+Developer Tools,teamcity-aws-codepipeline-plugin,Del/Add Ratio,1.4961,0.8438,-43.6%,N/A,,-0.493,small
+Developer Tools,teamcity-aws-core-plugin,Avg Function Length,7.5993,11.628,+53.0%,0.0000,✓,0.876,large
+Developer Tools,teamcity-aws-core-plugin,Avg Lines/Commit,70.9867,222.817,+213.9%,0.0029,✓,0.200,negligible
+Developer Tools,teamcity-aws-core-plugin,Bug-Fix Ratio,0.1333,0.2876,+115.7%,0.0103,✓,0.384,small
+Developer Tools,teamcity-aws-core-plugin,Comment Density,0.0032,0.0061,+90.2%,0.5375,,0.224,small
+Developer Tools,teamcity-aws-core-plugin,Cyclomatic Complexity,1.8339,1.8177,-0.9%,0.1189,,-0.024,negligible
+Developer Tools,teamcity-aws-core-plugin,Del/Add Ratio,0.622,0.8002,+28.6%,0.2507,,0.113,negligible
+Developer Tools,teamcity-bitbucket-issues,Avg Function Length,7.3623,7.7484,+5.2%,0.7618,,0.100,negligible
+Developer Tools,teamcity-bitbucket-issues,Avg Lines/Commit,26.4762,88.5,+234.3%,0.1137,,0.481,small
+Developer Tools,teamcity-bitbucket-issues,Bug-Fix Ratio,0.0952,0.25,+162.5%,0.3074,,0.396,small
+Developer Tools,teamcity-bitbucket-issues,Comment Density,0.0036,0.0048,+34.3%,0.6252,,0.162,negligible
+Developer Tools,teamcity-bitbucket-issues,Cyclomatic Complexity,1.4119,1.4474,+2.5%,0.8533,,0.070,negligible
+Developer Tools,teamcity-bitbucket-issues,Del/Add Ratio,1.0364,1.2631,+21.9%,0.0135,✓,0.103,negligible
+Developer Tools,teamcity-caches-cleanup-plugin,Avg Function Length,9.5392,10.246,+7.4%,0.1102,,0.402,small
+Developer Tools,teamcity-caches-cleanup-plugin,Avg Lines/Commit,41.7778,85.3333,+104.3%,0.1252,,0.487,small
+Developer Tools,teamcity-caches-cleanup-plugin,Bug-Fix Ratio,0.1111,0.1667,+50.0%,0.8417,,0.149,negligible
+Developer Tools,teamcity-caches-cleanup-plugin,Comment Density,0.017,0.0293,+71.9%,0.2045,,0.533,medium
+Developer Tools,teamcity-caches-cleanup-plugin,Cyclomatic Complexity,1.9412,2.0317,+4.7%,0.9840,,0.100,negligible
+Developer Tools,teamcity-caches-cleanup-plugin,Del/Add Ratio,0.7823,1.769,+126.1%,0.3072,,0.374,small
+Developer Tools,teamcity-commit-hooks,Avg Function Length,14.0571,12.1606,-13.5%,0.4071,,-0.170,negligible
+Developer Tools,teamcity-commit-hooks,Avg Lines/Commit,94.0667,114.9444,+22.2%,0.2354,,0.073,negligible
+Developer Tools,teamcity-commit-hooks,Bug-Fix Ratio,0.3,0.1667,-44.4%,0.3136,,-0.312,small
+Developer Tools,teamcity-commit-hooks,Comment Density,0.0154,0.0164,+6.3%,0.9032,,0.038,negligible
+Developer Tools,teamcity-commit-hooks,Cyclomatic Complexity,2.4629,2.4777,+0.6%,0.5926,,0.008,negligible
+Developer Tools,teamcity-commit-hooks,Del/Add Ratio,0.8081,0.8669,+7.3%,0.1628,,0.068,negligible
+Developer Tools,teamcity-dashboard-plugin,Avg Function Length,6.6228,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-dashboard-plugin,Avg Lines/Commit,823.3333,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-dashboard-plugin,Bug-Fix Ratio,0.049,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-dashboard-plugin,Comment Density,0.0028,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-dashboard-plugin,Cyclomatic Complexity,1.607,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-dashboard-plugin,Del/Add Ratio,79.8209,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-dotcover,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-dotcover,Avg Lines/Commit,232.0,3.0,-98.7%,N/A,,-0.869,large
+Developer Tools,teamcity-dotcover,Bug-Fix Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-dotcover,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-dotcover,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-dotcover,Del/Add Ratio,0.881,0.5,-43.2%,N/A,,-0.378,small
+Developer Tools,teamcity-github-auth,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-github-auth,Avg Lines/Commit,2.0,51.75,+2487.5%,N/A,,0.707,medium
+Developer Tools,teamcity-github-auth,Bug-Fix Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-github-auth,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-github-auth,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-github-auth,Del/Add Ratio,1.0,0.5,-50.0%,N/A,,-1.225,large
+Developer Tools,teamcity-github-issues,Avg Function Length,7.3195,8.136,+11.2%,0.1861,,0.262,small
+Developer Tools,teamcity-github-issues,Avg Lines/Commit,54.6875,42.7931,-21.7%,0.8584,,-0.117,negligible
+Developer Tools,teamcity-github-issues,Bug-Fix Ratio,0.25,0.3448,+37.9%,0.5250,,0.204,small
+Developer Tools,teamcity-github-issues,Comment Density,0.0011,0.0044,+294.3%,0.0375,✓,0.461,small
+Developer Tools,teamcity-github-issues,Cyclomatic Complexity,1.4634,1.7182,+17.4%,0.3641,,0.344,small
+Developer Tools,teamcity-github-issues,Del/Add Ratio,0.9995,1.0912,+9.2%,0.3428,,0.056,negligible
+Developer Tools,teamcity-gradle,Avg Function Length,8.3599,8.6118,+3.0%,0.1344,,0.039,negligible
+Developer Tools,teamcity-gradle,Avg Lines/Commit,125.35,492.2839,+292.7%,0.8037,,0.242,small
+Developer Tools,teamcity-gradle,Bug-Fix Ratio,0.3,0.1613,-46.2%,0.0469,✓,-0.331,small
+Developer Tools,teamcity-gradle,Comment Density,0.0043,0.015,+250.7%,0.1116,,0.370,small
+Developer Tools,teamcity-gradle,Cyclomatic Complexity,1.7767,1.588,-10.6%,0.0000,✓,-0.200,small
+Developer Tools,teamcity-gradle,Del/Add Ratio,0.8664,1.7488,+101.8%,0.0654,,0.132,negligible
+Developer Tools,teamcity-hashicorp-vault-plugin,Avg Function Length,12.3325,16.8365,+36.5%,0.0086,✓,0.483,small
+Developer Tools,teamcity-hashicorp-vault-plugin,Avg Lines/Commit,49.5833,109.8462,+121.5%,0.3774,,0.319,small
+Developer Tools,teamcity-hashicorp-vault-plugin,Bug-Fix Ratio,0.2083,0.2404,+15.4%,0.6656,,0.076,negligible
+Developer Tools,teamcity-hashicorp-vault-plugin,Comment Density,0.0169,0.0151,-10.3%,0.0245,✓,-0.104,negligible
+Developer Tools,teamcity-hashicorp-vault-plugin,Cyclomatic Complexity,2.1468,2.3448,+9.2%,0.8323,,0.181,negligible
+Developer Tools,teamcity-hashicorp-vault-plugin,Del/Add Ratio,0.8639,0.8308,-3.8%,0.1820,,-0.028,negligible
+Developer Tools,teamcity-investigations-hub-widget,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-investigations-hub-widget,Avg Lines/Commit,1273.625,127.75,-90.0%,0.6330,,-0.459,small
+Developer Tools,teamcity-investigations-hub-widget,Bug-Fix Ratio,0.125,N/A,-100.0%,0.3816,,-0.500,medium
+Developer Tools,teamcity-investigations-hub-widget,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-investigations-hub-widget,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-investigations-hub-widget,Del/Add Ratio,0.7229,0.7741,+7.1%,0.4727,,0.128,negligible
+Developer Tools,teamcity-local-cloud,Avg Function Length,N/A,4.8493,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-local-cloud,Avg Lines/Commit,N/A,113.5,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-local-cloud,Bug-Fix Ratio,N/A,0.25,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-local-cloud,Comment Density,N/A,0.006,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-local-cloud,Cyclomatic Complexity,N/A,1.3722,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-local-cloud,Del/Add Ratio,N/A,2.72,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-maven-archetypes,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-maven-archetypes,Avg Lines/Commit,33.8333,130.0,+284.2%,N/A,,0.628,medium
+Developer Tools,teamcity-maven-archetypes,Bug-Fix Ratio,0.1667,N/A,-100.0%,N/A,,-0.577,medium
+Developer Tools,teamcity-maven-archetypes,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-maven-archetypes,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-maven-archetypes,Del/Add Ratio,0.7523,0.8719,+15.9%,N/A,,0.419,small
+Developer Tools,teamcity-sakura-ui-plugins,Avg Function Length,6.0,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-sakura-ui-plugins,Avg Lines/Commit,144.75,101.5,-29.9%,N/A,,-0.210,small
+Developer Tools,teamcity-sakura-ui-plugins,Bug-Fix Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-sakura-ui-plugins,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-sakura-ui-plugins,Cyclomatic Complexity,1.0,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-sakura-ui-plugins,Del/Add Ratio,0.5,N/A,-100.0%,N/A,,-1.225,large
+Developer Tools,teamcity-shared-resources,Avg Function Length,14.5945,15.6954,+7.5%,0.2292,,0.106,negligible
+Developer Tools,teamcity-shared-resources,Avg Lines/Commit,120.697,218.6857,+81.2%,0.6540,,0.244,small
+Developer Tools,teamcity-shared-resources,Bug-Fix Ratio,0.2121,0.1714,-19.2%,0.6786,,-0.102,negligible
+Developer Tools,teamcity-shared-resources,Comment Density,0.0164,0.0229,+39.9%,0.0185,✓,0.187,negligible
+Developer Tools,teamcity-shared-resources,Cyclomatic Complexity,1.8875,2.1342,+13.1%,0.4055,,0.187,negligible
+Developer Tools,teamcity-shared-resources,Del/Add Ratio,1.6573,1.2957,-21.8%,0.3389,,-0.103,negligible
+Developer Tools,teamcity-torrent-plugin,Avg Function Length,11.4769,11.7096,+2.0%,0.8581,,0.030,negligible
+Developer Tools,teamcity-torrent-plugin,Avg Lines/Commit,71.4286,1637.0,+2191.8%,N/A,,N/A,N/A
+Developer Tools,teamcity-torrent-plugin,Bug-Fix Ratio,0.1429,N/A,-100.0%,N/A,,N/A,N/A
+Developer Tools,teamcity-torrent-plugin,Comment Density,0.0049,0.0111,+127.0%,0.8165,,0.211,small
+Developer Tools,teamcity-torrent-plugin,Cyclomatic Complexity,1.7849,1.7944,+0.5%,0.9441,,0.009,negligible
+Developer Tools,teamcity-torrent-plugin,Del/Add Ratio,0.7492,8.408,+1022.2%,N/A,,N/A,N/A
+Developer Tools,teamcity-vscode-extension,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-vscode-extension,Avg Lines/Commit,765.6429,3.0,-99.6%,N/A,,-0.870,large
+Developer Tools,teamcity-vscode-extension,Bug-Fix Ratio,0.2857,N/A,-100.0%,N/A,,-0.862,large
+Developer Tools,teamcity-vscode-extension,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-vscode-extension,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,teamcity-vscode-extension,Del/Add Ratio,2.8361,0.6667,-76.5%,N/A,,-0.650,medium
+Developer Tools,youtrack-workflows,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,youtrack-workflows,Avg Lines/Commit,3709.3636,25.5,-99.3%,N/A,,-0.651,medium
+Developer Tools,youtrack-workflows,Bug-Fix Ratio,N/A,0.5,N/A,N/A,,1.225,large
+Developer Tools,youtrack-workflows,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,youtrack-workflows,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+Developer Tools,youtrack-workflows,Del/Add Ratio,52.4962,0.25,-99.5%,N/A,,-0.440,small
+Static Analysis,DeepBugsPlugin,Avg Function Length,7.5202,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,DeepBugsPlugin,Avg Lines/Commit,15735.1051,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,DeepBugsPlugin,Bug-Fix Ratio,0.2451,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,DeepBugsPlugin,Comment Density,0.0045,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,DeepBugsPlugin,Cyclomatic Complexity,1.7181,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,DeepBugsPlugin,Del/Add Ratio,8188.8973,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,JetBrains.Rider.Debugger.Launcher,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,JetBrains.Rider.Debugger.Launcher,Avg Lines/Commit,32.3333,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,JetBrains.Rider.Debugger.Launcher,Bug-Fix Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,JetBrains.Rider.Debugger.Launcher,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,JetBrains.Rider.Debugger.Launcher,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,JetBrains.Rider.Debugger.Launcher,Del/Add Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,MoveMethodGenerator,Avg Function Length,14.2251,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,MoveMethodGenerator,Avg Lines/Commit,172.4483,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,MoveMethodGenerator,Bug-Fix Ratio,0.0345,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,MoveMethodGenerator,Comment Density,0.0053,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,MoveMethodGenerator,Cyclomatic Complexity,2.403,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,MoveMethodGenerator,Del/Add Ratio,0.6114,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,RefactorInsight,Avg Function Length,13.8897,22.4661,+61.7%,0.0000,✓,0.598,medium
+Static Analysis,RefactorInsight,Avg Lines/Commit,112.0498,343.2469,+206.3%,0.2307,,0.254,small
+Static Analysis,RefactorInsight,Bug-Fix Ratio,0.129,0.1975,+53.2%,0.1021,,0.186,negligible
+Static Analysis,RefactorInsight,Comment Density,0.0061,0.0053,-12.9%,0.3324,,-0.035,negligible
+Static Analysis,RefactorInsight,Cyclomatic Complexity,1.8146,2.4098,+32.8%,0.0000,✓,0.349,small
+Static Analysis,RefactorInsight,Del/Add Ratio,1.149,0.6987,-39.2%,0.7472,,-0.225,small
+Static Analysis,TeamCity.SonarQubePlugin,Avg Function Length,8.15,8.7731,+7.6%,0.1789,,0.122,negligible
+Static Analysis,TeamCity.SonarQubePlugin,Avg Lines/Commit,114.0357,215.1333,+88.7%,0.0376,✓,0.257,small
+Static Analysis,TeamCity.SonarQubePlugin,Bug-Fix Ratio,0.1964,0.2667,+35.8%,0.5635,,0.163,negligible
+Static Analysis,TeamCity.SonarQubePlugin,Comment Density,0.0054,0.0071,+31.9%,0.9574,,0.087,negligible
+Static Analysis,TeamCity.SonarQubePlugin,Cyclomatic Complexity,1.6941,1.8066,+6.6%,0.2169,,0.120,negligible
+Static Analysis,TeamCity.SonarQubePlugin,Del/Add Ratio,1.223,1.3129,+7.4%,0.6056,,0.043,negligible
 Static Analysis,astminer,Avg Function Length,9.3463,N/A,N/A,N/A,,N/A,N/A
 Static Analysis,astminer,Avg Lines/Commit,74.5278,11.0,-85.2%,N/A,,-0.287,small
 Static Analysis,astminer,Bug-Fix Ratio,0.1256,N/A,-100.0%,N/A,,-0.536,medium
 Static Analysis,astminer,Comment Density,0.0199,N/A,N/A,N/A,,N/A,N/A
 Static Analysis,astminer,Cyclomatic Complexity,1.6072,N/A,N/A,N/A,,N/A,N/A
 Static Analysis,astminer,Del/Add Ratio,1.0304,N/A,-100.0%,N/A,,-0.461,small
-Static Analysis,bug-finder,Avg Function Length,16.5584,N/A,N/A,N/A,,N/A,N/A
-Static Analysis,bug-finder,Avg Lines/Commit,119.4821,N/A,N/A,N/A,,N/A,N/A
-Static Analysis,bug-finder,Bug-Fix Ratio,0.2991,N/A,N/A,N/A,,N/A,N/A
-Static Analysis,bug-finder,Comment Density,0.0049,N/A,N/A,N/A,,N/A,N/A
-Static Analysis,bug-finder,Cyclomatic Complexity,3.3312,N/A,N/A,N/A,,N/A,N/A
-Static Analysis,bug-finder,Del/Add Ratio,1.5571,N/A,N/A,N/A,,N/A,N/A
-Static Analysis,code-change-miner,Avg Function Length,22.3145,N/A,N/A,N/A,,N/A,N/A
-Static Analysis,code-change-miner,Avg Lines/Commit,119.8951,2.0,-98.3%,N/A,,N/A,N/A
-Static Analysis,code-change-miner,Bug-Fix Ratio,0.1958,N/A,-100.0%,N/A,,N/A,N/A
-Static Analysis,code-change-miner,Comment Density,0.0199,N/A,N/A,N/A,,N/A,N/A
-Static Analysis,code-change-miner,Cyclomatic Complexity,4.647,N/A,N/A,N/A,,N/A,N/A
-Static Analysis,code-change-miner,Del/Add Ratio,0.8753,1.0,+14.3%,N/A,,N/A,N/A
-Static Analysis,kotlin-ref-miner,Avg Function Length,10.6018,13.1078,+23.6%,0.1368,,0.387,small
-Static Analysis,kotlin-ref-miner,Avg Lines/Commit,444.8118,22.0,-95.1%,0.0499,✓,-0.371,small
-Static Analysis,kotlin-ref-miner,Bug-Fix Ratio,0.2235,0.2857,+27.8%,0.7154,,0.137,negligible
-Static Analysis,kotlin-ref-miner,Comment Density,0.005,0.0097,+92.2%,0.6561,,0.365,small
-Static Analysis,kotlin-ref-miner,Cyclomatic Complexity,3.0773,2.3768,-22.8%,0.4832,,-0.347,small
-Static Analysis,kotlin-ref-miner,Del/Add Ratio,0.4879,0.8093,+65.9%,0.0589,,0.459,small
-Static Analysis,refactorinsight,Avg Function Length,13.8897,22.4661,+61.7%,0.0000,✓,0.598,medium
-Static Analysis,refactorinsight,Avg Lines/Commit,112.0498,343.2469,+206.3%,0.2307,,0.254,small
-Static Analysis,refactorinsight,Bug-Fix Ratio,0.129,0.1975,+53.2%,0.1021,,0.186,negligible
-Static Analysis,refactorinsight,Comment Density,0.0061,0.0053,-12.9%,0.3324,,-0.035,negligible
-Static Analysis,refactorinsight,Cyclomatic Complexity,1.8146,2.4098,+32.8%,0.0000,✓,0.349,small
-Static Analysis,refactorinsight,Del/Add Ratio,1.149,0.6987,-39.2%,0.7472,,-0.225,small
+Static Analysis,authorship-detection,Avg Function Length,11.3759,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,authorship-detection,Avg Lines/Commit,376.4534,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,authorship-detection,Bug-Fix Ratio,0.0497,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,authorship-detection,Comment Density,0.0362,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,authorship-detection,Cyclomatic Complexity,2.5343,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,authorship-detection,Del/Add Ratio,1.1138,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,bugs-classification,Avg Function Length,10.6444,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,bugs-classification,Avg Lines/Commit,229.0175,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,bugs-classification,Bug-Fix Ratio,0.1579,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,bugs-classification,Comment Density,0.0226,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,bugs-classification,Cyclomatic Complexity,1.8903,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,bugs-classification,Del/Add Ratio,1.8623,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,clion-debugger-plugin-stub,Avg Function Length,4.6886,4.1518,-11.4%,N/A,,-0.370,small
+Static Analysis,clion-debugger-plugin-stub,Avg Lines/Commit,514.0,149.5714,-70.9%,N/A,,-0.677,medium
+Static Analysis,clion-debugger-plugin-stub,Bug-Fix Ratio,0.3333,N/A,-100.0%,N/A,,-0.816,large
+Static Analysis,clion-debugger-plugin-stub,Comment Density,0.0107,0.0456,+325.9%,N/A,,0.693,medium
+Static Analysis,clion-debugger-plugin-stub,Cyclomatic Complexity,1.1533,1.0357,-10.2%,N/A,,-0.475,small
+Static Analysis,clion-debugger-plugin-stub,Del/Add Ratio,0.2667,0.8648,+224.3%,N/A,,1.310,large
+Static Analysis,coverage-report,Avg Function Length,7.1643,9.8037,+36.8%,0.0016,✓,0.660,medium
+Static Analysis,coverage-report,Avg Lines/Commit,541.5833,30.1818,-94.4%,0.8534,,-0.487,small
+Static Analysis,coverage-report,Bug-Fix Ratio,0.3333,N/A,-100.0%,0.0440,✓,-0.957,large
+Static Analysis,coverage-report,Comment Density,0.0021,0.0142,+592.3%,0.0000,✓,1.194,large
+Static Analysis,coverage-report,Cyclomatic Complexity,1.6606,2.0078,+20.9%,0.1029,,0.322,small
+Static Analysis,coverage-report,Del/Add Ratio,0.786,1.1671,+48.5%,0.0162,✓,0.199,negligible
+Static Analysis,debugger-memory-agent,Avg Function Length,7.7045,5.3543,-30.5%,0.3255,,-0.711,medium
+Static Analysis,debugger-memory-agent,Avg Lines/Commit,100.4249,42.6154,-57.6%,0.3055,,-0.271,small
+Static Analysis,debugger-memory-agent,Bug-Fix Ratio,0.1295,0.2308,+78.2%,0.3057,,0.259,small
+Static Analysis,debugger-memory-agent,Comment Density,0.0018,N/A,-100.0%,0.5990,,-0.226,small
+Static Analysis,debugger-memory-agent,Cyclomatic Complexity,1.3153,1.3665,+3.9%,0.3047,,0.125,negligible
+Static Analysis,debugger-memory-agent,Del/Add Ratio,1.193,0.5878,-50.7%,0.7124,,-0.132,negligible
+Static Analysis,dotmemory-demos,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,dotmemory-demos,Avg Lines/Commit,43.5,101.5,+133.3%,N/A,,0.556,medium
+Static Analysis,dotmemory-demos,Bug-Fix Ratio,0.5,N/A,-100.0%,N/A,,-1.000,large
+Static Analysis,dotmemory-demos,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,dotmemory-demos,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,dotmemory-demos,Del/Add Ratio,0.8721,0.5,-42.7%,N/A,,-0.721,medium
+Static Analysis,eslint-config,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,eslint-config,Avg Lines/Commit,1018.5,553.6538,-45.6%,0.8976,,-0.244,small
+Static Analysis,eslint-config,Bug-Fix Ratio,0.1389,0.1538,+10.8%,0.8792,,0.042,negligible
+Static Analysis,eslint-config,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,eslint-config,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,eslint-config,Del/Add Ratio,1.2992,2.7659,+112.9%,0.5928,,0.269,small
+Static Analysis,inspection-plugin,Avg Function Length,12.5908,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,inspection-plugin,Avg Lines/Commit,10.2857,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,inspection-plugin,Bug-Fix Ratio,0.119,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,inspection-plugin,Comment Density,0.0123,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,inspection-plugin,Cyclomatic Complexity,4.3182,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,inspection-plugin,Del/Add Ratio,0.8141,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,intellij-coverage,Avg Function Length,7.1619,8.8817,+24.0%,0.0000,✓,0.334,small
+Static Analysis,intellij-coverage,Avg Lines/Commit,168.1875,466.0695,+177.1%,0.5455,,0.203,small
+Static Analysis,intellij-coverage,Bug-Fix Ratio,0.4062,0.2674,-34.2%,0.0374,✓,-0.295,small
+Static Analysis,intellij-coverage,Comment Density,0.0038,0.0141,+268.7%,0.0000,✓,0.580,medium
+Static Analysis,intellij-coverage,Cyclomatic Complexity,1.8121,2.198,+21.3%,0.0000,✓,0.295,small
+Static Analysis,intellij-coverage,Del/Add Ratio,0.4443,2.2516,+406.8%,0.0196,✓,0.150,negligible
+Static Analysis,intellij-structural-search-for-kotlin,Avg Function Length,8.0311,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,intellij-structural-search-for-kotlin,Avg Lines/Commit,52.1257,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,intellij-structural-search-for-kotlin,Bug-Fix Ratio,0.2094,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,intellij-structural-search-for-kotlin,Comment Density,0.0076,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,intellij-structural-search-for-kotlin,Cyclomatic Complexity,2.0627,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,intellij-structural-search-for-kotlin,Del/Add Ratio,0.5012,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,kotlin-code-smells-detector,Avg Function Length,10.5712,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,kotlin-code-smells-detector,Avg Lines/Commit,408.6,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,kotlin-code-smells-detector,Bug-Fix Ratio,0.1,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,kotlin-code-smells-detector,Comment Density,0.0082,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,kotlin-code-smells-detector,Cyclomatic Complexity,2.5859,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,kotlin-code-smells-detector,Del/Add Ratio,0.7044,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,kotlin-refactoring-samples,Avg Function Length,3.0894,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,kotlin-refactoring-samples,Avg Lines/Commit,17.1429,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,kotlin-refactoring-samples,Bug-Fix Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,kotlin-refactoring-samples,Comment Density,0.0174,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,kotlin-refactoring-samples,Cyclomatic Complexity,1.0711,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,kotlin-refactoring-samples,Del/Add Ratio,0.6487,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,kotlinRMiner,Avg Function Length,10.6018,13.1078,+23.6%,0.1368,,0.387,small
+Static Analysis,kotlinRMiner,Avg Lines/Commit,444.8118,22.0,-95.1%,0.0499,✓,-0.371,small
+Static Analysis,kotlinRMiner,Bug-Fix Ratio,0.2235,0.2857,+27.8%,0.7154,,0.137,negligible
+Static Analysis,kotlinRMiner,Comment Density,0.005,0.0097,+92.2%,0.6561,,0.365,small
+Static Analysis,kotlinRMiner,Cyclomatic Complexity,3.0773,2.3768,-22.8%,0.4832,,-0.347,small
+Static Analysis,kotlinRMiner,Del/Add Ratio,0.4879,0.8093,+65.9%,0.0589,,0.459,small
+Static Analysis,metrics-evaluation,Avg Function Length,14.3845,14.1839,-1.4%,0.8920,,-0.015,negligible
+Static Analysis,metrics-evaluation,Avg Lines/Commit,264.0169,1691.3333,+540.6%,N/A,,1.130,large
+Static Analysis,metrics-evaluation,Bug-Fix Ratio,0.0678,N/A,-100.0%,N/A,,-0.378,small
+Static Analysis,metrics-evaluation,Comment Density,0.0344,0.0288,-16.4%,0.2899,,-0.076,negligible
+Static Analysis,metrics-evaluation,Cyclomatic Complexity,4.0547,4.0377,-0.4%,0.7924,,-0.005,negligible
+Static Analysis,metrics-evaluation,Del/Add Ratio,1.3166,0.2053,-84.4%,N/A,,-0.244,small
+Static Analysis,profiler-api,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,profiler-api,Avg Lines/Commit,93.1429,43.3415,-53.5%,0.0037,✓,-0.294,small
+Static Analysis,profiler-api,Bug-Fix Ratio,0.2857,0.122,-57.3%,0.0770,,-0.410,small
+Static Analysis,profiler-api,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,profiler-api,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,profiler-api,Del/Add Ratio,0.9809,0.956,-2.5%,0.0570,,-0.028,negligible
+Static Analysis,profiler-self-api,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,profiler-self-api,Avg Lines/Commit,94.0571,74.6986,-20.6%,0.0206,✓,-0.058,negligible
+Static Analysis,profiler-self-api,Bug-Fix Ratio,0.2,0.1644,-17.8%,0.5502,,-0.092,negligible
+Static Analysis,profiler-self-api,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,profiler-self-api,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,profiler-self-api,Del/Add Ratio,1.0974,1.245,+13.4%,0.0749,,0.059,negligible
+Static Analysis,resharper-cyclomatic-complexity,Avg Function Length,3.0,4.5,+50.0%,N/A,,N/A,N/A
+Static Analysis,resharper-cyclomatic-complexity,Avg Lines/Commit,86.2439,25.6909,-70.2%,0.3868,,-0.238,small
+Static Analysis,resharper-cyclomatic-complexity,Bug-Fix Ratio,0.122,0.1636,+34.2%,0.5732,,0.118,negligible
+Static Analysis,resharper-cyclomatic-complexity,Comment Density,0.0385,N/A,-100.0%,N/A,,-1.000,large
+Static Analysis,resharper-cyclomatic-complexity,Cyclomatic Complexity,1.0,1.0,+0.0%,N/A,,N/A,N/A
+Static Analysis,resharper-cyclomatic-complexity,Del/Add Ratio,0.7381,1.0024,+35.8%,0.0768,,0.248,small
+Static Analysis,ring-ui-license-checker,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,ring-ui-license-checker,Avg Lines/Commit,1879.3913,29.0,-98.5%,N/A,,N/A,N/A
+Static Analysis,ring-ui-license-checker,Bug-Fix Ratio,0.1304,N/A,-100.0%,N/A,,N/A,N/A
+Static Analysis,ring-ui-license-checker,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,ring-ui-license-checker,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,ring-ui-license-checker,Del/Add Ratio,0.888,N/A,-100.0%,N/A,,N/A,N/A
+Static Analysis,stylelint-config,Avg Function Length,N/A,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,stylelint-config,Avg Lines/Commit,799.4615,702.1818,-12.2%,0.8845,,-0.064,negligible
+Static Analysis,stylelint-config,Bug-Fix Ratio,0.0769,N/A,-100.0%,0.4030,,-0.392,small
+Static Analysis,stylelint-config,Comment Density,N/A,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,stylelint-config,Cyclomatic Complexity,N/A,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,stylelint-config,Del/Add Ratio,1.3908,0.5818,-58.2%,0.0447,✓,-0.783,medium
+Static Analysis,teamcity-dotmemory,Avg Function Length,11.8583,11.6545,-1.7%,0.8962,,-0.033,negligible
+Static Analysis,teamcity-dotmemory,Avg Lines/Commit,99.6,316.0,+217.3%,N/A,,0.866,large
+Static Analysis,teamcity-dotmemory,Bug-Fix Ratio,0.2,N/A,-100.0%,N/A,,-0.632,medium
+Static Analysis,teamcity-dotmemory,Comment Density,0.0172,0.0172,+0.2%,0.9657,,0.001,negligible
+Static Analysis,teamcity-dotmemory,Cyclomatic Complexity,1.5196,1.5412,+1.4%,0.9056,,0.030,negligible
+Static Analysis,teamcity-dotmemory,Del/Add Ratio,0.8,4.6653,+483.2%,N/A,,0.897,large
+Static Analysis,teamcity-dottrace,Avg Function Length,14.0438,13.5073,-3.8%,0.6564,,-0.066,negligible
+Static Analysis,teamcity-dottrace,Avg Lines/Commit,278.8333,713.0,+155.7%,N/A,,0.668,medium
+Static Analysis,teamcity-dottrace,Bug-Fix Ratio,0.1667,N/A,-100.0%,N/A,,-0.577,medium
+Static Analysis,teamcity-dottrace,Comment Density,0.0227,0.0245,+7.9%,0.8040,,0.054,negligible
+Static Analysis,teamcity-dottrace,Cyclomatic Complexity,2.0171,1.9842,-1.6%,0.8923,,-0.026,negligible
+Static Analysis,teamcity-dottrace,Del/Add Ratio,0.7099,5.0,+604.3%,N/A,,1.068,large
+Static Analysis,topias,Avg Function Length,19.7601,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,topias,Avg Lines/Commit,104.5673,4.0,-96.2%,N/A,,N/A,N/A
+Static Analysis,topias,Bug-Fix Ratio,0.0865,N/A,-100.0%,N/A,,N/A,N/A
+Static Analysis,topias,Comment Density,0.0168,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,topias,Cyclomatic Complexity,2.6899,N/A,N/A,N/A,,N/A,N/A
+Static Analysis,topias,Del/Add Ratio,1.1708,N/A,-100.0%,N/A,,N/A,N/A
