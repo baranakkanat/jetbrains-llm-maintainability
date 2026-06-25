@@ -1,0 +1,584 @@
+[
+  {
+    "name": "JetBrains-Research/astminer",
+    "created_at": "2018-12-14T16:37:33Z",
+    "language": "Kotlin",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains/teamcity-dottrace",
+    "created_at": "2015-08-18T09:03:02Z",
+    "language": "Java",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains/TeamCity.SonarQubePlugin",
+    "created_at": "2014-07-10T10:57:15Z",
+    "language": "Java",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains-Research/kotlin-code-smells-detector",
+    "created_at": "2020-03-05T15:00:01Z",
+    "language": "Kotlin",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains/inspection-plugin",
+    "created_at": "2017-08-04T12:59:23Z",
+    "language": "Kotlin",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains/eslint-config",
+    "created_at": "2017-05-24T15:05:54Z",
+    "language": "JavaScript",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains-Research/authorship-detection",
+    "created_at": "2019-03-05T20:26:46Z",
+    "language": "Python",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains/resharper-cyclomatic-complexity",
+    "created_at": "2015-08-26T08:44:54Z",
+    "language": "C#",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains-Research/kotlin-refactoring-samples",
+    "created_at": "2020-07-13T12:39:10Z",
+    "language": "Kotlin",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains-Research/bugs-classification",
+    "created_at": "2018-06-10T10:18:04Z",
+    "language": "Java",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains/teamcity-dotmemory",
+    "created_at": "2015-08-18T09:00:11Z",
+    "language": "Java",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains/JetBrains.Rider.Debugger.Launcher",
+    "created_at": "2019-06-24T19:11:22Z",
+    "language": "C#",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains/intellij-coverage",
+    "created_at": "2014-12-09T11:38:56Z",
+    "language": "Java",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains-Research/RefactorInsight",
+    "created_at": "2020-06-30T10:05:16Z",
+    "language": "Java",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains/clion-debugger-plugin-stub",
+    "created_at": "2020-05-21T09:24:59Z",
+    "language": "Java",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains-Research/topias",
+    "created_at": "2018-09-16T12:35:31Z",
+    "language": "Java",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains/profiler-self-api",
+    "created_at": "2019-05-31T10:57:43Z",
+    "language": "C#",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains-Research/metrics-evaluation",
+    "created_at": "2020-06-09T16:57:25Z",
+    "language": "Python",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains/ring-ui-license-checker",
+    "created_at": "2017-10-18T10:01:18Z",
+    "language": "JavaScript",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains/intellij-structural-search-for-kotlin",
+    "created_at": "2020-03-26T19:24:09Z",
+    "language": "Kotlin",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains/profiler-api",
+    "created_at": "2019-02-12T15:11:55Z",
+    "language": "C#",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains/dotmemory-demos",
+    "created_at": "2016-04-13T07:19:53Z",
+    "language": "C#",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains/stylelint-config",
+    "created_at": "2017-03-13T10:55:08Z",
+    "language": "JavaScript",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains-Research/kotlinRMiner",
+    "created_at": "2020-07-18T09:51:55Z",
+    "language": "Java",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains-Research/MoveMethodGenerator",
+    "created_at": "2019-01-21T16:41:33Z",
+    "language": "Java",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains/debugger-memory-agent",
+    "created_at": "2018-06-28T08:23:52Z",
+    "language": "C++",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains/coverage-report",
+    "created_at": "2021-01-26T14:17:42Z",
+    "language": "Java",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains-Research/DeepBugsPlugin",
+    "created_at": "2018-08-31T13:40:44Z",
+    "language": "Kotlin",
+    "group": "Static Analysis"
+  },
+  {
+    "name": "JetBrains/ruby-type-inference",
+    "created_at": "2017-03-16T09:57:01Z",
+    "language": "Kotlin",
+    "group": "AI & ML Research"
+  },
+  {
+    "name": "JetBrains-Research/viktor",
+    "created_at": "2015-10-14T16:06:49Z",
+    "language": "Kotlin",
+    "group": "AI & ML Research"
+  },
+  {
+    "name": "JetBrains-Research/python-ml-type-hints",
+    "created_at": "2020-10-02T09:11:38Z",
+    "language": "Kotlin",
+    "group": "AI & ML Research"
+  },
+  {
+    "name": "JetBrains-Research/embeddings-for-trees",
+    "created_at": "2019-10-09T12:40:13Z",
+    "language": "Python",
+    "group": "AI & ML Research"
+  },
+  {
+    "name": "JetBrains/nlc2cmd",
+    "created_at": "2020-11-26T12:33:42Z",
+    "language": "Python",
+    "group": "AI & ML Research"
+  },
+  {
+    "name": "JetBrains/dotnet-project-model",
+    "created_at": "2019-07-23T13:11:04Z",
+    "language": "Kotlin",
+    "group": "AI & ML Research"
+  },
+  {
+    "name": "JetBrains/teamcity-search-ql",
+    "created_at": "2020-08-06T10:58:17Z",
+    "language": "Kotlin",
+    "group": "AI & ML Research"
+  },
+  {
+    "name": "JetBrains-Research/contrastive-learning-framework",
+    "created_at": "2020-12-25T09:57:26Z",
+    "language": "Python",
+    "group": "AI & ML Research"
+  },
+  {
+    "name": "JetBrains/teamcity-xml-tests-reporting",
+    "created_at": "2018-11-28T18:35:32Z",
+    "language": "Java",
+    "group": "AI & ML Research"
+  },
+  {
+    "name": "JetBrains-Research/code-summarization-dataset",
+    "created_at": "2020-10-19T14:02:37Z",
+    "language": "Kotlin",
+    "group": "AI & ML Research"
+  },
+  {
+    "name": "JetBrains-Research/deep-gene",
+    "created_at": "2016-02-26T10:41:02Z",
+    "language": "Python",
+    "group": "AI & ML Research"
+  },
+  {
+    "name": "JetBrains-Research/code-completion-benchmark-toolkit",
+    "created_at": "2019-07-31T12:41:32Z",
+    "language": "Kotlin",
+    "group": "AI & ML Research"
+  },
+  {
+    "name": "JetBrains-Research/dataset-anonymizer",
+    "created_at": "2020-11-17T09:40:47Z",
+    "language": "Kotlin",
+    "group": "AI & ML Research"
+  },
+  {
+    "name": "JetBrains-Research/fishbone",
+    "created_at": "2019-03-07T15:34:18Z",
+    "language": "JavaScript",
+    "group": "AI & ML Research"
+  },
+  {
+    "name": "JetBrains-Research/commit_message_generation",
+    "created_at": "2020-10-16T14:12:51Z",
+    "language": "Python",
+    "group": "AI & ML Research"
+  },
+  {
+    "name": "JetBrains-Research/kinference",
+    "created_at": "2020-03-02T15:04:54Z",
+    "language": "Kotlin",
+    "group": "AI & ML Research"
+  },
+  {
+    "name": "JetBrains-Research/optimization-methods",
+    "created_at": "2021-02-26T09:35:23Z",
+    "language": "Python",
+    "group": "AI & ML Research"
+  },
+  {
+    "name": "JetBrains-Research/span",
+    "created_at": "2018-11-28T20:22:10Z",
+    "language": "Kotlin",
+    "group": "AI & ML Research"
+  },
+  {
+    "name": "JetBrains-Research/kinference-primitives",
+    "created_at": "2020-08-26T13:45:59Z",
+    "language": "Kotlin",
+    "group": "AI & ML Research"
+  },
+  {
+    "name": "JetBrains/sample-resharper-plugin",
+    "created_at": "2017-07-05T15:20:59Z",
+    "language": "C#",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/teamcity-maven-archetypes",
+    "created_at": "2013-01-22T17:18:47Z",
+    "language": "Java",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/intellij-obsolete-plugins",
+    "created_at": "2019-04-29T08:54:54Z",
+    "language": "Java",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/teamcity-github-auth",
+    "created_at": "2016-09-08T11:34:34Z",
+    "language": "Java",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/intellij-compiler-indices",
+    "created_at": "2020-05-12T18:33:59Z",
+    "language": "Scala",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/intellij-sdk-code-samples",
+    "created_at": "2020-04-02T15:20:51Z",
+    "language": "Java",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/intellij-micropython",
+    "created_at": "2017-06-18T19:29:22Z",
+    "language": "Python",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/teamcity-aws-core-plugin",
+    "created_at": "2019-10-02T13:40:39Z",
+    "language": "Java",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/plugin-repository-rest-client",
+    "created_at": "2015-04-07T17:02:02Z",
+    "language": "Kotlin",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/teamcity-dashboard-plugin",
+    "created_at": "2020-09-14T17:12:19Z",
+    "language": "JavaScript",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/resharper-plugins",
+    "created_at": "2012-09-12T17:53:53Z",
+    "language": "C#",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/teamcity-local-cloud",
+    "created_at": "2012-02-17T11:29:09Z",
+    "language": "Java",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/phpstorm-phpstan-plugin",
+    "created_at": "2020-06-15T17:05:14Z",
+    "language": "Java",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/intellij-scala-historical",
+    "created_at": "2015-11-08T18:56:35Z",
+    "language": "Scala",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/teamcity-commit-hooks",
+    "created_at": "2016-09-05T13:22:04Z",
+    "language": "Kotlin",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains-Research/IntelliJDeodorant",
+    "created_at": "2019-08-05T19:32:01Z",
+    "language": "Java",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/intellij-stats-collector",
+    "created_at": "2015-11-11T09:09:10Z",
+    "language": "Kotlin",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/teamcity-torrent-plugin",
+    "created_at": "2013-07-30T14:10:46Z",
+    "language": "Java",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/teamcity-hashicorp-vault-plugin",
+    "created_at": "2017-07-27T23:01:28Z",
+    "language": "Kotlin",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/teamcity-aws-codepipeline-plugin",
+    "created_at": "2016-04-19T17:21:04Z",
+    "language": "Java",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/teamcity-investigations-hub-widget",
+    "created_at": "2018-08-13T16:46:35Z",
+    "language": "JavaScript",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/gradle-changelog-plugin",
+    "created_at": "2020-05-19T03:53:36Z",
+    "language": "Kotlin",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/intellij-arend",
+    "created_at": "2017-07-03T03:53:54Z",
+    "language": "Kotlin",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/mocha-intellij",
+    "created_at": "2014-09-18T16:18:31Z",
+    "language": "JavaScript",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/teamcity-vscode-extension",
+    "created_at": "2017-07-03T11:17:14Z",
+    "language": "TypeScript",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/hub-dashboard-addons",
+    "created_at": "2017-05-25T14:27:37Z",
+    "language": "JavaScript",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/teamcity-github-issues",
+    "created_at": "2015-09-11T22:32:02Z",
+    "language": "Java",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/teamcity-bitbucket-issues",
+    "created_at": "2016-02-24T11:51:28Z",
+    "language": "Java",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/projector-server",
+    "created_at": "2020-05-29T11:49:12Z",
+    "language": "Kotlin",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/resharper-nuget",
+    "created_at": "2012-10-18T09:13:16Z",
+    "language": "C#",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/intellij-platform-plugin-template",
+    "created_at": "2020-01-24T09:42:52Z",
+    "language": "Kotlin",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/intellij-kotlin",
+    "created_at": "2020-07-09T13:17:29Z",
+    "language": "Kotlin",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/ReSharperPowerToys",
+    "created_at": "2014-10-12T14:12:57Z",
+    "language": "C#",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/teamcity-gradle",
+    "created_at": "2018-12-29T10:40:13Z",
+    "language": "Java",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/js-graphql-intellij-plugin",
+    "created_at": "2015-12-13T15:22:27Z",
+    "language": "Java",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/ij_tutorial_gradle",
+    "created_at": "2020-06-30T13:34:33Z",
+    "language": "Java",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/hub-widget-ui",
+    "created_at": "2018-09-05T10:24:47Z",
+    "language": "JavaScript",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/teamcity-sakura-ui-plugins",
+    "created_at": "2020-09-02T14:52:48Z",
+    "language": "Java",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/teamcity-caches-cleanup-plugin",
+    "created_at": "2016-03-06T06:12:56Z",
+    "language": "Kotlin",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/teamcity-dotcover",
+    "created_at": "2019-05-22T13:53:19Z",
+    "language": "C#",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/sbt-intellij",
+    "created_at": "2015-10-27T12:57:50Z",
+    "language": "Scala",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/sbt-idea-shell",
+    "created_at": "2017-03-28T21:11:00Z",
+    "language": "Scala",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/youtrack-workflows",
+    "created_at": "2012-08-09T14:15:59Z",
+    "language": "JavaScript",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/plugin-blockmap-patches",
+    "created_at": "2020-09-21T06:22:58Z",
+    "language": "Kotlin",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/intellij-scala",
+    "created_at": "2011-11-11T14:34:07Z",
+    "language": "Scala",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/intellij-deps-trove4j",
+    "created_at": "2017-02-03T14:22:45Z",
+    "language": "Java",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/TeamCity.SESPlugin",
+    "created_at": "2017-09-27T09:42:01Z",
+    "language": "Kotlin",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/projector-markdown-plugin",
+    "created_at": "2020-05-29T11:49:35Z",
+    "language": "Java",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/teamcity-shared-resources",
+    "created_at": "2012-09-07T14:23:36Z",
+    "language": "Java",
+    "group": "Developer Tools"
+  },
+  {
+    "name": "JetBrains/educational-plugin",
+    "created_at": "2015-10-05T15:54:52Z",
+    "language": "Kotlin",
+    "group": "Developer Tools"
+  }
+]
