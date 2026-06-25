@@ -131,12 +131,12 @@ Developer Tools,TeamCity.SESPlugin,Bug-Fix Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
 Developer Tools,TeamCity.SESPlugin,Comment Density,0.0063,0.0097,+52.5%,0.9753,,0.063,negligible
 Developer Tools,TeamCity.SESPlugin,Cyclomatic Complexity,1.8388,1.8388,-0.0%,1.0000,,-0.000,negligible
 Developer Tools,TeamCity.SESPlugin,Del/Add Ratio,0.8571,6.875,+702.1%,N/A,,0.875,large
-Developer Tools,educational-plugin,Avg Function Length,11.0021,12.6023,+14.5%,0.0000,✓,0.141,negligible
-Developer Tools,educational-plugin,Avg Lines/Commit,90.9287,122.0926,+34.3%,0.0000,✓,0.029,negligible
-Developer Tools,educational-plugin,Bug-Fix Ratio,0.1327,0.1106,-16.7%,0.0030,✓,-0.068,negligible
-Developer Tools,educational-plugin,Comment Density,0.0103,0.0168,+62.8%,0.0000,✓,0.207,small
+Developer Tools,educational-plugin,Avg Function Length,11.0021,12.6021,+14.5%,0.0000,✓,0.141,negligible
+Developer Tools,educational-plugin,Avg Lines/Commit,90.9287,122.056,+34.2%,0.0000,✓,0.029,negligible
+Developer Tools,educational-plugin,Bug-Fix Ratio,0.1327,0.1105,-16.7%,0.0029,✓,-0.068,negligible
+Developer Tools,educational-plugin,Comment Density,0.0103,0.0168,+62.8%,0.0000,✓,0.206,small
 Developer Tools,educational-plugin,Cyclomatic Complexity,2.2003,2.0941,-4.8%,0.0000,✓,-0.086,negligible
-Developer Tools,educational-plugin,Del/Add Ratio,1.3778,5.5588,+303.5%,0.0354,✓,0.059,negligible
+Developer Tools,educational-plugin,Del/Add Ratio,1.3778,5.556,+303.3%,0.0367,✓,0.059,negligible
 Developer Tools,gradle-changelog-plugin,Avg Function Length,16.653,28.4895,+71.1%,0.0001,✓,0.363,small
 Developer Tools,gradle-changelog-plugin,Avg Lines/Commit,32.113,25.0341,-22.0%,0.1860,,-0.088,negligible
 Developer Tools,gradle-changelog-plugin,Bug-Fix Ratio,0.0395,0.233,+489.0%,0.0000,✓,0.586,medium
@@ -306,11 +306,11 @@ Developer Tools,teamcity-aws-codepipeline-plugin,Comment Density,0.0008,0.001,+2
 Developer Tools,teamcity-aws-codepipeline-plugin,Cyclomatic Complexity,2.1091,2.1333,+1.1%,1.0000,,0.042,negligible
 Developer Tools,teamcity-aws-codepipeline-plugin,Del/Add Ratio,1.4961,0.8438,-43.6%,N/A,,-0.493,small
 Developer Tools,teamcity-aws-core-plugin,Avg Function Length,7.5993,11.628,+53.0%,0.0000,✓,0.876,large
-Developer Tools,teamcity-aws-core-plugin,Avg Lines/Commit,70.9867,222.817,+213.9%,0.0029,✓,0.200,negligible
-Developer Tools,teamcity-aws-core-plugin,Bug-Fix Ratio,0.1333,0.2876,+115.7%,0.0103,✓,0.384,small
+Developer Tools,teamcity-aws-core-plugin,Avg Lines/Commit,70.9867,221.4221,+211.9%,0.0029,✓,0.198,negligible
+Developer Tools,teamcity-aws-core-plugin,Bug-Fix Ratio,0.1333,0.2857,+114.3%,0.0110,✓,0.379,small
 Developer Tools,teamcity-aws-core-plugin,Comment Density,0.0032,0.0061,+90.2%,0.5375,,0.224,small
 Developer Tools,teamcity-aws-core-plugin,Cyclomatic Complexity,1.8339,1.8177,-0.9%,0.1189,,-0.024,negligible
-Developer Tools,teamcity-aws-core-plugin,Del/Add Ratio,0.622,0.8002,+28.6%,0.2507,,0.113,negligible
+Developer Tools,teamcity-aws-core-plugin,Del/Add Ratio,0.622,0.7958,+27.9%,0.2361,,0.111,negligible
 Developer Tools,teamcity-bitbucket-issues,Avg Function Length,7.3623,7.7484,+5.2%,0.7618,,0.100,negligible
 Developer Tools,teamcity-bitbucket-issues,Avg Lines/Commit,26.4762,88.5,+234.3%,0.1137,,0.481,small
 Developer Tools,teamcity-bitbucket-issues,Bug-Fix Ratio,0.0952,0.25,+162.5%,0.3074,,0.396,small
