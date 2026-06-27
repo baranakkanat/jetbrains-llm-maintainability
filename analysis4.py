@@ -6,7 +6,7 @@ import matplotlib.dates as mdates
 import re
 import lizard
 
-print("Full analysis starting... (may take 1-2 hours for 20 repos)")
+print("Full analysis starting... (may take 1-2 hours for 199 repos)")
 
 EPOS = {
     # Group 1: Static Analysis & Code Quality
@@ -724,11 +724,11 @@ def make_chart(title, filename, df, y_col, ylabel):
     plt.savefig(filename, dpi=120, bbox_inches="tight")
     print(f"Saved: {filename}")
 
-make_chart("Comment Density — 20 JetBrains Repositories", "chart1_comment_density.png", monthly_files, "comment_ratio", "Comment Ratio")
-make_chart("Avg Lines Changed per Commit — 20 JetBrains Repositories", "chart2_commit_size.png", monthly_commits, "avg_lines_changed", "Lines Changed")
-make_chart("Bug-Fix Commit Ratio — 20 JetBrains Repositories", "chart3_bugfix_ratio.png", monthly_commits, "bugfix_ratio", "Bug-Fix Ratio")
-make_chart("Cyclomatic Complexity — 20 JetBrains Repositories", "chart4_cyclomatic.png", monthly_files, "cyclomatic_complexity", "Cyclomatic Complexity")
-make_chart("Avg Function Length — 20 JetBrains Repositories", "chart5_avg_function_length.png", monthly_files, "cognitive_complexity", "Avg Lines per Function")
-make_chart("Deletion/Addition Ratio — 20 JetBrains Repositories", "chart6_del_add_ratio.png", monthly_commits, "del_add_ratio", "Del/Add Ratio")
+make_chart("Comment Density — 199 JetBrains Repositories", "chart1_comment_density.png", monthly_files, "comment_ratio", "Comment Ratio")
+make_chart("Avg Lines Changed per Commit — 199 JetBrains Repositories", "chart2_commit_size.png", monthly_commits, "avg_lines_changed", "Lines Changed")
+make_chart("Bug-Fix Commit Ratio — 199 JetBrains Repositories", "chart3_bugfix_ratio.png", monthly_commits, "bugfix_ratio", "Bug-Fix Ratio")
+make_chart("Cyclomatic Complexity — 199 JetBrains Repositories", "chart4_cyclomatic.png", monthly_files, "cyclomatic_complexity", "Cyclomatic Complexity")
+make_chart("Avg Function Length — 199 JetBrains Repositories", "chart5_avg_function_length.png", monthly_files, "cognitive_complexity", "Avg Lines per Function")
+make_chart("Deletion/Addition Ratio — 199 JetBrains Repositories", "chart6_del_add_ratio.png", monthly_commits, "del_add_ratio", "Del/Add Ratio")
 
 print("\nAll done! 6 charts saved.")

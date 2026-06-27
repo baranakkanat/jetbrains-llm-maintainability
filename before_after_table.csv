@@ -131,12 +131,12 @@ Developer Tools,TeamCity.SESPlugin,Bug-Fix Ratio,N/A,N/A,N/A,N/A,,N/A,N/A
 Developer Tools,TeamCity.SESPlugin,Comment Density,0.0063,0.0097,+52.5%,0.9753,,0.063,negligible
 Developer Tools,TeamCity.SESPlugin,Cyclomatic Complexity,1.8388,1.8388,-0.0%,1.0000,,-0.000,negligible
 Developer Tools,TeamCity.SESPlugin,Del/Add Ratio,0.8571,6.875,+702.1%,N/A,,0.875,large
-Developer Tools,educational-plugin,Avg Function Length,11.0021,12.6021,+14.5%,0.0000,✓,0.141,negligible
-Developer Tools,educational-plugin,Avg Lines/Commit,90.9287,122.056,+34.2%,0.0000,✓,0.029,negligible
-Developer Tools,educational-plugin,Bug-Fix Ratio,0.1327,0.1105,-16.7%,0.0029,✓,-0.068,negligible
-Developer Tools,educational-plugin,Comment Density,0.0103,0.0168,+62.8%,0.0000,✓,0.206,small
-Developer Tools,educational-plugin,Cyclomatic Complexity,2.2003,2.0941,-4.8%,0.0000,✓,-0.086,negligible
-Developer Tools,educational-plugin,Del/Add Ratio,1.3778,5.556,+303.3%,0.0367,✓,0.059,negligible
+Developer Tools,educational-plugin,Avg Function Length,11.0021,12.5987,+14.5%,0.0000,✓,0.141,negligible
+Developer Tools,educational-plugin,Avg Lines/Commit,90.9287,121.884,+34.0%,0.0000,✓,0.029,negligible
+Developer Tools,educational-plugin,Bug-Fix Ratio,0.1327,0.1111,-16.3%,0.0038,✓,-0.066,negligible
+Developer Tools,educational-plugin,Comment Density,0.0103,0.0169,+63.0%,0.0000,✓,0.207,small
+Developer Tools,educational-plugin,Cyclomatic Complexity,2.2003,2.0938,-4.8%,0.0000,✓,-0.086,negligible
+Developer Tools,educational-plugin,Del/Add Ratio,1.3778,5.5467,+302.6%,0.0367,✓,0.059,negligible
 Developer Tools,gradle-changelog-plugin,Avg Function Length,16.653,28.4895,+71.1%,0.0001,✓,0.363,small
 Developer Tools,gradle-changelog-plugin,Avg Lines/Commit,32.113,25.0341,-22.0%,0.1860,,-0.088,negligible
 Developer Tools,gradle-changelog-plugin,Bug-Fix Ratio,0.0395,0.233,+489.0%,0.0000,✓,0.586,medium
