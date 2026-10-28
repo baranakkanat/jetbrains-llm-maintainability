@@ -44,6 +44,7 @@ OUTPUT = "before_after_table.csv"
 HISTORY_START = datetime(2019, 1, 1)
 PRE_END = datetime(2021, 6, 1)      # GitHub Copilot technical preview
 POST_START = datetime(2023, 1, 1)   # first full month after ChatGPT's release
+POST_END = datetime(2026, 1, 1)     # post-LLM period is 2023-2025, as documented
 
 # A repository/metric pair needs this many monthly observations on each side
 # before a comparison is meaningful. Below it, a "significant" result is noise.
@@ -175,7 +176,8 @@ def compare(frame, repo_short, language):
     """Run the before/after test for every metric of one repository."""
     rows = []
     pre_mask = frame["month"] < pd.Period(PRE_END, freq="M")
-    post_mask = frame["month"] >= pd.Period(POST_START, freq="M")
+    post_mask = (frame["month"] >= pd.Period(POST_START, freq="M")) & \
+                (frame["month"] < pd.Period(POST_END, freq="M"))
 
     for metric in METRICS:
         if metric not in frame.columns:
