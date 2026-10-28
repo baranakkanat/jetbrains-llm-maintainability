@@ -114,8 +114,8 @@ description of what changed, not as an effect of LLM adoption.
 Some commits state their authorship directly:
 
 ```
-Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
 Co-authored-by: GitHub Copilot <...>
+Co-authored-by: <AI assistant> <...>
 ```
 
 `llm_signal_mining.py` scans the commit history of every sampled repository for

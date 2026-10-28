@@ -8,8 +8,8 @@ projects that simply died — moves the same metrics as LLM adoption does.
 Some repositories label the difference directly. A commit carrying a trailer
 such as
 
-    Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
     Co-authored-by: GitHub Copilot <...>
+    Co-authored-by: <AI assistant> <...>
 
 states that an assistant participated. Comparing those commits against the
 unlabelled commits of the same repository, over the same months, holds team,
