@@ -1,0 +1,9 @@
+hypothesis,term,effect,ci_low,ci_high,p,n,clusters,p_BH,section,outcome,earlier_sign,variants,same_sign_a_to_d,ci_excludes_0_a_to_d,robust_per_plan
+H1 follow-up fix (30d),is_pair,0.009379757288822347,-0.07361240743217451,0.0923719220098192,0.8246885041382979,4188.0,19.0,0.8246885041382979,confirmatory_plan_exact_H2,,,,,,
+H3a spillover: comment share,post_unlabelled,-0.008982752456686682,-0.026687474483242293,0.00872196956986893,0.32001114754562543,21475.0,114.0,0.6400222950912509,confirmatory_plan_exact_H2,,,,,,
+H3b spillover: commit size,post_unlabelled,-0.1751533789390379,-0.30040668878503796,-0.049900069093037874,0.006128034475927756,22438.0,114.0,0.024512137903711022,confirmatory_plan_exact_H2,,,,,,
+H2 reverted (plan-exact controls),is_pair,-0.0006648738266524725,-0.005376173821386176,0.00404642616808123,0.7820861038651135,4646.0,19.0,0.8246885041382979,confirmatory_plan_exact_H2,,,,,,
+,,,,,,,,,h4_verdict_per_plan,Comment share of added lines,1.0,4.0,True,False,False
+,,,,,,,,,h4_verdict_per_plan,Complexity added to modified methods,1.0,4.0,True,False,False
+,,,,,,,,,h4_verdict_per_plan,Net complexity per 100 added lines,-1.0,4.0,True,False,False
+,,,,,,,,,h4_verdict_per_plan,log(lines changed),1.0,4.0,True,True,True
