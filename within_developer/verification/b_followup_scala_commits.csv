@@ -1,0 +1,549 @@
+sha,group,followup_fix,followup_eligible,prod_files,ct,subject,n_prod,eligible,fu,fu_norenames,fu_newpath,fu_follow,fu_ext,fu_ge,fu_lt
+fd92ed8ea51f33e752b2f71947c3d476d85b9924,pair,0.0,True,1,1772524228,[build] Update the sbt-ide-settings plugin to 1.1.4,1,True,0,0,0,0,0,0,0
+f4d562edc3f228def911db1a2865ab1c566222b2,human,1.0,True,32,1772553651,"[compile server, eel] Translate paths using the eel machinery when communicating with the Scala Compile Server #SCL-24916 fixed",32,True,1,1,1,1,1,1,1
+4b204a318552d0cd3e95295bc1403c8c1025ac68,human,0.0,True,1,1772566260,[resolve] Fix some edge cases in constructor proxy resolution (type/term aliases),1,True,0,0,0,0,0,0,0
+84cf9dc60c2abbc06ea29e1435e8512e04166fff,human,0.0,True,2,1772566260,[conformance] Fix conformance of existential types designated to java classes,2,True,0,0,0,0,0,0,0
+b076f7a26d543f44978512d83ddbedffafd0d0e3,human,0.0,True,1,1772575157,[resolve] Perform minor fixes in term alias constructor proxy resolve,1,True,0,0,0,0,0,0,0
+62c2d30d44bafd748e13e10b5583c7c30c1f345e,pair,0.0,True,2,1772707638,[debugger] Factor out ServerConnector into a separate source file #SCL-25106,2,True,0,0,0,0,0,0,0
+c11591095be6f958179c0ea3853a8f06b696cebc,pair,0.0,True,1,1772707639,[debugger] Consolidate compile methods in ScalaEvaluatorCompileHelper #SCL-25106,1,True,0,0,0,0,0,0,0
+ef55421859272a3483c87a039adaa2dba337a0f4,pair,0.0,True,1,1772707640,[debugger] Use EelPathUtils for temp file/directory creation in ScalaEvaluatorCompileHelper #SCL-25106,1,True,0,0,0,0,0,0,0
+41dd9dd2bccc3f22bd84497da3666f6d1c4b7422,pair,0.0,True,1,1772707641,[debugger] Add type annotation to tempFiles and use mutable.Set.empty #SCL-25106,1,True,0,0,0,0,0,0,0
+f02caec116f275905cc3f04cb9d6e5cce1961188,pair,1.0,True,1,1772707642,[debugger] Deprecate OutputFileObject.getName for removal #SCL-25106,1,True,1,1,1,1,1,1,1
+a389bcf0e82bf85c90cb4819ffd41dba088c6262,pair,0.0,True,1,1772707643,[debugger] Use EelFiles.readAllBytes in OutputFileObject #SCL-25106 fixed,1,True,0,0,0,0,0,0,0
+209bad9cbd90efd2b31c522a1be3358ad6d9ab22,pair,1.0,True,2,1772726551,[compiler] Inline TransferCompilerBridgeSourcesTask into CompileServerLauncher #SCL-24988 #SCL-25099,2,True,1,1,1,1,1,1,1
+0b6d8326c02067304c01c22df761e3296e32a137,pair,1.0,True,2,1772726552,[compiler] Transfer worksheet repl interface impls jar to remote machine on eel #SCL-25099,2,True,1,1,1,1,1,1,1
+814c877ab5c1446bd90c394858d6d310ddd9fbe5,pair,1.0,True,1,1772726553,[compiler] Revert transferredRemotePath to single parameter list #SCL-25099,1,True,1,1,1,1,1,1,1
+786e1cfc279ad13f6daf1242a8a473fef580c092,pair,1.0,True,1,1772726554,[compiler] Transfer worksheet repl interface impls jar to correct remote directory #SCL-25099,1,True,1,1,1,1,1,1,1
+17b5640b7d2e2bed6e4cb4570650e6f54f174e39,pair,1.0,True,1,1772747674,[compiler] Deprecate CompileServerLauncher.transferToRemoteProjectCacheDirectory for removal #SCL-25099,1,True,1,1,1,1,1,1,1
+d064bf94c94a15f5745b364a2c0c9798247e11be,pair,0.0,True,1,1772791680,[project] Remove deprecated ScalaLibraryProperties constructors scheduled for removal,1,True,0,0,0,0,0,0,0
+fdc4887e78299ae7cde63d777f520b3976232631,pair,0.0,True,2,1772791681,[wizard] Remove deprecated ScalaGitNewProjectWizardData and addGitIgnore scheduled for removal in 2025.1,2,True,0,0,0,0,0,0,0
+ff8b1ea37e78a006182aa945ec743c2fd00b7283,pair,0.0,True,1,1772791682,[wizard] Remove deprecated setGenerateOnboardingTips scheduled for removal in 2025.2,1,True,0,0,0,0,0,0,0
+4f475d09b969dc690843f5771ebb2fc82b33b5e0,pair,0.0,True,1,1772791684,[project] Remove deprecated ScalaLibraryProperties.apply overloads scheduled for removal,1,True,0,0,0,0,0,0,0
+a644a3b7762843ce60008d66739c2fa586a99541,pair,0.0,True,1,1772807675,"[worksheet serialization] Add serialize(From, PathTranslator) overload to Serializer, deprecate serialize(From) for preserving binary compatibility #SCL-25099",1,True,0,0,0,0,0,0,0
+00fe77f62759d461e06eaa249a0c01cad94199f2,pair,0.0,True,1,1772807677,"[worksheet serialization] Override serialize(From, PathTranslator) in WorksheetArgsSerializer #SCL-25099",1,True,0,0,0,0,0,0,0
+abd40769c5065f3acfb0836d0c49ea9bb91d69d3,pair,0.0,True,1,1772807678,[worksheet serialization] Use Scala 3 vararg pattern syntax in WorksheetArgsSerializer #SCL-25099,1,True,0,0,0,0,0,0,0
+86e70f10859293cf35f2c6cc9485b5749c80c0e1,pair,0.0,True,3,1772807679,"[worksheet serialization] Transfer runnersJar to remote eel, use PathTranslator in WorksheetArgsPlainSerializer.serialize #SCL-25099",3,True,0,0,0,0,0,0,0
+015385eb9179e904f5f5fda78a854ccb67913ccd,pair,0.0,True,1,1772807681,[worksheet serialization] Use PathTranslator in WorksheetArgsReplSerializer.serialize #SCL-25099,1,True,0,0,0,0,0,0,0
+8348ac6b0dbeb1b74a17387e488b2b62cf7c4607,pair,0.0,True,1,1772807682,"[worksheet serialization] Add pathToString/pathsToString overloads accepting PathTranslator to SerializationUtils, deprecate old ones #SCL-25099",1,True,0,0,0,0,0,0,0
+fe66848eb631ceddd09572b6d20312250ccf1059,pair,1.0,True,8,1772807683,"[compiler, serialization] Replace inline pathToString/pathsToString lambdas with SerializationUtils overloads accepting PathTranslator #SCL-25099",8,True,1,1,1,1,1,1,1
+93b82d24f0164bcdb440e0095f73c260c2f69833,pair,0.0,True,1,1772807684,[worksheet] Make WorksheetCache temp directory creation eel-aware #SCL-25099,1,True,0,0,0,0,0,0,0
+984a1a1c0bf2c6c5887ab2f4db948d1a41620f0a,pair,1.0,True,3,1773045122,[debugger] Make DependencyManagerBase eel-aware #SCL-25123 fixed,3,True,1,1,1,1,1,1,1
+3262fe062e187de9d5f09aa5bc71ab2d05ef8e21,pair,1.0,True,1,1773056781,[eel] Delegate to super for local projects in EelAwareDependencyManager #SCL-25123,1,True,1,1,1,1,1,1,1
+f9ee6b4c31219080e37f0794d8453218a0d4927b,pair,1.0,True,8,1773056782,[worksheet] Use EelAwareDependencyManager when resolving Scala 3.8 REPL classpath #SCL-25099 fixed,8,True,1,1,1,1,1,1,1
+65e9c8e346f956aa86f5fbc5caab68a008c40ecc,pair,1.0,True,5,1773063924,"[compiler, eel] Make manually resolving the compiler bridge jar eel-aware #SCL-25126 fixed",5,True,1,1,1,1,1,1,1
+ff0eba286d377c04a5997858ddc895b2ee1ab0ad,pair,1.0,True,1,1773084159,Move SAM adaptation from getTypeAfterImplicitConversion to getTypeWithoutImplicits0 #SCL-24823 fixed,1,True,1,1,1,1,1,1,1
+09dca054a7b4f937165b704596d73ec2923d308f,human,1.0,True,1,1773084160,"Revert ""Move SAM adaptation from getTypeAfterImplicitConversion to getTypeWithoutImplicits0 #SCL-24823 fixed""",1,True,1,1,1,1,1,1,1
+89fcd9b1874cf3f9fa19358f9604cf3ed2fb346e,pair,1.0,True,6,1773162006,[resolve] Move SAM adaptation from getTypeAfterImplicitConversion to getTypeWithoutImplicits0 #SCL-24823 fixed,6,True,1,1,1,1,1,1,1
+65827787e35415b9deff6fe9d3d85e9605685475,pair,0.0,True,1,1773162007,[resolve] Implement Scala 3 late apply expansion in overload resolution,1,True,0,0,0,0,0,0,0
+ec37005a52872017d4a7775f043a39b252a84f81,pair,0.0,True,1,1773162007,[typer] Fix chained apply expansion typer failure,1,True,0,0,0,0,0,0,0
+21bb54c53ea6fca5c96c504f93a18470f1cfc2f1,pair,0.0,True,1,1773162007,[resolve] Prefer overloaded alternatives applicable without SAM adaptation #SCL-24823,1,True,0,0,0,0,0,0,0
+482ffafa32efa027da71c4f6239d50c49314b742,pair,0.0,True,14,1773162008,[resolve] Rename ScalaResolveResult fields for clarity and add scaladoc (no functional changes),14,True,0,0,0,0,0,0,0
+ed8b47b1ba6b4d2a62af3b44aaa9c5782c027549,pair,1.0,True,2,1773219304,"[build, tests] Add sbt-jupiter-interface to enable JUnit 5/6 tests #SCL-25131",2,True,1,1,1,1,1,1,1
+3c4fdeb045865f419efec8c208250d2761caf03b,pair,1.0,True,2,1773219308,"[build, tests] Convert CompileServerPortTest from JUnit 4 to JUnit 6 #SCL-25131",2,True,1,1,1,1,1,1,1
+ba9d8e564eefdada776d447c46974e37ed7fcf5b,human,1.0,True,2,1773219310,[build] Drop the explicit opentest4j dependency #SCL-25131,2,True,1,1,1,1,1,1,1
+779aca2654d38569f9912b20c7db595d67367936,human,0.0,True,1,1773226629,[build] Fix compilation after the intellijVersion update to 262.1528,1,True,0,0,0,0,0,0,0
+7f171b65e603dbdc979b0f5eeda116d173b161b4,pair,0.0,True,1,1773240516,"[compiler] Drop redundant port argument from NailgunRunner.createServer #(SCL-25135, SCL-24870)",1,True,0,0,0,0,0,0,0
+9da90d9d625bbb8895fcd83fdd67d6672338b3d2,pair,1.0,True,2,1773240517,"[compiler] Write port file to disk immediately when the port is discovered #(SCL-25135, SCL-24870)",2,True,1,1,1,1,1,1,1
+b72f6983c9c1f220f160fdbeee62574856decd90,human,1.0,True,1,1773312453,[tests] Run tests against Scala 3.8.3-RC2,1,True,1,1,1,1,1,1,1
+2316605982f80635d9633765e2a6211cadce03e5,human,0.0,True,4,1773327165,"[ivy resolve, eel] Resolve jar dependencies using ivy to the local machine and then manually transfer them to the remote eel target #SCL-25123 fixed",4,True,0,0,0,0,0,0,0
+4518638e1369b2c7d463e0620642fda41c830809,pair,0.0,True,1,1773352743,"[resolve] Fix false ""Cannot resolve overloaded method"" for Kotlin-compiled classes",1,True,0,0,0,0,0,0,0
+32d201b00b256be0ee7dba501db837610bff6b97,pair,0.0,True,1,1773418083,[resolve] Resolve Kotlin companion object methods from Scala (#SCL-23032) fixed,1,True,0,0,0,0,0,0,0
+4079d938ba6fb5ce3ca472eac207eed3c6912187,human,0.0,True,7,1773523612,[scala3] raw strings Unicode escape sequence (\u1234) is now highlighted as plain text #SCL-25087 fixed,7,True,0,0,0,0,0,0,0
+17e68f6ae37e182d66a7e84541db7ac3b50c62a0,human,0.0,True,1,1773523612,"[internal, tests] extract all performance tests of ScalaTextExtractorTest to ScalaTextExtractorPerformanceTest",1,True,0,0,0,0,0,0,0
+1674a2af69bbbd834b08cb155644d215b2d947e1,human,0.0,True,1,1773523612,"[internal, refactor] ScalaFeaturePusher: extract meaningful variables",1,True,0,0,0,0,0,0,0
+fcb13cb769dd50bca9701c51207f8a6510e93426,human,0.0,True,1,1773523612,"[internal, refactor] fix incorrect internal debug name for synthetic files created in ScSyntheticClass",1,True,0,0,0,0,0,0,0
+a2e80e92aaabb5021c605a799c071bcecbd8fb46,human,0.0,True,1,1773523613,"[internal, refactor] add scaladoc to ScalaFeaturePusher and rename some variables to make it slightly more readable #SCL-25087",1,True,0,0,0,0,0,0,0
+bc43501047bc74912b7fb80243b46057bdc621e9,human,0.0,True,1,1773523613,"[syntax highlighting] extract scala features from psi file, not just virtual file in ScalaSyntaxHighlighterFactory #SCL-25087",1,True,0,0,0,0,0,0,0
+b42f239ec72f56507f1344605173a336e9b1c996,human,0.0,True,1,1773523613,[string escaping] fix ScalaStringParser: recognise `\'` escape sequence as well,1,True,0,0,0,0,0,1,0
+53200390a60d00f24281a274bb6596ff3d505703,human,0.0,True,5,1773523613,[spellchecker] fix handling of escape sequences in string literals #SCL-25125 fixed,5,True,0,0,0,0,0,1,0
+cbf87ded436c6e0e9f6df9c3135c89efd6c9cbb8,human,0.0,True,3,1773523613,[internal refactor] introduce ScalaStringParser.unescapeTextGracefully and reuse it in several places,3,True,0,0,0,0,0,1,0
+111f96251a22232a1086a166a8e1b6a2e1195571,human,0.0,True,3,1773523613,[internal refactor] ScLiteralEscaperBase: move common logic from child classes to a protected method,3,True,0,0,0,0,0,0,0
+7a7b89b62f2dc52a1df9b35583a9ea81426bd76a,human,0.0,True,12,1773523613,[internal refactor] ScInterpolatedStringLiteral: move Kind implementations to the companion object and patch usages,12,True,0,0,0,0,0,1,0
+60d9429585f5c2147499a844bb367621cb77f66d,human,0.0,True,1,1773851834,"[compiler, eel] Stop the compile server when a remote eel project is closing #SCL-25135 fixed",1,True,0,0,0,0,0,0,0
+a09375c5619862b4a15fd84a3ba824b6177e3eac,pair,0.0,True,1,1773947468,"[formatter, scalafmt] fix format-on-save read-access violation in save listener #SCL-25189 fixed",1,True,0,0,0,0,0,0,0
+a9656dca896856b659473431aa8140741836be69,pair,1.0,True,1,1774272304,[tests] Update Scala 3.8.3-RC2 to 3.8.3-RC3,1,True,1,1,1,1,1,1,1
+db23bad9cbb604aacd984642e6fadbf35e1315f6,pair,0.0,True,1,1774629120,[compiler] Add --enable-final-field-mutation=ALL-UNNAMED for JDK 26+ #SCL-25201 fixed,1,True,0,0,0,0,0,0,0
+fa3986b0d62f2e75cf251eb3c71c1fa5bd6ccc3d,human,1.0,True,1,1774646283,[resolve] Fix TermSignature.equiv edge case,1,True,1,1,1,1,1,1,1
+9348c72b1b2dd837f3426ca9d350f46d1d91ee77,human,0.0,True,1,1774646284,[implicits] Discard extension candidates early when searching for parameters/arg. conversions,1,True,0,0,0,0,0,0,0
+a463627a25ec38f45ef2307d700dc3ada0efe275,human,0.0,True,2,1774646284,[resolve] Fix ScTypePolymorphicType equivalence,2,True,0,0,0,0,0,0,0
+40f819df7a7ebfd30de93282da91b83f2b9c8061,human,1.0,True,3,1774941452,[tests] Run tests against Scala 3.8.3 stable,3,True,1,1,1,1,1,1,1
+d23fb03178c4839cccfb66fd6c8626631933e647,human,1.0,True,3,1774945696,"Revert ""[tests] Run tests against Scala 3.8.3 stable""",3,True,1,1,1,1,1,1,1
+611a747c43745f0a009fa66767809a4cf8f61e00,human,0.0,True,1,1774945697,[tests] Run tests against Scala 3.8.3 stable (without unrelated changes pushed by mistake),1,True,0,0,0,0,0,0,0
+cd3f5cb145096abc604755822c6f4c03dd75f494,human,0.0,True,1,1775505380,[resolve] Allow resolving to parameters defined in the same param. clause,1,True,0,0,0,0,0,0,0
+b7603367492ce76e619d5afb48fb7dd387bbe868,human,1.0,True,5,1775505381,[resolve] Refine synthetic Scala 3 mirror instances,5,True,1,1,1,1,1,1,1
+7f807f21611cee3ec2ea11bf2922db94ec7398d3,human,1.0,True,4,1775648875,[worksheet] Run WorksheetDefaultSourcePreprocessor.preprocess in a smart non-blocking read action and do not require that smart mode is on before running the worksheet compiler #SCL-25277,4,True,1,1,1,1,1,1,1
+e9732886f3789a514d84740e8606b125e6bd86d1,human,0.0,True,2,1775656851,[worksheet] Remove the now unused ProjectShouldBeInSmartMode precondition #SCL-25277,2,True,0,0,0,0,0,0,0
+336c68cb0e32f83829f1825ac6bc8cd5d6677f30,human,0.0,True,1,1775657767,[worksheet] Allow starting the worksheet compilation process during dumb mode #SCL-25277 fixed,1,True,0,0,0,0,0,0,0
+c7ed3735ba9df039c38c5236cb492da0f17ee579,human,1.0,True,1,1775739090,"[build, tests] Run tests in sbt using the JBR as a runtime JDK #SCL-25286",1,True,1,1,1,1,1,1,1
+9b28783468bc2a34f6a7ec4684810de93243545f,human,1.0,True,1,1775748641,[tests] Run tests against Scala 3.8.4-RC1,1,True,1,1,1,1,1,1,1
+3946737fc84909190458e7e592e8092630959164,human,0.0,True,1,1775835713,"[cbh, quickfix] Handle null when constructing AddParametersQuickfix instances (#SCL-25244, #SCL-25248) fixed",1,True,0,0,0,0,0,0,0
+6177738933d6353759b61abf075062211cd98de2,human,0.0,True,12,1775914155,[parser] support Scala 3 erased soft modifier and basic syntactic checks,12,True,0,0,0,0,0,0,0
+8fcff7748227e894203062f0ae356dda3737c474,human,1.0,True,7,1775914156,"[parser, psi] add named type arguments parser and PSI/annotator support",7,True,1,1,1,1,1,1,1
+54f9a10910d5c633c119ba2ed3bda8c4a90499ee,human,0.0,True,1,1775914157,[parameter info] support named type args in type parameter info,1,True,0,0,0,0,0,0,0
+38a6e9f4e00e26efe2c7ab29415e3ae104e2418c,human,0.0,True,7,1775914158,"[parser, psi] Add ScTypeArgument PSI and type-arg nodes",7,True,0,0,0,0,0,0,0
+17c2ba46d713ae5dab64b76d806fd2dad293b195,human,1.0,True,48,1775914160,"[psi, code insight] Migrate consumers to ScTypeArgument-based APIs",48,True,1,1,1,1,1,1,1
+86f4ec95faeb3a8a19bfe03c7803c315859549c1,human,0.0,True,4,1775914162,[typer] Implement typing support for named type args,4,True,0,0,0,0,0,0,0
+2a21ce85f4089bf621f8ebe38f087f4fee5f71e4,human,0.0,True,1,1775914164,[tests] Update psi in imported parser tests,1,True,0,0,0,0,0,0,0
+24b44d8c27c15657453e18d62a15378c10fe8c11,human,0.0,True,2,1775914166,[annotator] add quick-fix to import namedTypeArguments feature flag,2,True,0,0,0,0,0,0,0
+0187fb796392f370d8a853d65659d926fc2e995a,human,0.0,True,1,1775914167,"[tests] Update psi in imported parser tests, pt. 2",1,True,0,0,0,0,0,0,0
+6ec8c65e75da5010f9ec50dc557caefec6ee1845,human,0.0,True,1,1775914168,[find usages] add named type argument usage type,1,True,0,0,0,0,0,0,0
+b346f09b7b4b31ddad1c3c53598529bd5649606d,human,0.0,True,8,1775914169,"[tests] Update psi in imported parser tests, pt. 3",8,True,0,0,0,0,0,0,0
+7a9b28f3ce3d5b22554e10a838b203ea60c67f9b,human,1.0,True,35,1775921943,"Restore old names for ScTypeArgs/ScGenericCall typeArguments, now that named type args support is implemented.",35,True,1,1,1,1,1,1,1
+893030f9dfa8ea014ad9b254004a7b2a40cea44d,human,0.0,True,2,1776099564,[annotator] report duplicate named type arguments,2,True,0,0,0,0,0,0,0
+63d47169cc6450091053aaeecf53556d25558ec1,pair,1.0,True,5,1776168222,[repl] Make ScalaConsoleRunConfiguration eel-aware #SCL-25179,5,True,1,1,1,1,1,1,1
+d1f5264b15477c62d3b6f824cab097a24f230d46,pair,1.0,True,2,1776168223,"[tests, repl] Deduplicate target-aware process handler creation into ScalaTargetAwareCommandLineState #SCL-25179",2,True,1,1,1,1,1,1,1
+3189c280817471488c6efa3ca9ad29a49b6c483d,pair,0.0,True,2,1776168224,[run config] Extract ScalaTargetAwareRunConfiguration base class to deduplicate TargetEnvironmentAwareRunProfile implementation #SCL-25179 fixed,2,True,0,0,0,0,0,0,0
+39fc37864987266546c59789d69ff172d07577d5,human,1.0,True,1,1776267686,"[repl, tests] Write a JUnit 5 test framework based test for ScalaConsoleRunConfiguration #SCL-25309",1,True,1,1,1,1,1,1,1
+1395c390c2def92ba80e14d0604dbf7bd8a72e72,human,1.0,True,1,1776267687,[build] Move the ignoreFirstAndLastTests custom vm option definition to Common to avoid duplication,1,True,1,1,1,1,1,1,1
+bfafa0d4d6542bec6b32c0a372f2e9e1108ef020,human,1.0,True,2,1776344647,"[build, eel] Move the eelTunnels Kotlin utilities to their own module",3,True,1,1,1,1,1,1,1
+661e2dac2ee3b2efaa3d8b75101a8644e241ff5f,human,1.0,True,1,1776354716,"[eel, tests] Cover EelCompilerUtils with eel JUnit 5 tests which offer simulated target operating system environments #SCL-25319",1,True,1,1,1,1,1,1,1
+20d8f22bfd0b8af72944c0fd0dca7ccd4abe0bd9,pair,1.0,True,2,1776358350,[NPW] include Scala Next in hardcoded Scala 3 wizard fallback list #SCL-24309,2,True,1,1,1,1,1,1,1
+45e56cb932316770b35d8da6d94bcd9d67fbae96,human,1.0,True,6,1776358352,"[NPW, sbt2] use a modern new project template for sbt 2 #SCL-24832 fixed",6,True,1,1,1,1,1,1,1
+b408ba9111f270517a673a8de795ae7f41b0e5ab,human,0.0,True,1,1776358353,[NPW] never add the version sbt setting in `build.sbt` #SCL-24832,1,True,0,0,0,0,0,0,0
+20fc95e6d6f678ecf2806849f2f9447e46633e8a,pair,0.0,True,3,1776363447,"[resolve] Resolve Kotlin object members (const val, fun, class) from Scala (#SCL-25317) fixed",3,True,0,0,0,0,0,0,0
+74cfd347fa06a5a680e20ceefeef625973a8a02d,human,1.0,True,1,1776447905,[build] Build the Scala Plugin with JDK 25 #SCL-25327,1,True,1,1,1,1,1,1,1
+f3cb8835eb216003ac1522aca42b0155a69d7d8a,human,1.0,True,1,1776448426,[internal: sbt] update latest sbt version to 1.12.9,1,True,1,1,1,1,1,1,1
+d458776390e797dd429ea6c7e67fb3f43cade8ab,human,0.0,True,1,1776677318,[build] Suppress deprecation warnings after the intellijVersion update to 262.4327,1,True,0,0,0,0,0,0,0
+361c86cab90e1ad0c2978e692f3e60963df0a3fd,human,1.0,True,1,1776689486,"[tests, sbt] Run tests against sbt 2.0.0-RC12",1,True,1,1,1,1,1,1,1
+003c29b189fd44a56b1c93dded55f3adbbe19341,human,0.0,True,1,1776807657,[resolve] Remove some useless code in MethodResolveProcessor,1,True,0,0,0,0,0,0,0
+c6b97c728b4d9810bad08ebd433faf0d1c8abaad,human,0.0,True,4,1776807658,[resolve] Enable conditional type parameter rendering with typeParamId,4,True,0,0,0,0,0,0,0
+7957a35d4ba68f5992e167fcaca90cc8ec4f2cc5,pair,1.0,True,1,1776844974,"[build, tests] Switch to platform @TestApplication and deprecate @ScalaTestApplication compatibility wrapper #SCL-25309",1,True,1,1,1,1,1,1,1
+26386753aeb5b31b6e4e4f1c5b28239d3f9f5368,pair,1.0,True,1,1776867609,[tests] Update Scala_3_Next_RC to 3.8.4-RC2,1,True,1,1,1,1,1,1,1
+c6054b46099fcb4e5cb2fba4374ab849f35305b0,human,1.0,True,1,1777312364,[test support] Restore test generation functionality for test frameworks other than utest #SCL-25361,1,True,1,1,1,1,1,1,1
+5d4847cf7744e8f4091b77dd2fd5021bfa4c2881,human,0.0,True,1,1777312365,[test support] Fix the generation of beforeEach and afterEach ScalaTest helper methods #SCL-25361,1,True,0,0,0,0,0,0,0
+41b20e527bd8296dfd0595b653c8b26e1a444185,human,0.0,True,1,1777312367,[test support] Add a test which asserts that beforeEach/afterEach methods are generated for the ScalaTest test framework #SCL-25361 fixed,1,True,0,0,0,0,0,0,0
+158d23168eb36d933ffe232f21e4140cf3cab307,pair,1.0,True,2,1777475522,"[build, tests] Add junit-vintage-engine to the JUnit test template classpath only #SCL-25373 fixed",2,True,1,1,1,1,1,1,1
+a5db27047f3b3638983ac50951df8870e914a1fb,human,0.0,True,1,1777558022,[cbh] Wrap error messages generated by scalac in a <pre> html element to render the text with monospace font #SCL-25362 fixed,1,True,0,0,0,0,0,0,0
+373c1297288bdf2390c20a249a095f0403c25960,pair,0.0,True,1,1777796531,[parser] parse indented `case` after `=>` as nested partial function in Scala 3 #SCL-25190 fixed,1,True,0,0,0,0,0,0,0
+db8819e610d5996586efd3efff576d79973327c3,pair,1.0,True,2,1777796532,"[editor, typing] preserve practical `case` space-indent behavior #SCL-25190",2,True,1,1,1,1,1,1,1
+f25a9c71d1c422c3a699b79ad4f9fc65d5e8fba1,human,0.0,True,1,1777796532,"[language injection] handle synthetic parameters in named arguments and for more kinds of synthetic parameters (#SCL-25363, #SCL-24959) fixed",1,True,0,0,0,0,0,0,0
+cef022fd09a1515c33025658830f90a72928f0d9,pair,0.0,True,1,1777796532,[parser] fix outdented nested try handler ownership in Scala 3 #SCL-25203 fixed,1,True,0,0,0,0,0,0,0
+19ea5323bf6350b8a22ef77683979f260c28e5a7,pair,1.0,True,2,1777796532,[synthetic psi] split synthetic classes startup strategy for tests and production #SCL-25281 fixed,2,True,1,1,1,1,1,1,1
+4695298c5011abe63d34b988f6648312802d1aaf,human,1.0,True,2,1777796532,[synthetic psi] extract RegisterSyntheticClassesStartupActivity from ScSyntheticClass #SCL-25281,2,True,1,1,1,1,1,1,1
+94889363a43c79d6c7a620c341be98154e850239,pair,1.0,True,1,1777796532,[synthetic classes] split AnyVal registration into read and PSI phases #SCL-25281,1,True,1,1,1,1,1,1,1
+188a5f1351aa8c24cdf655d6094ef42cd179e4b2,human,1.0,True,2,1777796532,[synthetic classes] drop caches and restart highlighting after synthetic classes registration (edge case for long registration) #SCL-25281,2,True,1,1,1,1,1,1,1
+af6bfa164d9fe1ffb1dcbebf08976b308205c5ae,human,1.0,True,4,1777796532,[synthetic classes] split class registration into multiple cancellable read actions instead of using one big read action #SCL-25281 fixed,4,True,1,1,1,1,1,1,1
+aad6166f063f61155b95622ef67c5306b2738df8,human,1.0,True,2,1777796532,"[sbt shell, build] refactor SbtProjectTaskRunnerImpl #SCL-25326",2,True,1,1,1,1,1,1,1
+6e335f8cb70aaa60665fd265a93ff6b2f3e2ed38,pair,1.0,True,3,1777796533,"[sbt shell, build] run Build Artifact via hybrid sbt compile + JPS packaging pipeline #SCL-25326 fixed",3,True,1,1,1,1,1,1,1
+5f85d56f61523921ad7457ddfd43e5806d700896,human,0.0,True,1,1777796533,[sbt] add more debug/trace logging to SbtProcessManager.scala,1,True,0,0,0,0,0,0,0
+b12c208c916fe3cdb14e3bc5335454a1ffbf5210,human,0.0,True,1,1777796533,[sbt] add more debug/trace logging to SbtShellCommunication & CommandListener,1,True,0,0,0,0,0,1,0
+07482476547a43fca86bb419eeceb93bc99d66b5,human,0.0,True,3,1777796533,"[sbt shell, tests] add basic integration tests for building via sbt shell #SCL-25108 fixed",3,True,0,0,0,0,0,0,0
+b2928081e116c4846ee7044e8fbb95da708095bb,human,0.0,True,1,1777796533,"[sbt shell, build, tests] add integration tests for ""Build Artifact"" when ""Use sbt shell for builds"" is enabled #SCL-25326",1,True,0,0,0,0,0,1,0
+2bc6733e6934a88aad356938680b8c32d98aed95,human,1.0,True,2,1777796533,[sbt] extract SbtBuildCommandsFactory and cover it with tests #SCL-25108,2,True,1,1,1,1,1,1,1
+2a24664247db9f19ec6c417ef3f904456208d894,human,0.0,True,3,1777796533,"[psi tests] add unit tests for ScalaPsiUtil #SCL-25363, #SCL-24959",3,True,0,0,0,0,0,0,0
+b071e05dfeda162ebe4e77b948943c201e45043e,pair,0.0,True,4,1777796533,"[derives, type inference] make derives synthetic signatures work with compiled library typeclasses and extension resolution #SCL-25353 fixed",4,True,0,0,0,0,0,0,0
+7af01e5f1d5508f57a2f481c04036af02f91579c,pair,0.0,True,2,1777796534,[fix todos] remove unused indentElement offset parameter #SCL-25190,2,True,0,0,0,0,0,1,0
+e04825e554c767fdf9f275b1653fed985e7d63bf,pair,0.0,True,2,1777796534,[fix todos] rename indentElement to adjustLineIndentIfNeeded #SCL-25190,2,True,0,0,0,0,0,1,0
+42badd807d707e47524be6d54957e61fd332d295,human,0.0,True,1,1777796534,[refactor] minor comment fix in ScBlockImpl.scala,1,True,0,0,0,0,0,0,0
+b9a10890d2ef038772b4e717fb2e6d946c6b1c3e,pair,0.0,True,4,1777796534,"[sbt shell, compiler] avoid starting compile server for delegated sbt-shell builds #SCL-12039 fixed",4,True,0,0,0,0,0,1,0
+090e21358b78768cd2e2eab1c554530fee14b088,pair,0.0,True,3,1777796534,[refactor] remove ThrowableExt and use ExceptionUtil directly #SCL-12039,3,True,0,0,0,0,0,0,0
+d38c4079eb9a620d76f9a8c3017610674f11ca30,pair,0.0,True,2,1777796534,[psi] remove case-class copy toggle from synthetic parameter remapping #SCL-25363,2,True,0,0,0,0,0,0,0
+bea54b9ba39877b16d993e0129dcb37282c80f64,pair,0.0,True,3,1777796534,[sbt import tests] add resilient import heartbeat diagnostics with output dump in tests,3,True,0,0,0,0,0,0,0
+6d0e078a49ae073ca5d69318110223bf529aea59,pair,1.0,True,1,1777796534,[navigation] add pending cross-language Kotlin navigation regression tests #KTIJ-38455,1,True,1,1,1,1,1,1,1
+ed5c30c48f0502772c73a71b97d5fbd5fa1345a3,pair,0.0,True,1,1777796534,[sbt shell tests] track compile server start requests in build tests #SCL-12039 fixed,1,True,0,0,0,0,0,1,0
+a776c334cf2ebc933e92ee525827ff9be8366f41,pair,0.0,True,1,1777800556,[highlighting] refresh Scala features for cached syntax highlighters #SCL-25212 fixed,1,True,0,0,0,0,0,0,0
+516b73de0eb4287d400a79a7462997daf1057d11,human,0.0,True,3,1777800557,[psi docs] add scaladoc for psi.types.Signature and it's implementations,3,True,0,0,0,0,0,0,0
+4b776212eb45cdbff4ec8e58b68e09af3634781e,human,0.0,True,1,1777800558,[psi docs] minor restructure of scaladoc of psi.types.ScSubstitutor,1,True,0,0,0,0,0,0,0
+787279bb284bba1e8f595abd99266e05486bcdfe,human,0.0,True,1,1777800559,[psi docs] add Scaladoc to ScDeclaredElementsHolder,1,True,0,0,0,0,0,0,0
+56f1f8e0aa93755457e979cf6b8b03d1e4b0abc5,human,0.0,True,1,1777800561,[psi docs] add Scaladoc for MixingNodes,1,True,0,0,0,0,0,0,0
+50180d73530d4052dea74c7176e8029f1636b179,human,0.0,True,3,1777916928,[npw] add exception annotations for version loading methods,3,True,0,0,0,0,0,0,0
+b4ae0f2c7c4d9d9d8f169196eac3636e48a3dea7,human,0.0,True,1,1777916930,SCL-CR-1359: remove visual noise in named arguments,1,True,0,0,0,0,0,0,0
+e105d872a3b33ea66b336cced01ef5825fca086a,pair,0.0,True,3,1777916932,SCL-CR-1359: [derives] centralize derived given synthesis from derives references #SCL-25353,3,True,0,0,0,0,0,0,0
+ea1d4c77a6a248763779b7ce7ae95490176f8dab,pair,0.0,True,1,1777974851,"[tests, sbt] Inline Sbt_1_11 in AllSbt1 and remove the val (#SCL-24645, #SCL-24855)",1,True,0,0,0,0,0,0,0
+af4738bd09b5fe1a40a5553116bbb2d2b6bdec44,pair,0.0,True,1,1777974865,"[tests, sbt] Update latest sbt 1.12 version to 1.12.11 (#SCL-24645, #SCL-24855)",1,True,0,0,0,0,0,0,0
+d281288cd1d416506cc63691a881a5f081169853,human,0.0,True,1,1777983737,"[tests, sbt] Factor out Sbt_1_11 once again as its own variable because it is being used in 261 and 262 nightly branches (#SCL-24645, #SCL-24855)",1,True,0,0,0,0,0,0,0
+6b54c01e0328da9cf350d16742c8481ec3f4a809,human,1.0,True,1,1777992620,"[build, sbt] Update the sbt dependency of the Scala Plugin to version 1.12.11 #SCL-24855",1,True,1,1,1,1,1,1,1
+eb959966c49b34cfd9dc491c1d0525147df4132c,human,1.0,True,1,1777998088,[build] Update the zinc dependency to version 1.12.0 #SCL-24855,1,True,1,1,1,1,1,1,1
+bf86f283f9eb85d434576e8463a4a30f4c18b3cc,human,0.0,True,1,1778087568,[tests] Run tests against Scala 3.3.8-RC1 #SCL-25399,1,True,0,0,0,0,0,0,0
+76039ee3725b7343c62d934b6c8e795a7917262e,human,0.0,True,2,1778241315,[compiler] Avoid the forced addition of the `-proc:full` compiler parameter by the platform #SCL-25236 fixed,2,True,0,0,0,0,0,0,0
+5ba313f2c46dff2c69ba6dd370de391c85ec5a13,human,1.0,True,1,1778499226,"[build, tests] Drop the customIntellijVMOptions which were used to disable certain automatically registered Jupiter test listeners by the IntelliJ Platform",1,True,1,1,1,1,1,1,1
+d9c880a5335055e5d02e4e2b75a61b4a6a1bbfb6,human,0.0,True,1,1778847335,"[worksheets, build] Use MacroPrinter_3_0_0 for all Scala 3 plain worksheets #SCL-25414",1,True,0,0,0,0,0,0,0
+3ed0bf41281849110064b8c752f3a092efda553d,human,0.0,True,2,1778847336,[worksheets] Modify MacroPrinter_3_0_0 to use reflection to call the Text#mkString method in the compiler API #SCL-25414,2,True,0,0,0,0,0,0,0
+90215ff5ab539d88705ce043a25bcdba1295c8ee,human,0.0,True,1,1778847337,[worksheets] Clear the output directory before reusing it to recompile a plain worksheet #SCL-25414,1,True,0,0,0,0,0,0,0
+e45df194c3c47ac8583c1bd523656af8177e96b8,human,0.0,True,1,1779114381,"[testing support, specs2, bazel] Use a named argument in isSpecs2TestClass instead of a comment #SCL-25391",1,True,0,0,0,0,0,0,0
+7289992d4e9b8ce3860729c4dc87cfae59798db3,human,0.0,True,1,1779276454,[tests] Fix the worksheet JDK compatibility tests on Windows,1,True,0,0,0,0,0,0,0
+9e2e84b174e8509639345e7f885e9a82443a2359,human,1.0,True,1,1779284302,"[tests, junit5] Rewrite ScalaJSCompletionTest to JUnit 5 and the new platform test framework #SCL-25424",1,True,1,1,1,1,1,1,1
+f18ca4df41f7cef8571f005b8c4eef7dea5c5512,human,0.0,True,3,1779288302,"[eel, nio] Replace usages of Path#toFile in bspConfigSteps #SCL-25423",3,True,0,0,0,0,0,0,0
+3d69fe1fe4613634aee733324e043cc7117dcf76,human,0.0,True,1,1779288303,[bsp] Remove the FastpassProjectImportProvider class definition as it is only used to instantiate a logger intance #SCL-25423,1,True,0,0,0,0,0,0,0
+c7379be387d46c6642d4f543962114e5f4721dcf,human,0.0,True,1,1779288303,"[eel, nio] Replace a usage of Path#toFile in I18nBundleContent #SCL-25423",1,True,0,0,0,0,0,0,0
+0647a4b6dc461fb04e547fe4a6f4618a308cfcbc,human,1.0,True,1,1779812722,"[eel, nio] Rewrite usages of Path#toFile in SbtStructureDumper #SCL-25423",1,True,1,1,1,1,1,1,1
+ff728d0c9906d4bea4407a356b98fb8a876811df,human,1.0,True,1,1779813875,"[eel, nio] Use new java.nio.file.Path APIs in SbtProcessManager #SCL-25423",1,True,1,1,1,1,1,1,1
+44f6ea94db89b40c0d0d63b23a4fd5c947c1b63d,human,1.0,True,3,1779822854,"[build, sdk] Replace our copy-pasted version of CoursierPaths with the officially released `coursier-paths` micro-library #SCL-25493 fixed",3,True,1,1,1,1,1,1,1
+edbf4f7ab4bf8f6b7656f9159cf7d89508c24428,human,1.0,True,9,1779868626,[build] Fix deprecation warnings after the intellijVersion update to 262.6653.22 #SCL-25494,9,True,1,1,1,1,1,1,1
+ba238b4f973c5ba5a64976c9dbb165d26db447d7,pair,0.0,True,1,1779874059,[tests] Update Scala Next RC test version to 3.8.4-RC3,1,True,0,0,0,0,0,0,0
+b5c739318b66426a4cd411ab50ed0abe2d656f18,pair,0.0,True,4,1779879312,"[eel, nio] Migrate FilePosition from File to Path (#SCL-25423, #SCL-25494)",4,True,0,0,0,0,0,0,0
+f3db010549f065e89fccef37ab3e6c1239088ef7,pair,0.0,True,1,1779879448,[compiler] Replace JulLogger.configureLogFileAndConsole with configureStandardLoggers #SCL-25494,1,True,0,0,0,0,0,0,0
+984f64c63c9e636daf941e70a5524f1ce4bee8ea,pair,0.0,True,4,1779881376,[bazel] Replace deprecated BazelProjectPropertiesKt.isBazelProject with ProjectKt.isBazelProject #SCL-25494 fixed,4,True,0,0,0,0,0,0,0
+591816fedd6394f13779118c90166499a26f3b5b,human,0.0,True,1,1779889532,"[nio, eel] Suppress the `java.io.File` usage warning in AnalysisStoreFactory #SCL-25423",1,True,0,0,0,0,0,0,0
+93b2dcbfb1201f21cfc85fe8d748acadd139f140,human,0.0,True,2,1779890806,"[nio, eel] Migrate a couple of simple `java.io.File` usages in bsp fastpass configuration code #SCL-25423",2,True,0,0,0,0,0,0,0
+67e138af5103420572176f4bc7172007921d4bd7,pair,0.0,True,1,1779902464,"[eel, nio] Replace ProcessBuilder with GeneralCommandLine in FastpassConfigSetup #SCL-25423",1,True,0,0,0,0,0,0,0
+d3647a470dc55e6d30145d47794cf713f970b1af,human,0.0,True,1,1779916158,[parser] Disallow back-to-back interleaved type parameter clauses,1,True,0,0,0,0,0,0,0
+ace8cedc5b45f9125de0901e8874d7f55622b5c6,human,0.0,True,3,1779916158,[parser] tighten interleaved type-clause parsing outside methods,3,True,0,0,0,0,0,0,0
+5e7d25f871044c2e150e93c62ecb32e34f810a72,human,0.0,True,6,1779916158,"[psi, resolve] introduce ScSignatureClause-based interleaved scope model",6,True,0,0,0,0,0,0,0
+f0b505eada318659fe30a1e274f746d20887bb8b,human,0.0,True,2,1779916158,"[codegen, type inference] preserve interleaved clause order in codegen/rendering",2,True,0,0,0,0,0,0,0
+f83c00decdba9a2890f38700beccbd8475b1eec3,human,0.0,True,3,1779916158,"[codegen, override-implement] preserve interleaved clause order in generated method signatures",3,True,0,0,0,0,0,0,0
+d7fcd19a552d214a19df27ecefd9e716a3cd8e27,human,0.0,True,1,1779916158,"[resolve, psi] preserve substituted type params in TermSignature equivalence",1,True,0,0,0,0,0,0,0
+70545516cc067cddf764b86833927f95b7a926fa,human,0.0,True,3,1779916158,"[codegen, completion] render interleaved signature clauses in lexical order",3,True,0,0,0,0,0,0,0
+a9161539e9d7b51b559e1dd6f68130e1ff5f44f7,human,0.0,True,2,1779916158,"[psi, resolve] add clause-aware type parameter access for method signatures",2,True,0,0,0,0,0,0,0
+4ff16520c5f4e712f24a36bf5b889c9aa867c81a,human,1.0,True,3,1779916158,[type inference] adapt type utilities to clause-aware TermSignature type params,3,True,1,1,1,1,1,1,1
+b1ff7aa53f750a7f0978d750941a52fb67d9f533,human,0.0,True,1,1779916158,[parser] Improve parser error messages around interleaved clauses,1,True,0,0,0,0,0,0,0
+cdf5e141835289555884699f7bc99a4ecdc86797,human,0.0,True,2,1779958526,"[eel, nio] Rewrite JarManifestUtils.readManifestAttribute using java.nio.file.Path #SCL-25423",2,True,0,0,0,0,0,0,0
+283fc769c87813a6d34d12f0484fc0928802b368,human,0.0,True,1,1779959227,"[eel, nio] Rewrite JarManifestUtils.readManifest with Scala 3 syntax #SCL-25423",1,True,0,0,0,0,0,0,0
+09d7751be4c9a2b427a831c95a531d433cd7fc8a,human,0.0,True,1,1779959803,"[eel, nio] Replace a java.io.File usage in SbtUtil.createTemporarySbtFile #SCL-25423",1,True,0,0,0,0,0,0,0
+8b8d6d68efaa5130dba66d52f9f063e1985ce920,pair,0.0,True,1,1779978377,"[eel, nio, deprecations] Remove deprecated RichFile and File-based path extensions",1,True,0,0,0,0,0,0,0
+4b87f1936bdba7564f624a664f34b1b07b7d5702,pair,0.0,True,10,1779978868,"[eel, nio, deprecations] Remove PathTranslator-less compiler data serialization API",10,True,0,0,0,0,0,0,0
+3052f5228efe8cda4f3248aa20c3bc2daa0350cd,pair,0.0,True,2,1779978993,"[eel, nio, deprecations] Remove unused CompileServerClasspathProvider and CompileServerVmOptionsProvider extension points",2,True,0,0,0,0,0,0,0
+e673dfa424808f13b88fea03003641406a76572c,pair,1.0,True,3,1779979158,"[eel, nio, deprecations] Remove Int-based compile server port API",3,True,1,1,1,1,1,1,1
+8cef2db9a0b453ac91e41df41617823061ede776,pair,0.0,True,2,1779988872,"[eel, nio, deprecations] Remove File/String-based project setup APIs",2,True,0,0,0,0,0,0,0
+328f460217746f87b7832563084bc5c2acc59205,pair,1.0,True,3,1779989108,"[eel, nio, deprecations] Remove miscellaneous deprecated 2026.2 methods",3,True,1,1,1,1,1,1,1
+141e7f7c5d1d4d5413bfcfc9b72c70e7a16d4f89,human,1.0,True,35,1779991757,[resolve] Implement support for interleaved parameter (and corresponding argument) clauses in reference resolution,35,True,1,1,1,1,1,1,1
+5587dbfbfc67742df8bebd84cbdbca9d6d8e2727,pair,1.0,True,2,1779996792,[build] Update bloop-rifle to 2.1.0 #SCL-25423,2,True,1,1,1,1,1,1,1
+e93cbb1c998cf9371ab7310bc6a4f314633544ca,pair,1.0,True,1,1779997272,"[eel, nio] Migrate bloop-rifle integration to java.nio.file.Path #SCL-25423",1,True,1,1,1,1,1,1,1
+544d05e7131b1fb003897c32c4982883e384cbb8,pair,0.0,True,1,1780045798,"[eel, nio, deprecations] Remove unused non-eel-aware SbtUtil overloads scheduled for removal in 2026.2",1,True,0,0,0,0,0,0,0
+f9465a3700a095fb58a1591a856b512de61dddca,pair,0.0,True,1,1780047173,"[eel, nio, deprecations] Require non-null Project in RemoteServerRunner",1,True,0,0,0,0,0,0,0
+af3e15e0422cf708b48703762116b06cdc1ac8c5,pair,1.0,True,1,1780047574,"[eel, nio, deprecations] Remove unused no-arg CompileServerLauncher.scalaCompileServerSystemDir scheduled for removal in 2026.2",1,True,1,1,1,1,1,1,1
+1274354b984d2eeab45e03933321f82da85c02bf,pair,1.0,True,1,1780058427,"[eel, nio] Migrate BloopPreImporter from java.io.File to java.nio.file.Path #SCL-25423",1,True,1,1,1,1,1,1,1
+35aab9c84f39081af954db73b3d312fdd971f173,human,1.0,True,1,1780302992,[type inference] Fix expected types for polymorphic functions,1,True,1,1,1,1,1,1,1
+be2f9f6fd99776c31f41dc38ec35c219e8740899,pair,0.0,True,1,1780307712,"[eel, nio] Rewrite readScalacPluginName to java.nio.file APIs #SCL-25423",1,True,0,0,0,0,0,0,0
+9ffb7fa73894a972e79abd70c14f6f62300956c3,pair,0.0,True,1,1780307712,"[eel, nio] Migrate isScalaMetaParadiseJar off java.io.File #SCL-25423",1,True,0,0,0,0,0,0,0
+10b54d47381f48d734572829500ad81af0711f35,pair,0.0,True,1,1780307712,"[eel, nio] Migrate containScalacPluginXml off java.io.File #SCL-25423",1,True,0,0,0,0,0,0,0
+0f6d59319db64a22271f6b13d170ad399405b039,human,1.0,True,1,1780315730,[build] Remove the lib/app.jar and lib/app-client.jar from the jps-shared classpath #SCL-25518,1,True,1,1,1,1,1,1,1
+b575ed547324190e367ac8303c2058356d74368d,human,1.0,True,1,1780316385,[build] Remove the non-existent jars from the jps classpath #SCL-25518,1,True,1,1,1,1,1,1,1
+ff51507be4abaea335d9a3b35a91b40fe360ae54,human,1.0,True,2,1780321254,[build] Move the CompilerEventListener trait to the `bsp` module in order to remove the `compiler-shared` dependency on the `util.jar` jar #SCL-25518,3,True,1,1,1,1,1,1,1
+d3bb2a0b09e271751bbf31c2946a72ddc313f696,human,1.0,True,1,1780321495,[build] Also remove the `utils.jar` from the jps classpath #SCL-25518,1,True,1,1,1,1,1,1,1
+bf27b6d7befbab4cbf0ce280fe892ed425ff098b,human,1.0,True,1,1780393212,[build] Further reduce the jps-shared classpath by removing the unused util_rt jar #SCL-25518,1,True,1,1,1,1,1,1,1
+09617cdf5acad847759fb6708dc54c46581ddc39,pair,1.0,True,1,1780395830,[build] Reduce IntellijSdkSubsetInfo.Jps to the minimal required jars #SCL-25518,1,True,1,1,1,1,1,1,1
+ddae87c4bd52e6c74b4334238f41cd38d5153e18,pair,1.0,True,2,1780408689,[build] Verify JPS SDK subset classpaths contain no Java 12+ bytecode #SCL-25518,2,True,1,1,1,1,1,1,1
+a4e08e7e25babea4b1ffbd7f1755fd0833ee20ac,pair,1.0,True,2,1780409286,[build] Suppress known non-compliant jars in JPS SDK subset bytecode check #SCL-25518,2,True,1,1,1,1,1,1,1
+be178809d0f5e4b552eb5df4335039ff7a65aaf9,human,1.0,True,5,1780414357,[build] Suppress deprecation warnings after the intellijVersion update to 262.7132.9,5,True,1,1,1,1,1,1,1
+fc00670a7060c33abbe42378f022c46481ef4d6c,human,1.0,True,1,1780431043,[build] Add the now mandatory intellij.libraries.misc.plugin plugin after the intellijVersion update to 262.7132.9,1,True,1,1,1,1,1,1,1
+915f830f7be576cb4b11e92cebca4561475d757f,human,0.0,True,2,1780473490,"[eel, nio] Use the new java.nio.file.Path based API in ExternalSystemAutoImportAware #SCL-25423",2,True,0,0,0,0,0,0,0
+05db37199742cb70dcf85423c51d7a0ed953fd74,human,0.0,True,3,1780474220,"[eel, nio] Hide the old java.io.File based APIs in a compatibility trait called ExternalSystemAutoImportAwareCompat #SCL-25423",3,True,0,0,0,0,0,0,0
+ee2a176e0825bee1388d5e42cf7f460493375c01,pair,0.0,True,1,1780481100,"[tests, sbt] Update latest sbt 2.x version to 2.0.0-RC14",1,True,0,0,0,0,0,0,0
+3c10d393a38191bf5d3124db74f5b224931b3671,human,0.0,True,4,1780482253,"[eel, nio] Use the new java.nio.file.Path based methods in PathsList #SCL-25423",4,True,0,0,0,0,0,0,0
+35b281c642ea835aa71a0f56f26ddad83eeef4b9,human,0.0,True,1,1780487301,[tests] Run tests against Scala 3.8.4,1,True,0,0,0,0,0,0,0
+badc0d0308f3c851188fe8edf22cf41c7a8fd713,human,0.0,True,1,1780492329,[tests] Run tests against Scala 3.3.8-RC2,1,True,0,0,0,0,0,0,0
+72e7bc410c4de48c8567c8a6faed307aff4e6d89,human,1.0,True,2,1780497584,[build] Depend on the intellij.libraries.misc.plugin and intellij.libraries.commons.text module and stop shipping our own copy of the Apache Commons Text library #SCL-25534 fixed,2,True,1,1,1,1,1,1,1
+39391e764d9d8c3925466ae5c870a1092b55da3d,human,1.0,True,1,1780990824,[build] Update the hunspell test dictionary version to 0.2.359,1,True,1,1,1,1,1,1,1
+526aa5e6cb27ac6add99d166838895bb8e6c2697,pair,0.0,True,1,1780997425,"[eel, nio] Reuse existing isUnder Path extension instead of local isAncestorOf in SbtProjectResolver #SCL-25423",1,True,0,0,0,0,0,0,0
+104a68cec4d4c454a6bf14e27b0607890a078407,pair,0.0,True,1,1780997470,"[eel, nio] Migrate java.io.File usages in BspResolverLogic to Path-based isUnder #SCL-25423",1,True,0,0,0,0,0,0,0
+4623559559901c2ee672be0e8f5a21a6766df342,pair,0.0,True,1,1780998492,"[eel, nio] Migrate java.io.File usage in SdkUtils to Path.toRealPath #SCL-25423",1,True,0,0,0,0,0,0,0
+e32779cb3d9cbe040484c2fca366bce6016b6d94,pair,0.0,True,3,1780999234,"[eel, nio] Suppress SSBasedInspection for java.io.File fields kept for serialization compatibility #SCL-25423",3,True,0,0,0,0,0,0,0
+0c1edad817c704cc4371664b129fe3fac22cfa26,pair,0.0,True,4,1780999890,"[eel, nio] Suppress SSBasedInspection for java.io.File usages forced by external APIs #SCL-25423",4,True,0,0,0,0,0,0,0
+f31e70c9a75e7a82c52e26f96d196c1d3b5f6de2,pair,1.0,True,1,1781008858,"[eel, nio] Remove unused members from project.template package object #SCL-25423",1,True,1,1,1,1,1,1,1
+52e9ed8d95036d9e22bdc28b3f24e7ac1a88bf91,pair,1.0,True,3,1781011971,"[eel, nio] Migrate usingTempFile and writeLinesTo usages off project.template package object #SCL-25423",3,True,1,1,1,1,1,1,1
+1930d8a8869100972c2fb67199158ece21267742,pair,0.0,True,2,1781014562,"[eel, nio] Migrate usingTempDirectory usage and remove project.template package object #SCL-25423 fixed",2,True,0,0,0,0,0,0,0
+9f169e853a2983a06eaec18fdbeafc2a8416009d,human,1.0,True,8,1781032994,[sbt] import kotlin compiler options when sbt-kotlin-plugin is enabled and kotlin options are present,8,True,1,1,1,1,1,1,1
+1bdc9d15fc1b50d963f088e521b01b9ba701dfa1,human,1.0,True,4,1781042657,"Update intellijVersion to 262.7574 and fix the build (#SCL-25552, #SCL-25518)",4,True,1,1,1,1,1,1,1
+065cd10fd86c7422b890c7b3603a390b0d251216,human,0.0,True,3,1781074684,"Regenerate the sbt workspace entities (#SCL-25552, #SCL-25518)",3,True,0,0,0,0,0,0,0
+6a075c4002614fcd982d9075062606c7415ad48b,human,1.0,True,1,1781101925,[compiler] Drop `-server` as a default VM option for the Scala Compile Server JVM process #SCL-24311,1,True,1,1,1,1,1,1,1
+94dff584eab6b88d24377c0c152ed9f206a3a610,human,1.0,True,1,1781101955,[compiler] Drop `-XX:+UseParallelGC` as a default VM option for the Scala Compile Server JVM process #SCL-24311,1,True,1,1,1,1,1,1,1
+bbd534465832ba8e05e090da35decf230ee95df1,human,1.0,True,1,1781101999,[compiler] Set `-XX:ReservedCodeCacheSize=384m` as a default VM option for the Scala Compile Server JVM process #SCL-24311,1,True,1,1,1,1,1,1,1
+b981866fd7466c562a36ae3ad3e1315ccbccf0ef,human,0.0,True,1,1781102023,[compiler] Use the default number of builder threads as the platform #SCL-24311 fixed,1,True,0,0,0,0,0,0,0
+e0c8f6b9bb373b39e5da31abb783c5a91f4b58df,human,0.0,True,1,1781114400,[compiler] Document the choice of default JVM parameters for the Scala Compile Server #SCL-24311,1,True,0,0,0,0,0,0,0
+888746e9f351717412e7451e3a4d1bfbec9fa2ec,human,0.0,True,1,1781155863,"[tests, lts] Run tests against Scala 3.3.8 LTS #SCL-25399",1,True,0,0,0,0,0,0,0
+3ed2cb21fd25cebeed060ed5a39634df29f63c4a,pair,0.0,True,1,1781266700,[tests] Update sbt 2 test version to 2.0.0-RC16,1,True,0,0,0,0,0,0,0
+fea5453a27e434f4755e32eeb9c424f409a2cfeb,human,0.0,True,1,1781279441,fix comment text in SbtImportHeartbeatReporter,1,True,0,0,0,0,0,0,0
+57d08e3ce01e9af36484bd601d3d4d5f189b2743,human,0.0,True,2,1781279442,"[quick fix] fix ""change type"" quick fix not available in the end of the block #SCL-25481 fixed",2,True,0,0,0,0,0,0,0
+09d9c22e789b33b071c08ee7925323d144df4932,human,1.0,True,8,1781279442,"[sbt, refactor] split the huge communication.scala file into multiple top-level files",9,True,1,1,1,1,1,1,1
+0af1192496cad0127c74119f5c224c5c00f95959,pair,1.0,True,18,1781279442,"[sbt, refactor] huge refactor of SbtShellCommunication, extract multiple entities to separate classes, improve pipeline (part 1) (#SCL-22453, #SCL-24338, #SCL-24434)",18,True,1,1,1,1,1,1,1
+cc740202c80533a0f6a26b4b86f43eaa56a5c9ef,pair,1.0,True,4,1781279442,"[sbt, cleanup] replace trimRight with stripTrailing #SCL-22453",4,True,1,1,1,1,1,1,1
+64132a335f5d4c33d1c32ad9d1cc25ae0de2a09b,human,1.0,True,2,1781279442,"[sbt, refactor] extract SbtCommandLineState.scala from SbtRunConfiguration.scala",2,True,1,1,1,1,1,1,1
+7bd69c1a921d5075aa4d28e48376fa821a19ecc7,human,0.0,True,1,1781279442,"[sbt, refactor] SbtExternalSystemManager: extract multiple lambdas to methods",1,True,0,0,0,0,0,0,0
+ea09d0e2a439f810a23fd1ce4233789c25531fcb,human,0.0,True,1,1781279442,"[sbt, tests, refactor] huge refactor of tests based on SbtExternalSystemImportingTestLike",1,True,0,0,0,0,0,0,0
+05f75b7cf8e395db3ede7809e789bef663d52156,human,1.0,True,1,1781279443,"[sbt shell] update debug action ""enabled"" only in ""update"" method, not in the constructor",1,True,1,1,1,1,1,1,1
+5d4c7e61b3d20bdd7abd3acdb5151ff56a85f2eb,human,1.0,True,9,1781279443,"[sbt, refactor] extract SbtProcessOutputDiagnosticsCollector (for tests)",9,True,1,1,1,1,1,1,1
+6c72be2df3451fec78e6729ad9813f4a357437e3,human,1.0,True,2,1781279443,[sbt] add a comment to SbtShellCommandSubmitter,2,True,1,1,1,1,1,1,1
+9106d5c9ca97eda9b58bd80a0caea4f684221431,human,1.0,True,25,1781279443,"[sbt, refactor] split sbt jvm & sbt options entities into multiple entities and move to separate package ""options""",25,True,1,1,1,1,1,1,1
+c29e7e7200378d622b26f5490b1c18f33c650a6b,human,0.0,True,1,1781279443,"[sbt, refactor] improve CompositeReporter: handle more methods when delegating",1,True,0,0,0,0,0,0,0
+4745f64cc07783b1b950dcc57294539e6f6ee9d8,human,0.0,True,1,1781279443,"[sbt, refactor] improve LogReporter: handle more methods",1,True,0,0,0,0,0,0,0
+519e69058a33465b65b19a2ab8f44ed2a48bcb38,human,0.0,True,1,1781279443,"[sbt, refactor] improve ExternalSystemNotificationReporter: don't forget to call ExternalSystemTaskNotificationListener methods in the `onEvent` method",1,True,0,0,0,0,0,0,0
+0f128e34015ad709e283d0bea46eeab50df5c309,human,1.0,True,1,1781279443,"[sbt, refactor] improve BuildToolWindowReporter: handle more methods",1,True,1,1,1,1,1,1,1
+5d3e3eb6ad35011534448825cb8e88c278ad2fa5,human,1.0,True,7,1781279443,"[sbt, refactor] extract multiple entities from SbtProcessManager.scala to separate entities in process/utils subpackage",7,True,1,1,1,1,1,1,1
+1b4a1074cdceb9ded8cce586f42fe4c17a9c16ea,human,1.0,True,4,1781279443,"[sbt] fix ability to run before launch steps in ""sbt Task"" in all possible modes #SCL-25433 fixed #SCL-15953 fixed #SCL-22453 fixed",4,True,1,1,1,1,1,1,1
+123759882216f96e0150efc496698714893b6382,human,1.0,True,1,1781279443,"[sbt, refactor] SbtCommandLineState: extract some variables + minor renames",1,True,1,1,1,1,1,1,1
+34989539f49886362b017ba996103a71db6f5c4e,human,0.0,True,1,1781279443,"[sbt, refactor] stricter, explicit requirements for SbtExternalSystemManager.executionSettingsFor to be run on background thread",1,True,0,0,0,0,0,0,0
+0906bdf31badd272471b93590b5595585564d7a6,human,1.0,True,2,1781279444,"[sbt, docs] add docs to the SbtProgramRunner and SbtDebugProgramRunner",2,True,1,1,1,1,1,1,1
+8d4cc82a7fd2d5174e377df66b65fe600bcc62ed,human,0.0,True,1,1781279444,"[sbt, tests] cover SbtProcessJdkGuesser with tests",1,True,0,0,0,0,0,0,0
+6fb27813586a00b807b40724e555365d681facd7,human,0.0,True,6,1781279444,"[sbt, legacy warnings] rewrite legacy sbt version warnings and cover the logic with tests",6,True,0,0,0,0,0,0,0
+2a041dcd95c1717351a2184611cf2a9e67f33105,human,0.0,True,1,1781279444,[inspection] Use uninitialized for Scala 3 null initializers #SCL-25522 fixed,1,True,0,0,0,0,0,0,0
+bfdd06f4eae7408b62bb1e66f869029c94a487c1,human,0.0,True,1,1781279444,[compile server] fix compile server auto-start for single-file compilation #SCL-25538 fixed,1,True,0,0,0,0,0,0,0
+e38890caffd9ce8617306650e20ba389feff0b83,human,1.0,True,1,1781279444,[sbt] add Scaladoc to SbtCommandLineState,1,True,1,1,1,1,1,1,1
+09f73655a6e47db37bb66d30b69fbca0a41868db,human,1.0,True,1,1781279444,[sbt run configuration] fix adding sbt commands to the non-sbt shell process in SbtCommandLineState,1,True,1,1,1,1,1,1,1
+d056652550ea6e7633f0e781ddd4df13d20136fa,human,1.0,True,3,1781279444,[sbt] drop unused run configuration output listener,3,True,1,1,1,1,1,1,1
+0fd3193855159e95af45c8dded13dd5804b0834c,human,0.0,True,1,1781279444,[sbt] make  org.jetbrains.sbt.shell.communication.SbtShellCommandEventProcessor.OutputCollector  thread-safe,1,True,0,0,0,0,0,0,0
+5e0317361948dd7bfbdac644952b629865341858,human,1.0,True,3,1781279444,[sbt run configruation] cancel a command to sbt shell when sbt run configuration is canceled,3,True,1,1,1,1,1,1,1
+f98a05bc8f1c3b7cee888e9e8d14de5be63a4f70,human,0.0,True,1,1781279444,[sbt] add missing method to SbtProcessOutputDiagnosticsCollector.scala needed for SbtRunConfiguration_MockedProcess_ExecutionTest,1,True,0,0,0,0,0,0,0
+51f8c0801e95454b31ec03475704b6903e2e4ea1,human,1.0,True,27,1781280841,[sbt] report malformed quoted sbt options to the build tool window,27,True,1,1,1,1,1,1,1
+2b1549bb8efe35499705a156847b2e9647085c77,human,0.0,True,4,1781280841,[sbt] fixup to one of the commits above: parsing & diagnostics store original file and lines,4,True,0,0,0,0,0,0,0
+66de09ec7d073df5ab33038f5f2d170a83b47589,human,1.0,True,10,1781280841,[sbt] show warnings for collected sbt options on sbt shell startup #SCL-24625 fixed,11,True,1,1,1,1,1,1,1
+e386a444c86e26cf7a8b7997b4d19d86cf92bcb8,human,1.0,True,3,1781280841,[sbt] stricter API for build reporters when resolving sbt options,3,True,1,1,1,1,1,1,1
+ca0556a4bd6f3e98e4c4284a83948145266a6e47,human,1.0,True,2,1781280842,[sbt shell] track lifecicle transition events for better diagnostics in internal mode and unit tests,2,True,1,1,1,1,1,1,1
+cbd600c6a948b71a436ab41c30c61a35f74bbee0,human,1.0,True,1,1781280843,[sbt shell tests] run sbt shell state integration tests on background thread,1,True,1,1,1,1,1,1,1
+957ee473fd4f4741849e89936291b250b17b10db,human,1.0,True,3,1781280843,[sbt] not non-sbt-shell project import also uses dumpStructureTo command instead of dumpStructure #SCL-18487,3,True,1,1,1,1,1,1,1
+e79f5e4655f75f90325e3e59c32172a8849f37ed,human,0.0,True,1,1781280844,"[sbt shell tests] add support for ""no-shell-stdin"" mode in MockSbtProcess (needed for SbtRunner)",1,True,0,0,0,0,0,0,0
+6e14fef4e7af712ce9b80d3bbbcec7b2759011c3,human,1.0,True,2,1781280844,"[sbt, run configuration] avoid EDT sbt settings lookup in debug runner",2,True,1,1,1,1,1,1,1
+7719b60e89fcd8a86bf6f33182c3044f10372afc,pair,1.0,True,1,1781280844,"[run configurations, sbt shell] defer sbt shell debug attach off EDT #SCL-24434 fixed",1,True,1,1,1,1,1,1,1
+fbe72e9ccd45d4b46d970cf538dc98baeb4ff4cc,human,1.0,True,1,1781280845,[sbt test] move mockSbtProcess to a dedicated module and integrate it into the project build pipiline,1,True,1,1,1,1,1,1,1
+e2beb15e2cf2d542227a343a13235a4e50c9af4e,human,1.0,True,1,1781280845,[sbt tests] ensure proper thread annotations and threading model adjustments in sbt shell tests and process handling,1,True,1,1,1,1,1,1,1
+f0a4c03280a5db6551e8b525f6ded0b83cdba0d9,human,1.0,True,1,1781280845,[sbt tests] refactor MockSbtProcess to use centralized info logging function,1,True,1,1,1,1,1,1,1
+0fa8717cdfc7121f3c44d6d73c42aa9074753a17,human,1.0,True,1,1781280845,"[sbt tests] refactor MockSbtProcess: centralize commands, improve logging, and streamline command processing",1,True,1,1,1,1,1,1,1
+46640f468e3f7298989766714e6c90ad55261993,pair,1.0,True,1,1781280845,[sbt shell] attach decorated debug console before session creation,1,True,1,1,1,1,1,1,1
+c58b2fe148bfe9bd2e9fff77f24d0726968a4380,human,1.0,True,2,1781280845,"[sbt debug runner] extract MyTrojanRemoteState to a dedicated file, add scaladoc",2,True,1,1,1,1,1,1,1
+6cc2845097d65a0f6757b7b9e6f656a8a16da674,pair,1.0,True,1,1781280845,[sbt] decorate separate-process run configuration console,1,True,1,1,1,1,1,1,1
+71f65dffa0184452735492081526fc05ac90803a,human,0.0,True,1,1781280846,[sbt debug runner] MyTrojanRemoteState: extract executeImpl method,1,True,0,0,0,0,0,1,0
+2cdf7c24b8a4ab6c4b003e36ccd823e92298d812,pair,1.0,True,20,1781280846,"[sbt shell, run confug] fix JDWP prompt parsing and shell run console output #SCL-12187 fixed",20,True,1,1,1,1,1,1,1
+e6e1ed0a42814aab3b45bb508fb2c5d70dd6723f,pair,1.0,True,3,1781512806,[sbt shell] cover failed reload ignore handling #SCL-25342 fixed,3,True,1,1,1,1,1,1,1
+152e9369a7204a3fd00c7f15fc00c06c8e4a0a10,pair,0.0,True,1,1781512831,[sbt shell] drop deprecated -Xdebug VM option from shell debug launch #SCL-12187,1,True,0,0,0,0,0,0,0
+98aa587bc0cf136c2d33eeabd73617629ad15258,pair,1.0,True,12,1781512831,"[sbt, shell, run config] show waiting hint for delegated run configurations #SCL-11525",12,True,1,1,1,1,1,1,1
+9eb406bd7b91b3982984629db18708d749efa018,pair,0.0,True,1,1781512831,"[sbt shell] preserve JVM option operands from .jvmopts (without dash `-`) (#SCL-22898, #SCL-22803) fixed",1,True,0,0,0,0,0,0,0
+8343423cd1a5d9cd952fa1b80a58c4a6dffa1e42,pair,1.0,True,7,1781512831,[sbt shell] mirror startup output for shell-backed sync #SCL-24150 fixed,7,True,1,1,1,1,1,1,1
+b31df7cdf5c6c175ca2fbe9a0d7cf5634475a78e,pair,1.0,True,2,1781512831,[sbt shell] ignore prompt state changes during shell shutdown,2,True,1,1,1,1,1,1,1
+3114c9885071cd210f432efe0d65cb2fd259ec8b,pair,1.0,True,2,1781512932,[sbt shell] add failed reload diagnostics #SCL-25342,2,True,1,1,1,1,1,1,1
+e1ac7de783bdd209fc88d358b9fed21795c60f7c,pair,1.0,True,1,1781512932,"[sbt shell] handle failed-reload ignore on Linux legacy shell (#SCL-25342, #SCL-24349, #SCL-24706)",1,True,1,1,1,1,1,1,1
+f2c78ea45aac1ef92c8fcf8556babb54adc58ec7,pair,1.0,True,2,1781512933,[sbt shell] simplify mock sbt shell input handling,2,True,1,1,1,1,1,1,1
+1933fcf0a3813762c006ec8e93f02b115043ffe2,pair,0.0,True,1,1781540505,"[tests, sbt] Update test sbt versions to 1.12.12 and 2.0.0",1,True,0,0,0,0,0,0,0
+0d6d90ae90f02fa37b98f5959bb049fa1ad2bbf7,human,1.0,True,1,1781591214,"[internal, debugging] Fix the debug setup of the Scala Compile Server",1,True,1,1,1,1,1,1,1
+36816470e8f25ee38f9c07a82546676380e60a16,human,0.0,True,1,1781607860,"[tests, next] Add Scala 3.9 as a ScalaVersion entry",1,True,0,0,0,0,0,0,0
+1f193401263ad1df8c3ebb19341b32cde2136104,human,0.0,True,1,1781607862,"[tests, next] Run Next RC tests against Scala 3.9.0-RC1",1,True,0,0,0,0,0,0,0
+f839ebb6aa2bf23153c2b8082c79766481121acf,human,0.0,True,2,1781607866,"[debugger, expression compiler] Do not base the debugger expression compiler class loader on the class loader of the Scala Compile Server #SCL-25557",2,True,0,0,0,0,0,0,0
+b90e0a8d397efc56dd928341b3e532df752ca234,human,0.0,True,1,1781637600,[completion] Add test cases for parameter name completion in interleaved clauses #SCL-23375,1,True,0,0,0,0,0,0,0
+d91697adcadbb8c2ee61009a4b6d5eba6fb93427,human,0.0,True,1,1781637600,[resolve] Support named type args in interleaved clauses #SCL-23375,1,True,0,0,0,0,0,0,0
+16d9cd63cebd07a7217da08101478c680211563f,human,0.0,True,2,1781637601,[quick-doc] Render interleaved method clauses #SCL-23375,2,True,0,0,0,0,0,0,0
+bf156820a62f94367a4a8a2c0cf698c46ad9832b,human,0.0,True,5,1781637601,[parameter-info] Support interleaved clauses #SCL-23375,5,True,0,0,0,0,0,0,0
+c41722ff1bb70da51ac74f1e05fb7bff59786dd0,human,0.0,True,2,1781637601,[resolve] Account for omitted using clauses in interleaved type args #SCL-23375,2,True,0,0,0,0,0,0,0
+7da2758488184fa8b76600e5e656c59d7467abef,human,0.0,True,1,1781637601,[delegate] Support interleaved clauses in forwarding calls #SCL-23375,1,True,0,0,0,0,0,0,0
+1bc64af2f373aa1c2d9458bb5b44e8ed24d1ed68,human,0.0,True,1,1781637601,[intentions] Support interleaved clauses in context bound conversion #SCL-23375,1,True,0,0,0,0,0,0,0
+4a0a63ace395a4115f2a4f3609b8831ed785ac1b,human,0.0,True,1,1781637601,[completion] Support rename command for interleaved clauses #SCL-23375,1,True,0,0,0,0,0,0,0
+db2860727e1a7d85a506781d90567f7be11f4353,human,0.0,True,2,1781637601,[structure-view] Support interleaved clauses in function signatures #SCL-23375,2,True,0,0,0,0,0,0,0
+4c4322ac6ed7b14e5e7b4e654e21ce10277de81c,human,0.0,True,3,1781637601,[change-signature] Support interleaved clauses #SCL-23375,3,True,0,0,0,0,0,0,0
+3d7b926bf21b64c03f83c0e8d42356b4c12b99b4,human,1.0,True,4,1781641829,[hints] Support interleaved clauses #SCL-23375,4,True,1,1,1,1,1,1,1
+0dde87da97e31fb713a937adeb946578b40519f0,human,0.0,True,3,1781685843,[resolve] Implement prefix unary assignment support,3,True,0,0,0,0,0,0,0
+7fc1b5564f268217db51ddb586a42d8dad2264dc,human,1.0,True,14,1781818507,"[hints] Add basic implementation of matchedTypeParameters, improve interleaved type argument hints",14,True,1,1,1,1,1,1,1
+02a8b900304397049966cc9536ff6a477185d877,human,0.0,True,4,1781865797,[resolve] Fix unary assignment annotation,4,True,0,0,0,0,0,0,0
+14b7c03aee6ba8b697393b1903e51b725ce3ad48,human,1.0,True,1,1782114609,Update intellijVersion to 262.8117.19,1,True,1,1,1,1,1,1,1
+7db3edcb6e239b2942b1b23fbeb5a5769dbae769,pair,1.0,True,2,1782123527,"[tests, sbt] Update latest sbt 1.12 version to 1.12.13",2,True,1,1,1,1,1,1,1
+69a66ee3d23614cb8fdeb80668f7e0fc3747de15,human,1.0,True,1,1782203974,Update intellijVersion to 262.8376,1,True,1,1,1,1,1,1,1
+ffedcedd7347d6bdcfbb1e5ee687aaf4a8afbf5e,human,0.0,True,1,1782221540,"[cbh, eel, scratch] Handle errors when parsing scratch worksheet paths and fallback to a local filesystem path if needed #SCL-25245 fixed",1,True,0,0,0,0,0,0,0
+72e40ed846f666ef92dab8996122aff598159c6b,human,0.0,True,1,1782221541,"[cbh, eel, scratch] Handle unknown paths which cannot be mapped to a virtual file when using compiler types #SCL-25245",1,True,0,0,0,0,0,0,0
+833fc9fb51d760a0a9c18171cc3e7dbdfe429bf4,human,1.0,True,1,1782294849,Update intellijVersion to 262.8377.25,1,True,1,1,1,1,1,1,1
+7a2aa9c728dd07c8a790a4bccbd4a8cd6773b3a9,human,0.0,True,1,1782402861,"[bytecode indices, eel] Fix threading exceptions thrown by eel code running on the UI thread in the CompilerIndicesSettingsForm constructor #SCL-25609 fixed",1,True,0,0,0,0,0,0,0
+d8f097b51e98b66b30cbd484b05d778ca2158882,pair,0.0,True,1,1782470881,"[bytecode indices, find usages] Avoid invokeAndWait under a ReadAction when checking the search scope #SCL-25610 fixed",1,True,0,0,0,0,0,0,0
+a4695c5077b411fae8d82aae13add10b8509d22e,pair,0.0,True,1,1782735128,[debugger] Stop on lambda breakpoints added after start in Scala 3 top-level definitions #SCL-25415 fixed,1,True,0,0,0,0,0,0,0
+4fac6aba26318b48eed7b3e3a27e67343bb7fa17,human,1.0,True,1,1782922001,[build] Update the sbt-kotlin-plugin to version 4.0.0 #SCL-24919,1,True,1,1,1,1,1,1,1
+927ddf7fff3cfbf7e155805cd029a192b724b12e,human,0.0,True,1,1783002008,"[settings, compile server] Fix the perpetually modified state of the Scala Compile Server settings form #SCL-25631 fixed",1,True,0,0,0,0,0,0,0
+045b36aa5bbc4a04a5a41807ff30478936719e86,human,1.0,True,1,1783077668,[build] add VM option for splitting IntelliJ test logs,1,True,1,1,1,1,1,1,1
+56ce9c6c58fc75eaf100b047f5955ee0f14b112f,human,0.0,True,1,1783077670,"[sbt, build view] Fix a deprecation warning in BuildEvents API after the intellijVersion update to 262.8665.81 Beta",1,True,0,0,0,0,0,0,0
+2556ff2a93477a00fa1db5a0db2f41c9ca03c13f,human,1.0,True,1,1783097831,[build] disable fatal warnings scala compiler optoins,1,True,1,1,1,1,1,1,1
+b31a37140d0908705100e4b5a2f2cbdbb3a5fa15,human,0.0,True,4,1783097833,"[sbt] fix ""Open Settings"" link in sbt options warning #SCL-25648 fixed",4,True,0,0,0,0,0,0,0
+540c60794785ce7d922d7b29fb00da93334c817f,pair,0.0,True,1,1783528897,[debugger] Stop endless implicit-conversion recursion when evaluating an unresolvable call #SCL-25655 fixed,1,True,0,0,0,0,0,0,0
+21757d141ffa9fc6b9011824f7686a8c2f560371,pair,0.0,True,1,1783610019,[worksheet] Avoid '$' in the identifiers generated by the Plain worksheet source preprocessor #SCL-25659 fixed,1,True,0,0,0,0,0,0,0
+24396c17abd7295409df3435600c62c0cadd8bc6,pair,0.0,True,1,1783619074,"[compiler, log] Write Scala Compile Server log to its own dir instead of build-log #SCL-19104",1,True,0,0,0,0,0,0,0
+99a1fc48174d4a4aecbf1bcf68e1d2d8ac8704f6,pair,0.0,True,1,1783619082,"[compiler, log] Show the Scala Compile Server log path in the not-found notification #SCL-19104",1,True,0,0,0,0,0,0,0
+9704ab8aa6597e8364778d65b83e3fa1c05cbc4a,pair,1.0,True,4,1783627646,[npw] hide unsupported Scala 3 versions #SCL-22032 fixed,4,True,1,1,1,1,1,1,1
+ac182f7252c7a3a7f805409010bb926522aa0ee9,human,0.0,True,2,1783627648,"[language injection] handle named arguments in call argument patterns #SCL-24942, #SCL-21686, #SCL-24947",2,True,0,0,0,0,0,0,0
+2b66c6dfed0d347184bce5fee128d5be5923fb63,pair,0.0,True,1,1783627650,"[language injection] recognise doobie library ""Update.apply"" argument as SQL #SCL-24942 fixed",1,True,0,0,0,0,0,0,0
+fbb325f1257f45beeb7cb3b08938b0bab872b74f,pair,1.0,True,6,1783627652,[bsp] treat project-close session initialization as cancellation #SCL-24439 fixed,6,True,1,1,1,1,1,1,1
+b2684ff10cba21bb40449434edf663cc332f653f,pair,0.0,True,6,1783926185,"[navigation bar] improve Scala navbar paths and add exhaustive test coverate (#SCL-25671, #SCL-25672) fixed",6,True,0,0,0,0,0,0,0
+0f539ee0a618e00bebcbbcac6f0a82797abe2a68,human,0.0,True,3,1783926186,[psi] add scaladoc to ScValueOrVariableDefinition.scala and remove redundant `isAbstract` overrides,3,True,0,0,0,0,0,0,0
+f7cb017f23a3b5205018d17434298136885e29f0,pair,0.0,True,3,1783926188,[sbt shell] avoid deadlock during concurrent shell shutdown #SCL-25654 fixed,3,True,0,0,0,0,0,0,0
+c3bc94325d0ca3c967c4c4461ead8b19f7b83080,pair,1.0,True,2,1783926189,[sbt shell] hard kill cancels buffered soft-restart commands even when a shutdown is already in progress #SCL-25654,2,True,1,1,1,1,1,1,1
+ddba9f190f7ef0b376074ee2b1004680f1515937,pair,0.0,True,1,1783933163,"[tests, sbt] Update latest sbt 2 version to 2.0.2",1,True,0,0,0,0,0,0,0
+7f0453b5d14c8f86784a2594405a05e59cbe0c9d,human,0.0,True,3,1784040426,"[tests, ui] Add back the UI tests specific utility code for setting up a Scala SDK #SCL-25601",3,True,0,0,0,0,0,0,0
+19e06b6e5860a73a66e965d353b92b7c1b1e57fe,human,1.0,True,1,1784315617,[completion] Fix applicability checking of extension candidates in completion,1,True,1,1,1,1,1,1,1
+26f370ede29178bbd7c3f720a23222f39557764c,human,1.0,True,3,1784494543,[resolve] Fix specificity comparison of extension candidates,3,True,1,1,1,1,1,1,1
+4ebbe32a54dd45c63ae2aa7c42863734e8aace94,human,0.0,True,1,1784542851,"[tests, ui] Use the JetBrains Maven Central resolver when fetching the Scala SDK from the internet #SCL-25601",1,True,0,0,0,0,0,0,0
+c910ff37e53ffec3e6b78f1b9f1487d2c0e6b0c3,pair,1.0,True,2,1784548406,"[tests, sbt] Update latest sbt versions to 1.12.14 and 2.0.3",2,True,1,1,1,1,1,1,1
+d04f477fc3b13146bb2ad2236b7a690fceeca4c8,pair,0.0,True,3,1784642751,[project wizard] Fall back to hardcoded Scala/sbt versions when the version download fails with a non-OK HTTP status #SCL-25707 fixed,3,True,0,0,0,0,0,0,0
+23130bdc29f3390dfcb94f3f083f67d850597b0a,pair,0.0,True,2,1784712797,"[tests, ui] Add a system property that switches DependencyManagerBase to the JetBrains Maven Central mirror #SCL-25601",2,True,0,0,0,0,0,0,0
+90f5644a89616ea26b38e631bb14ae87f006badd,pair,1.0,True,4,1784736407,[java interop] expose synthetic Scala interfaces to Java hierarchy traversal #SCL-25708 fixed,4,True,1,1,1,1,1,1,1
+7015a77fe3bd4f807f49de707caf7e871831d93c,pair,1.0,True,7,1784736412,[java interop] model inherited static forwarder types #SCL-25042 fixed,7,True,1,1,1,1,1,1,1
+9e0d7a47d60d291a382724dcc3634ace18647c75,pair,0.0,True,1,1784736414,[enums] remove obsolete synthetic package workaround #SCL-20012,1,True,0,0,0,0,0,0,0
+5fbae6b0ef801258840ffc208b0ce9b2e1ddd1c9,pair,0.0,True,3,1784736416,[enums] model Java-compatible Scala enum constants #SCL-20012 fixed,3,True,0,0,0,0,0,0,0
+c9d531a518de7ba4f3abc5e44ef1b93e8045fd8d,human,0.0,True,2,1784736419,[tests] introduce compiler-test-utils module and CompilerTestUtil object,4,True,0,0,0,0,0,0,0
+de1d81fb4c43bf559630a6304f3a430d5013db1e,pair,0.0,True,2,1784736421,"[structure view, nav bar] support anonymous class members in navigation",2,True,0,0,0,0,0,0,0
+8b0ccf9099f924321d4702cba39a6f7df5b9e04e,pair,0.0,True,2,1784736423,[structure view] keep anonymous classes under owning definitions #SCL-25671 #SCL-25672,2,True,0,0,0,0,0,0,0
+2ef681dfeb4e0aa5805a1485ceabd24678182414,pair,1.0,True,4,1784810033,"[color scheme, highlighting] add configurable first-clause case class field colors #SCL-386240 fixed",4,True,1,1,1,1,1,1,1
+735f017f185641831b20543aa84a9a5aec84384b,pair,0.0,True,1,1784822778,[highlighting] apply Scala colon color scheme in editor #SCL-22117 fixed,1,True,0,0,0,0,0,0,0
+26138417efc709f0e5e512f21d9f497f7901ccf8,pair,0.0,True,3,1784822780,[highlighting] cover all Scala color scheme elements with tests SCL-22117,3,True,0,0,0,0,0,0,0
+5a9e30b894c52ebb1af9694e3068ec4ecf953a9a,pair,0.0,True,1,1784897587,[tests] Run tests against Scala 3.9.0-RC4 #SCL-25557,1,True,0,0,0,0,0,0,0
+058d17af8ea30a95d2114ee850401e3c3a54e203,pair,0.0,True,2,1785093011,[overriders search] include self-type overrides in Go to Implementations #SCL-25367 fixed,2,True,0,0,0,0,0,1,0
+a9ec85ada129f9fa9b2c32cb78cce2a8330d55bd,pair,1.0,True,10,1785093011,"[overriders search, gutter] support exported members in navigation #SCL-25367 fixed",10,True,1,1,1,1,1,1,1
+1b0047f7ea21288151eb2fbe6cb863aca0250ad0,pair,0.0,True,1,1785093011,"[psi, java interop] add Scala trait superclass regressions for multiple subsystems (#SCL-25260, #SCL-25714)",1,True,0,0,0,0,0,0,0
+ccbcf942e22cc6f475ae1d1c337ebe594ed91324,pair,0.0,True,2,1785093011,[psi] align Scala trait parent lists with Java interfaces behavior #SCL-25260,2,True,0,0,0,0,0,0,0
+8fe3ac39575d45ffb4d7e298aadd2499b4d386c9,pair,1.0,True,1,1785093011,[psi] align Scala anonymous template parent APIs with Java behavior #SCL-25260,1,True,1,1,1,1,1,1,1
+056bec826589cebeb5e144c55cd5a807916c398a,pair,0.0,True,2,1785093012,[psi] document Scala trait Java-superclass parent lists #SCL-25714,2,True,0,0,0,0,0,0,0
+a2d3edc916860854937bef90d188f9cbcd6fa90f,pair,0.0,True,1,1785093012,[psi] preserve Scala annotations in synthetic case class members #SCL-25718,1,True,0,0,0,0,0,0,0
+073bacb031253c5be4464e22b28ebe5a829651ea,pair,0.0,True,1,1785093012,[editor] rename Java overriding searcher #SCL-7463,2,True,0,0,0,0,0,1,0
+d983cf27042948c4f05ffa0eb39586a7f4ee0a6a,pair,0.0,True,1,1785093012,[editor] make Java overriding aware of Scala specialisations in generics #SCL-7463 fixed,1,True,0,0,0,0,0,0,0
+fefd7ca0d3bd7770b4398c1bffeb4158536cd75f,pair,1.0,True,1,1785093012,[light psi] normalize backticked annotation attributes #SCL-25723 fixed,1,True,1,1,1,1,1,1,1
+c557d1b6fbbe02bd19966340edd0425889a8d169,pair,0.0,True,1,1785093013,[light psi] normalize Java annotation conversion #SCL-25723 fixed,1,True,0,0,0,0,0,0,0
+9345c23cd47f1bf467f0e8334c0d445194c26b15,human,0.0,True,1,1785093013,[light psi] ScLightModifierList.scala #SCL-25723,1,True,0,0,0,0,0,1,0
+c6280651757d503db7d712501e7f6238cbeb8d4d,human,0.0,True,1,1785093013,[teamcity] restrict automatic retries for large failing test buckets with 10 failed tests max (per bucket),1,True,0,0,0,0,0,0,0
+98f20a4d02f3dcffa087fa36d16bc71273c2ee4d,pair,0.0,True,1,1785172659,[worksheet] Explicitly pass a `NON_BLOCKING` SleepingPolicy when constructing BaseDataReader instances #SCL-25734 fixed,1,True,0,0,0,0,0,0,0
+9131d2dc0a02c9bb13bde791ce8ca564056c4087,pair,0.0,True,1,1785506865,[build] Enable @NotNull annotation instrumentation of the compiled bytecode #SCL-22085 fixed,1,True,0,0,0,0,0,0,0
+3b46c64d18476dbedbb45ce5f39892f9f8d39a88,human,0.0,True,1,1785838848,[build] Rewrite the LocalRepoPackager custom sbt plugin to fetch from the JetBrains Maven Central Mirror instead of Maven Central to avoid HTTP 429 Too Many Requests errors in the CI #SCL-25750,1,True,0,0,0,0,0,0,0
+35a5e75ac0c62b3277ad8c93e47e0b2047470c84,human,0.0,True,1,1785915209,[tests] Run tests against sbt 2.0.5,1,True,0,0,0,0,0,0,0
+4e9703efeba6a223a91801cec57e0f3d8b0618e2,human,0.0,True,3,1785959497,[build] Factor out a common list of dependencies to be used for fetching local repo and dynamic dependencies of the Scala Plugin using Coursier #SCL-25750,3,True,0,0,0,0,0,0,0
+74d8f2a7883ed91d6e0b2ba79dac73ea72f72efe,human,0.0,True,1,1785960559,[build] Replace the deprecated withExclusions with the withMinimizedExclusions method in LocalRepoPackager #SCL-25750,1,True,0,0,0,0,0,0,0
+5ea31382083a4e1c6c7860855e86a83a73629f5c,pair,0.0,True,1,1785962439,[build] Determine the repository root of a fetched artifact by matching cache path prefixes in LocalRepoPackager #SCL-25750,1,True,0,0,0,0,0,0,0
+1ff59ea032b5096441c544937bb562dbeb596a82,pair,0.0,True,1,1785962447,[build] Add Maven Central as a fallback repository for fetching local repo and dynamic dependencies #SCL-25750,1,True,0,0,0,0,0,0,0
+254d50ac0dda2d75f4aef871197ece8012e22d0d,human,1.0,True,1,1786003523,[build] Update the coursier-paths library dependency to version 2.1.25-M26,1,True,1,1,1,1,1,1,1
+24a4291c17e357e3edcd63572bbfe86ea8d26ad7,human,1.0,True,1,1786003550,[build] Update the JetBrains annotations library dependency to version 26.1.0,1,True,1,1,1,1,1,1,1
+6268a49082604b016ab506afa727933ff0effbed,human,1.0,True,1,1786003668,[build] Update the provided utest dependency to version 0.9.5,1,True,1,1,1,1,1,1,1
+ab3122bcdb9e47b66064c795ba14321b16a16a40,human,1.0,True,1,1786003729,[build] Update the slf4j-api test dependency to version 2.0.18,1,True,1,1,1,1,1,1,1
+cf2ecdeb0477459b9e9f96a3250ed5c4acd82309,human,1.0,True,1,1786003800,[build] Update the bloop-rifle library dependency to version 2.1.1,1,True,1,1,1,1,1,1,1
+62f2678903225a6ec39a783f1e566d6b6571b831,human,1.0,True,1,1786003833,[build] Update the ivy library dependency to version 2.6.0,1,True,1,1,1,1,1,1,1
+7d401ed57997ff648a91ec08333ca418c7825e87,human,1.0,True,1,1786024231,[tests] Use the JetBrains Maven Central for resolving artifacts at runtime using ivy2 in tests #SCL-25750,1,True,1,1,1,1,1,1,1
+3b4ebb3fe595c24be9ea534cb5d6695784af1c39,human,1.0,True,24,1786025520,[bundles] Fix deprecation warnings for extending DynamicBundle and switch to composition by encapsulating a private instance of DynamicBundle,24,True,1,1,1,1,1,1,1
+6dfe6f1b30a7c5a379e6d59d8333688c44994834,human,1.0,True,1,1786368517,[build] Update the coursier-paths library dependency to version 2.1.25-M26,1,True,1,1,1,1,1,1,1
+a1a32a970f06b70f9cf7b4c6daea1050c9bd7065,human,1.0,True,1,1786368517,[build] Update the JetBrains annotations library dependency to version 26.1.0,1,True,1,1,1,1,1,1,1
+feace886d0d8aefc62d44ef2b8805e0dab35e1ba,human,1.0,True,1,1786368518,[build] Update the provided utest dependency to version 0.9.5,1,True,1,1,1,1,1,1,1
+b58c29744b9723871a9583da8750d4b07e057e90,human,1.0,True,1,1786368518,[build] Update the slf4j-api test dependency to version 2.0.18,1,True,1,1,1,1,1,1,1
+8fe7df3747bc58751a2e8ae98b49c9e00ed4ea67,human,1.0,True,1,1786368518,[build] Update the bloop-rifle library dependency to version 2.1.1,1,True,1,1,1,1,1,1,1
+e79ea7b058ecbb4069cdeeec1ddca3e3e53144b5,human,1.0,True,1,1786368518,[build] Update the ivy library dependency to version 2.6.0,1,True,1,1,1,1,1,1,1
+654a21db859c136f228a29b9d313e92aad319a1f,human,1.0,True,1,1786368520,[tests] Use the JetBrains Maven Central for resolving artifacts at runtime using ivy2 in tests #SCL-25750,1,True,1,1,1,1,1,1,1
+c4eca4ea0a25da23c19db85ebc7d12fae605a46c,human,0.0,True,24,1786368521,[bundles] Fix deprecation warnings for extending DynamicBundle and switch to composition by encapsulating a private instance of DynamicBundle,24,True,0,0,0,0,0,0,0
+c2c1000e5229f85fee2cb69eac65ca6a4dabae7b,human,0.0,True,1,1786382135,[build] Fix the build and compilation after the intellijVersion update to 263.3053,1,True,1,1,0,1,1,1,1
+749ce9d8e23dca71355849e7dc835c4f8ad4554f,pair,0.0,True,1,1786382180,"[build, compilation cache] Compute the remoteCacheId without triggering the default id #SCL-25790",1,True,0,0,0,0,0,0,0
+bc0dbf791409868ded567920a0068c06b0c070d3,pair,0.0,True,1,1786382182,"[build, compilation cache] Skip unnecessary compilation cache round trips #SCL-25790",1,True,0,0,0,0,0,0,0
+072e8c0867580f26141652125fdd0130d0842ac1,human,1.0,True,2,1786392069,[build] Update the sbt dependency to version 1.12.15,2,True,1,1,1,1,1,1,1
+fbb1cc33dc4cfdf3005c37f087b97d4b9e0023b3,human,0.0,True,1,1786438842,[compiler integration] Drop the VAlign case of the new VAlign enum #SCL-25741,1,True,0,0,0,0,0,0,0
+0997ac18e0cb3ee7fba78bd558e8456b35f8c530,human,0.0,True,7,1786616376,[build] Fix compilation after the intellijVersion update to 263.3261,8,True,0,0,0,0,0,0,0
+fe582e2226fe5f68eb2a76d85d8fe9a85e05d92b,human,0.0,True,1,1786712800,[tests] Run tests against Scala 3.9.0-RC5 #SCL-25557,1,True,0,0,0,0,0,0,0
+36b87d084bc4a0f6bd45d30181e6c66b801a05be,pair,1.0,True,1,1786966563,[debugger] Replace obsolete dumb-mode breakpoint highlight refresh with fireBreakpointChanged #SCL-25827 fixed,1,True,1,1,1,1,1,1,1
+96326712b412f404891c383fd7c947ce4a8947fe,pair,1.0,True,1,1786969968,[debugger] Fix potential NPEs from nullable SourcePosition.getElementAt in ScalaLineBreakpointType #SCL-25827,1,True,1,1,1,1,1,1,1
+4cc36300cae665b7b405cc2f4ca3ca38304ed776,pair,1.0,True,1,1786975191,"[sbt, deprecations] Replace deprecated proxy JVM properties API with ProxyUtils.getCurrentSettingsAsJvmProperties",1,True,1,1,1,1,1,1,1
+15cad487125a3f03902a740be8e8199fe896d9ec,human,0.0,True,2,1786976343,[deprecations] Suppress and replace usage of deprecated APIs in SbtExtraControls.scala and settings.scala where possible,2,True,0,0,0,0,0,0,0
+dce76bf70ff5110cd1876ad4e4201d0f040b5ae8,pair,0.0,True,1,1787039207,[worksheet] Remove the never-working MyCaretAdapterBase listener-removal hack,1,True,0,0,0,0,0,0,0
+217cd2e0e161308d84bdce1293f77e61d30cb85b,pair,1.0,True,1,1787142451,[tests] Prefer the JetBrains Maven Central mirror when listing Ammonite versions #SCL-25750,1,True,1,1,1,1,1,1,1
+4431622309d6d2fbb5d66307cf04bb8eaa6216f1,human,0.0,True,1,1787217682,[tests] Run tests against Scala 3.9.0-RC6 #SCL-25557,1,True,0,0,0,0,0,0,0
+299796d2ed9510123d9dea211b897bab8a3eeb9f,pair,1.0,True,1,1787332126,[implicits] resolve inherited SBT syntax #SCL-25850 fixed #SCL-23772,1,True,1,1,1,1,1,1,1
+aa086a062e69cd60ab86ff6d5cb7a819d00b503d,pair,0.0,True,3,1787610573,[scaladoc] preserve Markdown Wiki link boundaries #SCL-25357 fixed,3,True,0,0,0,0,0,0,0
+3d70496a23d7c06d2bab3a2443bd61415baf97d3,human,1.0,True,2,1787645766,"[build, tests] Update the sbt dependency to version 1.13.0",2,True,1,1,1,1,1,1,1
+6607e9e28d0b6ccd5b2e45238626f15d0bac01a5,human,1.0,True,1,1787648284,[tests] Add Maven Central as a fallback in tests #SCL-25750,1,True,1,1,1,1,1,1,1
+ff06ca53643b879f48ccaca3f76707ee89023c8e,human,1.0,True,1,1787656640,[build] Update the zinc library dependency version to 1.12.1,1,True,1,1,1,1,1,1,1
+27efdeca5de57c59aac9e1dad9e977e81ae0b6dd,human,0.0,True,1,1787667109,"Revert ""[tests] Add Maven Central as a fallback in tests #SCL-25750""",1,True,0,0,0,0,0,0,0
+fc8e7654d53cab44943f2e84e17d7b0f5a3da116,pair,1.0,True,5,1787671346,[resolve] Fix extension receiver conversion precedence #SCL-25859 fixed,5,True,1,1,1,1,1,1,1
+4ec014173cf75eb18a26e419e10f0e8ea7276bc8,pair,1.0,True,3,1787748089,[sbt] Prevent sbt hanging caused by terminal props inherited via environment variables #SCL-25864 fixed,3,True,1,1,1,1,1,1,1
+74b634530512b9e978ea6cc084a57dd91ef23280,pair,0.0,True,2,1787761727,[resolve] Infer Scala 3 conversion evidence from member arguments #SCL-19475 fixed,2,True,0,0,0,0,0,0,0
+41f568b324a46732f598637859774c3531e1e3d6,pair,0.0,True,11,1787770717,[scala3] clarify extension overload displays,11,True,0,0,0,0,0,0,0
+b41d1c7a712b74e87dbb9fc50242fbece74eddf5,human,0.0,True,1,1787830243,"[semantic tests, build] Introduce a SemanticTests category for running the semantic tests in the CI/sbt #SCL-22082",1,True,0,0,0,0,0,0,0
+0ad26a4b63d490c1535278505351d5913758765e,human,1.0,True,1,1787909228,[semantic tests] Join the futures to avoid silently swallowing errors #SCL-22082,1,True,1,1,1,1,1,1,1
+e366bd2b8891c1e2f513ce50d8adacbdaba1c8dc,human,0.0,True,1,1788163089,[tests] Run tests against Scala 3.9.0 stable #SCL-25557,1,True,0,0,0,0,0,0,0
+81f60bbb1775e9974913e33f6ceb6bd3a4c2eea1,human,0.0,True,1,1788165531,[tests] Run tests against sbt 2.0.8,1,True,0,0,0,0,0,0,0
+3e8cee26625bb196542ba13ba514acfefbceaa62,human,0.0,True,1,1788248299,[tests] Run tests against Scala 3.10.0-RC1 #SCL-25872,1,True,0,0,0,0,0,0,0
+3001ad83ebeedafc8788c2f82cf6336e8d7c1ddf,human,0.0,True,1,1788263386,[project] Tweak ScalaLanguageLevel regex version matching to be more strict and add unit tests #SCL-25872,1,True,0,0,0,0,0,0,0
+c9d27bcb8afd795599a2431b77ed1163847ac6fd,human,1.0,True,2,1788436751,Update intellijVersion to 263.4312,2,True,1,1,1,1,1,1,1
+38e5068332175984bc61d773ed75cbd02823f820,pair,0.0,True,1,1788445226,[project] Guard ModuleExt.scalaModuleSettings against disposed modules #SCL-25911 fixed,1,True,0,0,0,0,0,0,0
+c00834773f1af7e9253d71f8db0db4281168d833,human,1.0,True,1,1788453692,"[build] Refactor the common exclusion of the special categories (NightlyTests, FlakyTests, SemanticTests) #SCL-25816",1,True,1,1,1,1,1,1,1
+1488b673e209b89a2e485ccbdf502a81c7a92fae,pair,1.0,True,1,1788507430,[build] Set the organization at the build level #SCL-25790,1,True,1,1,1,1,1,1,1
+2af12095ee937422c0574ef578386eff7e04a3f4,pair,0.0,True,1,1788522783,[build] Pre-fetch the compilation cache artifacts in parallel #SCL-25790,1,True,0,0,0,0,0,0,0
+0abe8528fa7f7d9b0d6426b8518f1b9f96c80cac,pair,0.0,True,1,1788528628,[build] Fetch the compilation cache artifacts on virtual threads #SCL-25790,1,True,0,0,0,0,0,0,0
+90df1272a574bcf0ddd596683132a7bc00238764,pair,1.0,True,4,1788873652,[debugger] Support conditional return breakpoints for returns in regular methods #SCL-21626 fixed,4,True,1,1,1,1,1,1,1
+726e167b7cdb9fcf9902985212bcc3241d493e78,human,1.0,True,1,1788901962,[type inference] Fix typing of interleaved type argument clauses,1,True,1,1,1,1,1,1,1
+9c6b95e27104d10f05e3d7f62accf921a5140213,human,0.0,True,1,1788901962,[resolve] Fix extracting parts of implicit scope for literal types,1,True,0,0,0,0,0,0,0
+6bbe0e4b8cfe35c1dee3af298a58e1b4d8bbef7d,human,1.0,True,2,1788976073,[resolve] Fix edge cases in assigning implicit clauses to owners in interleaved scenarios,2,True,1,1,1,1,1,1,1
+4b3e6bcc1ae398da92cd11de04423cab9d590ef1,human,1.0,True,5,1788986246,[resolve] Fix handling of right associative extension methods,5,True,1,1,1,1,1,1,1
+8b5e64d37232d01d58adef9bffebc9f99ce2e378,human,0.0,True,1,1789048108,[type inference] Fix numeric narrowing of char literals,1,True,0,0,0,0,0,0,0
+64eb0a2e93049f834b9b390a5bf12ac05ac98ef9,pair,1.0,True,23,1789576662,"[ammonite drop] drop Ammonite support (#SCL-25613, #SCL-25932) fixed",23,True,1,1,1,1,1,1,1
+132ed60d5033afc733e60562af48e2374b6fb463,pair,1.0,True,2,1789576663,[ammonite drop] remove obsolete ScalaImportOptimizerHelper EP #SCL-25613,2,True,1,1,1,1,1,1,1
+1479373e30d5b485f1424784376925edf09bc081,pair,0.0,True,3,1789576663,[ammonite drop] drop ImportInfoProvider EP #SCL-25613 #SCL-25932,3,True,0,0,0,0,0,0,0
+43460117c2d6b0af3422e6fc4ef15f803c9eedac,pair,1.0,True,2,1789576663,[ammonite drop] remove resolver referenceExtraResolver EP #SCL-25613 #SCL-25932,2,True,1,1,1,1,1,1,1
+a7b1741a014a5690351f049379be67c8b91ee518,pair,0.0,True,1,1789576663,[sbt] document artifact suffix list #SCL-25613,1,True,0,0,0,0,0,0,0
+5d28dcacd402cca26426dd8fb9f9933b4c8838ac,pair,0.0,True,1,1789620283,[statistics] Version Scala actions after removal,1,True,0,0,0,0,0,0,0
+e1d7d3b2454f84391dc9009ef69d9b2aab72f9a1,pair,0.0,True,1,1789636140,"[main run config] Fix missing read action during main class extraction (#SCL-25917, #SCL-25918, #SCL-25921, #SCL-25923) fixed",1,True,0,0,0,0,0,0,0
+d62ea946d817c3b9b2c787688a3e48f267833bae,human,0.0,True,1,1789995563,[parser] Fix parsing of backticked infix operators,1,True,0,0,0,0,0,0,0
+b95e18de2ff449827b115b79539ed2d7695d49e4,human,1.0,True,24,1790015837,[type inference] Implement changes to glb/lub calculations in Scala 3,24,True,1,1,1,1,1,1,1
+6b5e94d3a51ba588aa773cc20263459d63ee9cd7,human,1.0,True,22,1790015838,[type inference] Implement transparent trait handling in inferred types,22,True,1,1,1,1,1,1,1
+d53a6fe4e82c0b22673b4427799e701d17cb9cd8,human,0.0,True,1,1790022187,[type inference] Fix edge cases in transparent trait widening,1,True,0,0,0,0,0,0,0
+f17849fb11cacd4696d032d618aaf8112ad2fcdf,human,0.0,True,1,1790150269,[tests] Run tests against sbt 2.0.9,1,True,0,0,0,0,0,0,0
+70d2f0b6aaa52b956332b2f99798e0839273913e,human,0.0,True,1,1790159262,[tests] Run tests against Scala 3.3.9-RC1 and run the AfterUpdateDottyVersionScript for Scala 3.3.9-RC1,1,True,0,0,0,0,0,0,0
+335d67e2c332d46a4d195eebf5eb74166713768b,human,0.0,True,1,1790160316,[debugger] Update the scala-expression-compiler version to 4.2.13,1,True,0,0,0,0,0,0,0
+9eb53fa4a8e1f6d0b300fef3cd1b7eb6a0514930,human,1.0,True,1,1790177764,[type inference] Implement type parameter bound checking in partial unification,1,True,1,1,1,1,1,1,1
+24cb80656eb443abf2792b2b1ba3a9f1c6006049,pair,1.0,True,6,1790181126,[bsp] remove Fastpass BSP import and generation flow,6,True,1,1,1,1,1,1,1
+552542dda225a561e32f2872b63988eff2c203a7,human,0.0,True,1,1790231524,[tests] Run tests against Scala 3.10.0-RC2 and run the AfterUpdateDottyVersionScript for this Scala version,1,True,0,0,0,0,0,0,0
+0772bd0835891e03683fe87cde6f6358739f3879,pair,0.0,True,4,1790251080,[bsp] remove obsolete setup cancellation API #SCL-25991 fixed,4,True,0,0,0,0,0,0,0
+3ee90c58607747f69b8dd01dca3ba252953f1f24,pair,0.0,True,2,1790261266,[lexer] Support shebang comments #SCL-25035 fixed,2,True,0,0,0,0,0,0,0
+a64ebaaea8342b381eccb93a0db47c87bfc2f78a,pair,1.0,True,14,1790264882,[packagesearch] remove dormant integration #SCL-19293 fixed,14,True,1,1,1,1,1,1,1
+448eb597c5420fd2aa6f9f552b496ce173dfb726,pair,0.0,True,1,1790265473,[inspection] drop MarkInnerCaseObjectsAsFinal inspection #SCL-24944 fixed,1,True,0,0,0,0,0,0,0
+8a97f5025975aa610d3f393e8e482b24a17a3c2e,human,1.0,True,1,1790331166,[sbt import] Use a simple in-memory cache when resolving the Scala 3.8+ REPL classpath during sbt import #SCL-25996,1,True,1,1,1,1,1,1,1
+eb10a29c2fb041b99de26e8e94c0b6badf02da1d,human,1.0,True,1,1790331590,[sbt import] Convert ImportContext to a simple class instead of a case class #SCL-25996,1,True,1,1,1,1,1,1,1
+0513a5d5ea0b11c94a2c4d4685fe7e7adeadffce,pair,0.0,True,1,1790337636,[inspection] Warn about shebang-based scala script permissions #SCL-26000 fixed,1,True,0,0,0,0,0,0,0
+667491aee2d963b930d49fe038a367e2385e6483,human,0.0,True,1,1790579583,[tests] Run tests against Scala 3.10.0-RC3 and run AfterUpdateDottyVersionScript for that Scala version,1,True,0,0,0,0,0,0,0
+c1a8fbc13a763ba7a3a868e16cc563225cf31154,human,0.0,True,1,1790586863,[bsp] Use a simple in-memory cache when resolving the Scala 3.8+ REPL classpath during BSP import #SCL-25996,1,True,0,0,0,0,0,0,0
+55ef417c6fffda5d26173e4e26a01e909e380127,human,0.0,True,2,1790592030,[gradle] Use a simple in-memory cache when resolving the Scala 3.8+ REPL classpath during Gradle import #SCL-25996,2,True,0,0,0,0,0,0,0
+d762188d13c7a7299fc652d25904121845cc7057,human,0.0,True,1,1790598848,[maven] Use a simple in-memory cache when resolving the Scala 3.8+ REPL classpath during Maven import #SCL-25996,1,True,0,0,0,0,0,0,0
+b3599f54ef49863cdc8ed13bf0cc94d8867845ae,human,1.0,True,5,1790603878,[project import] Factor out the per-import REPL classpath cache as ReplClasspathCachedResolver #SCL-25996,5,True,1,1,1,1,1,1,1
+00c39fcd4483e59063db74b86df2c8246fe45385,human,0.0,True,1,1790761822,[ivy resolve] Remove the 300 ms floor from Ivy resolves and fix hangs and cancellation handling #SCL-25996 fixed,1,True,0,0,0,0,0,0,0
+d1ab4c7834cac9e9b797d738d0cac84470df8d7f,pair,1.0,False,7,1790879042,"[compile server, build] Restrict the compile-server module to a Java 8 compatible IntelliJ SDK subset #SCL-26036 fixed",7,False,1,1,1,1,1,1,1
+697112000cef4b017cbefd1c843d8c2f1aaf3e4f,pair,0.0,False,1,1790941942,[synthetic classes] Scope synthetic lookup to Scala SDK modules #SCL-26044,1,False,0,0,0,0,0,0,0
+3d7d483cf4f964122dfc3d61f0edacb70dc82d5b,human,1.0,False,3,1791190553,[compile server] Use the existing build machinery for resolving the compile-server specific Scala 2 and Scala 3 standard libraries #SCL-18840,3,False,1,1,1,1,1,1,1
+8cbae2dc57fc7976250734672eb0bfc648b94660,human,1.0,False,1,1791190833,[build] Remove the not-referenced scalaCompiler dependency definition from the build to avoid any confusion in the future #SCL-18840,1,False,1,1,1,1,1,1,1
+8de0f7587d83289b428cdff0321b8674e552b181,human,1.0,False,1,1791191272,[build] Update the scala-xml library dependency to version 2.5.0,1,False,1,1,1,1,1,1,1
+0746aa6f9b23d89f9928326867d80b461d00bf82,human,1.0,False,1,1791191322,[build] Update the coursier-paths library dependency to version 2.1.26,1,False,1,1,1,1,1,1,1
+9867155c6ac8dc8668ac350f9f27d3fbf6e58552,human,1.0,False,1,1791191363,[build] Update the coursier interface library dependency to version 1.0.30,1,False,1,1,1,1,1,1,1
+383f5135c5d211cc251b67d2769f7f314dc9b439,human,1.0,False,1,1791215573,[build] Pin the Zinc dependency to Scala 2.13 in the repackagedZinc module #SCL-18840,1,False,1,1,1,1,1,1,1
+3759ad4f01672b9837185facaeaef9f9df08088f,pair,0.0,False,1,1791732752,[tests] Add Scala 3.10 as a ScalaVersion entry #SCL-25872,1,False,0,0,0,0,0,0,0
+9cd28ffc0cb7b10e2af025132bc82fdda396b04a,human,0.0,False,1,1791815262,[tests] Run AfterUpdateDottyVersionScript for Scala 3.10.0 #SCL-25872,1,False,0,0,0,0,0,0,0
+e51fc03b0427ecb0119c82d9aaea78416e41404f,human,0.0,False,1,1791886137,[tests] Run tests against sbt version 2.0.10,1,False,0,0,0,0,0,0,0
+c4a2750c347e7e37f65360c3d6f97647c02d0451,pair,1.0,False,1,1791904718,[debugger] Fix the Initialize link of not initialized lazy vals in the split debugger #SCL-26103 fixed,1,False,1,1,1,1,1,1,1
+cab4c13f59ee7caffc0bd684dff0d4e7266abd97,pair,1.0,False,3,1792052664,[scalafmt] Migrate to scalafmt-dynamic-core 3.11.5 #SCL-24412,3,False,1,1,1,1,1,1,1
+2bf8d54fb44570185582e5b969f0dff7eefa53c4,human,0.0,False,1,1792052665,"[build, cleanup] Inline the scalatest provided dependency for the testRunners project",1,False,0,0,0,0,0,0,0
+fc54c1eef60a03117f0be4017f542d6e585fe3f7,human,0.0,False,1,1792052666,[build] Update the slf4j-api test dependency to version 2.0.20,1,False,0,0,0,0,0,0,0
+6e750bc72179830b98236d4416c7c85966714feb,human,0.0,False,1,1792052667,[build] Update the bloop-rifle library dependency to version 2.1.2,1,False,0,0,0,0,0,0,0
+6f3f63cd63f4a7748e58f27900c52946ecdcf646,pair,0.0,False,3,1792057226,[scalafmt] Access scalafmt-dynamic's Dependency through a shim module #SCL-24412,3,False,0,0,0,0,0,0,0
+9f4e6ee2074722e9f2adb89a446c88ceb26730db,pair,0.0,False,1,1792063080,[scalafmt] Prevent the IntelliJ formatter from reformatting the whitespace at the start of scalafmt-formatted ranges #SCL-23253 fixed,1,False,0,0,0,0,0,0,0
+414a1cafb004d9e97c065c7f3d1d3be94e5b97ec,pair,0.0,False,1,1792063081,[scalafmt] Use a ScopedValue instead of a ThreadLocal to enforce scalafmt range formatting #SCL-23253,1,False,0,0,0,0,0,0,0
+011fc1ca7bbaa78841983aa7e52e5e32519dfc19,pair,0.0,False,1,1792089132,[settings] show both highlighting modes for new projects #SCL-26133,1,False,0,0,0,0,0,0,0
+ee12aa86735cdf3f55d354eaed7d87a67d357d6f,human,0.0,False,1,1792142049,"[tests, dotty script] Run the AfterUpdateDottyVersionScript for Scala 3.3 LTS for the 263 branches",1,False,0,0,0,0,0,0,0
+1dfd4a4fb28d3f0d42e6f143db4e12712b08b7bc,human,0.0,False,1,1792167593,[nailgun] Register only the Scala compile server's own commands in the Nailgun alias table,1,False,0,0,0,0,0,0,0
+f1ea98c7875ad2fa7699ede233428dc036f7a285,human,1.0,False,2,1792167594,[compiler] Remove the unused stop command from the Scala compile server,2,False,1,1,1,1,1,1,1
+b3674cd0824fe172dc9f413389f5d79d3962ce6a,human,0.0,False,2,1792167596,[compiler] Factor out a function that writes to an owner-only permissions file,2,False,0,0,0,0,0,0,0
+144f41721012eb2372e1519a8bf051588e922324,human,1.0,False,3,1792167597,[compiler] Create the Scala compile server port file with owner-only permissions,3,False,1,1,1,1,1,1,1
+1188d78edc8b36d6b0b1dad3669ed86b08677150,pair,0.0,False,1,1792167601,[compiler] Validate the Scala compile server token before parsing the command arguments,1,False,0,0,0,0,0,0,0
+99ea29b60fec50563734f0d4973483330efd57a8,pair,0.0,False,1,1792182480,[compiler] Recompile the users of a changed macro in Zinc mode #SCL-26126 fixed,1,False,0,0,0,0,0,0,0
+b673994eab95e77731a47ee2e1d6ccef65ade3b7,human,0.0,False,1,1792397801,[tests] Run tests against sbt 2.0.11,1,False,0,0,0,0,0,0,0
+9aa712d747aae031e1328d081987b7055444db24,pair,1.0,False,3,1792405552,[build] Simplify the Zinc assembly and remove duplicated classes from the plugin distribution #SCL-18840,3,False,1,1,1,1,1,1,1
+36465f16dde5c51c6b5066b7e96801f06d9f3201,pair,0.0,False,2,1792414132,[build] Add a verification task for the assembled plugin and a compile server classpath test #SCL-18840,2,False,0,0,0,0,0,0,0
+860f4f9b2ed1af545c46af0f3480c920a3f098f4,pair,0.0,False,2,1792498740,[compilation warning fixes] remove Scala 3 reserved-dollar identifiers,2,False,0,0,0,0,0,0,0
+2d36d951facab1be78a38b2ec548b799c58500f9,pair,0.0,False,1,1792498742,[compilation warning fixes] make negative literal receiver explicit,1,False,0,0,0,0,0,0,0
+f810f914f97ed223c5bb6243e37e9ca9a4ec14f1,pair,0.0,False,2,1792498743,[compilation warning fixes] rename Kotlin continuation parameters,2,False,0,0,0,0,0,0,0
+2fbce2bcb5d5b64d6e64458eed800bdcf5dd71fc,pair,1.0,False,2,1792498744,[compilation warning fixes] remove destructuring pattern type ascriptions,2,False,1,1,1,1,1,1,1
+cbd67d7da3a1b6925fc58e5369b2f0cda110583d,pair,1.0,False,1,1792498745,[compilation warning fixes] remove unused service import,1,False,1,1,1,1,1,1,1
+5a3560e3b56d2129be9a4af7c4f36d772b73e8ee,pair,0.0,False,7,1792498746,[deprecation warning fixes] migrate file opening to nonblocking requests #SCL-26175 fixed,7,False,0,0,0,0,0,0,0
+ea680f3f92d4d2ba15a12351fda97c6eedc2c3ca,human,0.0,False,1,1792512087,[build] Use the Scala 3 builds of scala-compiler-indices-protocol and spray-json #SCL-18840,1,False,0,0,0,0,0,0,0
+6161fdbbdab33e737aff68f237959f916632ae31,pair,0.0,False,1,1792588224,[build] Support optional test bucketing in category commands,1,False,0,0,0,0,0,0,0
+7d84935364db184099d74af8b79866eb5fea79c6,pair,0.0,False,1,1792588225,[build] Share framework options and temporary test command execution,1,False,0,0,0,0,0,0,0
+a074a36c9f93aa610aff5da57e24b5e86b9c5221,pair,0.0,False,1,1792588227,[build] Share class filtering for category and bucket test commands,1,False,0,0,0,0,0,0,0
+972ae3bedd6dfa5e7d618bd3b897f55f90f61cc6,pair,0.0,False,1,1792588228,[build] Share JUnit execution for category and bucket test commands,1,False,0,0,0,0,0,0,0
+e66dd38bbe996e9d7fd708ef0e43af3e8623b74d,pair,0.0,False,2,1792588229,[build] Introduce typed class selection for shared JUnit test commands,2,False,0,0,0,0,0,0,0
+89261a6ac6b5fa8df474cfb239bf467d01b55906,pair,0.0,False,1,1792588230,[build] Defer TeamCity retry lookup through the public method API,1,False,0,0,0,0,0,0,0
+a4cf9f37f89e3e4c9331611390c5eabf2b842403,pair,0.0,False,1,1792588231,[build] Share JUnit framework options with plugin XML dependency generation,1,False,0,0,0,0,0,0,0
+5dd900339298d7b4cfb54f2525dd2fd90197f194,pair,0.0,False,1,1792588232,[build] Limit JUnit class filtering and temporary execution helpers to internal use,1,False,0,0,0,0,0,0,0
+a80908abe676628a8a7e7b5bb594a9ef3bcabce4,pair,1.0,False,2,1792667056,[debugger] Compute the runtime type for completion in a non-blocking read action #SCL-26185,2,False,1,1,1,1,1,1,1
+675f89508d14b3de45973b8830ac5f82974fdf93,pair,0.0,False,2,1792667057,[debugger] Do not collect captured values of a function when evaluating its own parameters #SCL-26185,2,False,0,0,0,0,0,0,0
+5bfaf0e5aeeb54a9ffcc9fc2830c3e323b15a4b5,pair,1.0,False,4,1792676590,[debugger] Reuse the lazily built expression evaluator between evaluations #SCL-24414,4,False,1,1,1,1,1,1,1
+51fa3a646950cce9e4239b91b2525946621128de,pair,1.0,False,5,1792676593,[debugger] Build every expression evaluator in a non-blocking read action #SCL-24414,5,False,1,1,1,1,1,1,1
+d5aed9d479e286b69313e376420c2b365c5730c1,pair,0.0,False,1,1792681824,[debugger] Collect the variables of enclosing scopes in non-blocking read actions #SCL-24414,1,False,0,0,0,0,0,0,0
+7e77ba964df8968e737c63cc761283433e69ca5b,pair,0.0,False,2,1792681825,[debugger] Drop the registry switch back to eager expression evaluator construction #SCL-24414 fixed,2,False,0,0,0,0,0,0,0
+54f8357b1b36a0035209dc7e602aca5b0063b5e1,pair,1.0,False,1,1792750331,[debugger] Compute the type of an isInstanceOf test while building the evaluator #SCL-26198,1,False,1,1,1,1,1,1,1
+82caa8882104e5fb4bd38d2eac82ac263c4e7be3,pair,1.0,False,1,1792750332,[debugger] Compute the type of an asInstanceOf cast while building the evaluator #SCL-26198,1,False,1,1,1,1,1,1,1
+1cc0170502b638ce7bfc735e120139a2727f58c3,pair,1.0,False,1,1792750333,[debugger] Compute the type of a classOf expression while building the evaluator #SCL-26198,1,False,1,1,1,1,1,1,1
+67a551bc305d9d9cfe2bddc8dd70499540d01930,pair,1.0,False,1,1792750334,[debugger] Determine the source lines of a method while building the evaluator #SCL-26198,1,False,1,1,1,1,1,1,1
+4e89764924f289fad3b608498dc2ba759eb34c22,pair,1.0,False,2,1792750335,"[debugger] Read the module, text and package of a compiled expression while building the evaluator #SCL-26198",2,False,1,1,1,1,1,1,1
+45cf317e2ac7695609c6c32bf824d980bf4863e0,pair,0.0,False,1,1792750336,[debugger] Drop the read actions from the error paths of JVMClassAt and JVMConstructorSignature #SCL-26198,1,False,0,0,0,0,0,0,0
+ea1b881ec6be7c185ae458c2c03174e9f81256b4,pair,1.0,False,2,1792750337,[debugger] Drop the no-op read actions in ScalaCompilingEvaluator and GeneratedClass #SCL-26198,2,False,1,1,1,1,1,1,1
+e3684b12fb0a8efba84fc0e8d969c81a33a19877,pair,1.0,False,7,1792750338,[debugger] Annotate the evaluator constructors that read PSI with @RequiresReadLock #SCL-26198,7,False,1,1,1,1,1,1,1
+a9cf05ea6028c5888ef4ad9ae5f6f841e69f37e0,pair,0.0,False,29,1792750339,[debugger] Annotate the evaluate methods of the Scala evaluators with @RequiresReadLockAbsence #SCL-26198 fixed,29,False,0,0,0,0,0,0,0
+bfd983aca5624c91581151d6034166e79dc20a95,pair,0.0,False,1,1792760994,[worksheet] Coalesce the non-blocking read actions submitted by WorksheetDumbModeListener.exitDumbMode #SCL-26187 fixed,1,False,0,0,0,0,0,0,0
+7fd518d2cf8e6521fdd15e8bdb71f4e2a15d2d55,human,0.0,False,1,1793012248,[tests] Break out the heavy project downloading and highlighting tests into their own separate category,1,False,0,0,0,0,0,0,0
+833319ec909929bb54e2039c470c2ca52c767dcc,human,0.0,False,1,1793097990,[dotty update script] Prepare the AfterUpdateDottyVersionScript for running against Scala 3.10.1-RC1 #SCL-26206,1,False,0,0,0,0,0,0,0
+422539c8bfd065675b99d1bcd01a808f071a80e1,pair,0.0,False,1,1793187083,"[compiler] Do not show an error notification for the JVM's ""Picked up JAVA_TOOL_OPTIONS"" line #SCL-26223 fixed",1,False,0,0,0,0,0,0,0
+12b571d4a7dc509f3a5b11fa33df838147cf7d4e,human,0.0,False,1,1793195358,[tests] Run tests against Scala 3.3.9,1,False,0,0,0,0,0,0,0
+26da52f5192e73e85aed136fdd588d9f29ab39a0,human,0.0,False,1,1793195360,[build] Compile some parts of the plugin using Scala 3.3.9 LTS,1,False,0,0,0,0,0,0,0
+89f8ab7d413160a2df8762e2f22bf39e722be335,pair,1.0,False,4,1793205531,"[debugger] Always finish the children of Scala renderer nodes, with an error message on failure #SCL-26219",4,False,1,1,1,1,1,1,1
+5743d087950bc2933db50e6577eab9d3e4694c5f,pair,0.0,False,2,1793205532,[debugger] Find the accessors of private lazy vals and objects used from inner classes #SCL-26219 fixed,2,False,0,0,0,0,0,0,0
+d6472f0347bf7123b2bc86215aa837d4f989c8fd,human,0.0,False,1,1793264482,[tests] Run tests against sbt 2.0.12,1,False,0,0,0,0,0,0,0
+1cc4fdf4b9f62a2ed9b3a95a022703d3a7be86ff,human,0.0,False,2,1793264484,[tests] Update the sbt dependency to version 1.13.1,2,False,0,0,0,0,0,0,0
+3a870733719e7dfd29adff7c4366728d96a48ee5,human,0.0,False,1,1793285341,[build] Update the sbt-structure dependencies to version 2026.3.0 #SCL-22065,1,False,0,0,0,0,0,0,0

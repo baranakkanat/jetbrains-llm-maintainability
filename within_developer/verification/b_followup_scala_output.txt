@@ -1,0 +1,26 @@
+population: 548 rows {'human': 310, 'pair': 238}
+clone: 4516 non-merge commits; last committer time 2026-10-31 01:54:44+00:00
+eligibility cut-off (last ct - 30 days): 2026-10-01 01:54:44+00:00
+population SHAs not found in clone: 0
+prod-file count equal to CSV prod_files: 541 / 548
+eligibility agrees with CSV: 548 / 548; fresh eligible 477, CSV eligible 477
+
+Fresh follow-up-fix rate (fresh eligibility), primary definition:
+  human  n= 285 rate=0.4316 (123 with follow-up)
+  pair   n= 192 rate=0.4010 (77 with follow-up)
+CSV follow-up-fix rate (CSV eligibility):
+  human  n= 285 rate=0.4281
+  pair   n= 192 rate=0.4010
+
+Commit-level agreement with CSV followup_fix (rows where CSV followup_eligible is True):
+  primary (-M, path identity, >ct, <=30d)   : agree 476/477; fresh1/csv0 1, fresh0/csv1 0; rates {'human': 0.4316, 'pair': 0.401}
+  --no-renames                              : agree 476/477; fresh1/csv0 1, fresh0/csv1 0; rates {'human': 0.4316, 'pair': 0.401}
+  follow renames forward                    : agree 476/477; fresh1/csv0 1, fresh0/csv1 0; rates {'human': 0.4316, 'pair': 0.401}
+  renames count under new path only         : agree 477/477; fresh1/csv0 0, fresh0/csv1 0; rates {'human': 0.4281, 'pair': 0.401}
+  keywords + fixing, reverts                : agree 476/477; fresh1/csv0 1, fresh0/csv1 0; rates {'human': 0.4316, 'pair': 0.401}
+  same-second commits allowed (>=ct)        : agree 462/477; fresh1/csv0 15, fresh0/csv1 0; rates {'human': 0.4596, 'pair': 0.4323}
+  window < 30d instead of <= 30d            : agree 476/477; fresh1/csv0 1, fresh0/csv1 0; rates {'human': 0.4316, 'pair': 0.401}
+
+Disagreements (primary): 1
+  c2c1000e52 human fresh=1 csv=0.0 ext=1 '[build] Fix the build and compilation after the intellijVersion update'
+      follow-up 0997ac18e0 after 2.7 d, entry [('R', 'scala/integration/intellij-bazel/src/org/jetbrains/plugins/scala/bazel/BazelScalaRunLineMarkerContributor.scala', 'scala/integration/intellij-bazel/src/org/jetbrains/plugins/scala/bazel/BazelScalaRunConfigurationProducer.scala')], '[build] Fix compilation after the intellijVersion update to '
