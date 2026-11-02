@@ -41,9 +41,10 @@ def split_rename(path):
 def main(repo_path, repo_name, since="2025-01-01"):
     fmt = f"{START}%H{BODY}%cI{BODY}%an{BODY}%B{END}"
     # Rename detection is pinned so the result does not depend on the global git config.
+    # A date without a time makes git use the current time of day, so midnight is explicit.
     out = subprocess.run(["git", "-C", repo_path, "-c", "diff.renames=true",
                           "-c", "diff.renameLimit=1000", "log", "--no-merges", "-M",
-                          f"--since={since}", "--numstat", f"--pretty=format:{fmt}"],
+                          f"--since={since} 00:00:00", "--numstat", f"--pretty=format:{fmt}"],
                          capture_output=True, text=True, errors="replace", check=True).stdout
     commits, files = [], []
     for block in out.split(START)[1:]:
