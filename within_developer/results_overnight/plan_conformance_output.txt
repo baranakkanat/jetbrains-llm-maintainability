@@ -1,0 +1,17 @@
+=== Confirmatory family with plan-exact H2 (BH across H1, H2, H3a, H3b) ===
+                       hypothesis            term  effect  ci_low  ci_high      p     n  clusters   p_BH
+           H1 follow-up fix (30d)         is_pair  0.0094 -0.0736   0.0924 0.8247  4188        19 0.8247
+     H3a spillover: comment share post_unlabelled -0.0090 -0.0267   0.0087 0.3200 21475       114 0.6400
+       H3b spillover: commit size post_unlabelled -0.1752 -0.3004  -0.0499 0.0061 22438       114 0.0245
+H2 reverted (plan-exact controls)         is_pair -0.0007 -0.0054   0.0040 0.7821  4646        19 0.8247
+
+Script H2 for comparison:
+ hypothesis    term  effect  ci_low  ci_high      p    n  clusters   p_BH
+H2 reverted is_pair -0.0007 -0.0054   0.0040 0.7739 4646        19 0.8247
+
+=== H4 verdict as worded in the plan ((a)-(d), sign of the earlier run) ===
+                             outcome  earlier_sign  variants  same_sign_a_to_d  ci_excludes_0_a_to_d  robust_per_plan
+        Comment share of added lines             1         4              True                 False            False
+Complexity added to modified methods             1         4              True                 False            False
+  Net complexity per 100 added lines            -1         4              True                 False            False
+                  log(lines changed)             1         4              True                  True             True

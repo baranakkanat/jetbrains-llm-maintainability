@@ -1,0 +1,47 @@
+
+=== Comment share of added lines, base ===
+added_comment_share ~ is_pair + log_size + C(author) + C(repo_month)  (n=4416, authors=19, repo_months=28)
+design: 48 columns from patsy, 2 exactly collinear dummy column(s) dropped: ['C(repo_month)[T.intellij-scala_2026-10]', 'C(repo_month)[T.kotlin_2026-10]']
+coef is_pair = 0.051006
+K (rank of design incl. dummies) = 46, clusters G = 19
+[A] CR1 (G/(G-1)*(N-1)/(N-K)), t(G-1=18): SE 0.018718, 95% CI [0.011681, 0.090331], p 0.0138938
+[B] CR1, normal:                        SE 0.018718, 95% CI [0.014319, 0.087692], p 0.00643057
+    manual sandwich check: CR0 0.018126, CR1 0.018718 (statsmodels 0.018718)
+[C] G/(G-1)*(N-1)/(N-2) [K = slope regressors only], normal: SE 0.018624, 95% CI [0.014503, 0.087509], p 0.00616897
+analysis (overnight_h4.csv): coef 0.051006, 95% CI [0.014502, 0.087510], p 0.00616897, n 4416, clusters 19; implied SE if normal 0.018625
+coef difference fresh - analysis = 2.71e-16
+
+=== log(lines changed), base ===
+log_size ~ is_pair + C(author) + C(repo_month)  (n=4646, authors=19, repo_months=28)
+design: 47 columns from patsy, 2 exactly collinear dummy column(s) dropped: ['C(repo_month)[T.intellij-scala_2026-10]', 'C(repo_month)[T.kotlin_2026-10]']
+coef is_pair = 0.505621
+K (rank of design incl. dummies) = 45, clusters G = 19
+[A] CR1 (G/(G-1)*(N-1)/(N-K)), t(G-1=18): SE 0.131352, 95% CI [0.229661, 0.781582], p 0.00117478
+[B] CR1, normal:                        SE 0.131352, 95% CI [0.248176, 0.763067], p 0.000118425
+    manual sandwich check: CR0 0.127242, CR1 0.131352 (statsmodels 0.131352)
+[C] G/(G-1)*(N-1)/(N-1) [K = slope regressors only], normal: SE 0.130728, 95% CI [0.249399, 0.761844], p 0.000109855
+analysis (overnight_h4.csv): coef 0.505621, 95% CI [0.249394, 0.761849], p 0.000109855, n 4646, clusters 19; implied SE if normal 0.130731
+coef difference fresh - analysis = -4.44e-16
+
+All overnight_h4.csv rows, normal vs t(G-1) inference (SE implied by the CI):
+                             outcome         variant     effect        p      p_t  excl0_normal  excl0_t
+                  log(lines changed)            base   0.505621 0.000110 0.001128          True     True
+                  log(lines changed)   a_commit_type   0.519714 0.000026 0.000534          True     True
+                  log(lines changed)     b_same_file   0.373440 0.008339 0.016706          True     True
+                  log(lines changed)   c_claude_only   0.584953 0.000029 0.000557          True     True
+                  log(lines changed) d_since_2025_01   0.522593 0.000046 0.000707          True     True
+        Comment share of added lines            base   0.051006 0.006169 0.013495          True     True
+        Comment share of added lines   a_commit_type   0.057425 0.000813 0.003579          True     True
+        Comment share of added lines     b_same_file   0.030096 0.111575 0.128984         False    False
+        Comment share of added lines   c_claude_only   0.071774 0.000016 0.000416          True     True
+        Comment share of added lines d_since_2025_01   0.051153 0.005211 0.011998          True     True
+Complexity added to modified methods            base   0.134130 0.006343 0.013761          True     True
+Complexity added to modified methods   a_commit_type   0.118288 0.016980 0.028160          True     True
+Complexity added to modified methods     b_same_file   0.144538 0.177551 0.194274         False    False
+Complexity added to modified methods   c_claude_only   0.135895 0.003743 0.009565          True     True
+Complexity added to modified methods d_since_2025_01   0.107137 0.045624 0.060955          True    False
+  Net complexity per 100 added lines            base -39.096186 0.011434 0.020995          True     True
+  Net complexity per 100 added lines   a_commit_type -39.642812 0.009004 0.017652          True     True
+  Net complexity per 100 added lines     b_same_file -22.198646 0.214450 0.230385         False    False
+  Net complexity per 100 added lines   c_claude_only -39.337832 0.021915 0.034188          True     True
+  Net complexity per 100 added lines d_since_2025_01 -43.810900 0.000369 0.002229          True     True

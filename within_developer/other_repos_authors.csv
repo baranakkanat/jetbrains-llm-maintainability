@@ -1,0 +1,632 @@
+repo,author,human,pair,eligible
+intellij-community,7410,1,0,False
+intellij-community,Adam Malek,18,0,False
+intellij-community,Ahmet Kerim Senol,3,0,False
+intellij-community,Air,5,0,False
+intellij-community,Aleksander Movsesov,4,0,False
+intellij-community,Aleksandr Gribovich,4,0,False
+intellij-community,Aleksandr Iasinskii,1,0,False
+intellij-community,Aleksandr Izmailov,11,0,False
+intellij-community,Aleksandr Krasilnikov,52,1,False
+intellij-community,Aleksandr Lvov,4,0,False
+intellij-community,Aleksandr Slapoguzov,3,0,False
+intellij-community,Aleksandr.Govenko,25,4,False
+intellij-community,Aleksandra Olemskaia,212,1,False
+intellij-community,Aleksandra Zdrojowa,1,0,False
+intellij-community,Aleksei Afanasev,2,0,False
+intellij-community,Aleksei Berezkin,7,0,False
+intellij-community,Aleksei Gagarin,1,0,False
+intellij-community,Aleksei Gurianov,1,0,False
+intellij-community,Aleksei Gusarov,1,0,False
+intellij-community,Aleksei Priakhin,1,0,False
+intellij-community,Aleksei Stafeev,3,0,False
+intellij-community,Aleksei.Cherepanov,34,0,False
+intellij-community,Aleksey Dobrynin,115,0,False
+intellij-community,Aleksey Pivovarov,252,0,False
+intellij-community,Alex Berezhnykh,6,0,False
+intellij-community,Alex Plate,20,1,False
+intellij-community,Alexander Bubenchikov,53,0,False
+intellij-community,Alexander Doroshko,4,0,False
+intellij-community,Alexander Gusakov,3,0,False
+intellij-community,Alexander Karaev,21,0,False
+intellij-community,Alexander Kass,20,0,False
+intellij-community,Alexander Koshevoy,70,0,False
+intellij-community,Alexander Kuklev,10,2,False
+intellij-community,Alexander Kuznetsov,71,0,False
+intellij-community,Alexander Lobas,161,0,False
+intellij-community,Alexander Shparun,41,0,False
+intellij-community,Alexander Trushev,385,0,False
+intellij-community,Alexander Zolotov,133,1,False
+intellij-community,Alexander.Danilov,1,0,False
+intellij-community,Alexander.Glukhov,76,0,False
+intellij-community,Alexander.Kass,6,0,False
+intellij-community,Alexander.Shvedov,6,0,False
+intellij-community,Alexandr Evstigneev,68,0,False
+intellij-community,Alexandr Kugushev,1,0,False
+intellij-community,Alexandru Resiga,12,0,False
+intellij-community,Alexey,9,0,False
+intellij-community,Alexey Belkov,11,0,False
+intellij-community,Alexey Katsman,75,0,False
+intellij-community,Alexey Korovin,4,0,False
+intellij-community,Alexey Kryuchkov,1,0,False
+intellij-community,Alexey Kudravtsev,590,0,False
+intellij-community,Alexey Sedunov,4,0,False
+intellij-community,Alexey Sergeev,24,0,False
+intellij-community,Alexey Utkin,12,0,False
+intellij-community,Alexey.Berezhnykh,2,0,False
+intellij-community,Alexey.Merkulov,41,0,False
+intellij-community,Alisa.Afonina,8,0,False
+intellij-community,Alon Albert,4,0,False
+intellij-community,Amaury Medeiros,1,0,False
+intellij-community,Anastasia Katsman,230,0,False
+intellij-community,Anastasia.Katsman,2,0,False
+intellij-community,Anastasiya Bortnikova,20,0,False
+intellij-community,Andreas Eisele,1,0,False
+intellij-community,Andrei Efanov,77,0,False
+intellij-community,Andrei Kuznetsov,3,0,False
+intellij-community,Andrei Matveev,5,1,False
+intellij-community,Andrei Ogurtsov,12,0,False
+intellij-community,Andrei.Kuznetsov,92,0,False
+intellij-community,Andrew Kashukov,6,0,False
+intellij-community,Andrew Kozlov,4,0,False
+intellij-community,Andrey Cherkasov,148,0,False
+intellij-community,Andrey Sokolov,23,0,False
+intellij-community,Andrey Vokin,54,0,False
+intellij-community,Andrey Vorobev,5,0,False
+intellij-community,Andrey Zaytsev,16,0,False
+intellij-community,Andrii Zinchenko,92,0,False
+intellij-community,Andrzej Głuszak,2,0,False
+intellij-community,Anna Antonova,67,0,False
+intellij-community,Anna Gromova,3,0,False
+intellij-community,Anna Koehler,1,0,False
+intellij-community,Anna Kozlova,372,1,False
+intellij-community,Anna Solomennik,32,0,False
+intellij-community,Anna Soloveva,8,0,False
+intellij-community,Anna Zhukova,5,0,False
+intellij-community,Anna.Zhdan,3,0,False
+intellij-community,Anton Efimchuk,22,0,False
+intellij-community,Anton Kogun,3,0,False
+intellij-community,Anton Kozub,5,0,False
+intellij-community,Anton Lakotka,3,0,False
+intellij-community,Anton Penerov,1,0,False
+intellij-community,Anton Pikhtin,3,0,False
+intellij-community,Anton Prokhorov,1,0,False
+intellij-community,Anvar Ramazanov,11,0,False
+intellij-community,Arnold Balliu,0,1,False
+intellij-community,Arsenii Iusufov,14,0,False
+intellij-community,Arseniy Pendryak,3,0,False
+intellij-community,Arseny Chernyaev,2,0,False
+intellij-community,Arseny.Chernyaev,4,0,False
+intellij-community,Artem,3,0,False
+intellij-community,Artem Aleksyuk,6,0,False
+intellij-community,Artem Bochkarev,10,0,False
+intellij-community,Artem Chuguev,1,0,False
+intellij-community,Artem Ivanov,3,0,False
+intellij-community,Artem Kobzar,3,0,False
+intellij-community,Artem Mukhin,10,0,False
+intellij-community,Artem Pronichev,2,0,False
+intellij-community,Artem Vedernikov,2,0,False
+intellij-community,Artem.Bukhonov,78,1,False
+intellij-community,Artem.Grigorash,18,0,False
+intellij-community,Aydar Mukhametzyanov,286,0,False
+intellij-community,Azad Abdulov,4,0,False
+intellij-community,Azim Akhmadjonov,51,0,False
+intellij-community,Bart van Helvert,53,0,False
+intellij-community,Bartek Pacia,55,0,False
+intellij-community,Bartosz Janusz,55,0,False
+intellij-community,Bartosz Sojka,1,0,False
+intellij-community,Bas Leijdekkers,339,0,False
+intellij-community,Berezhko Ekaterina,48,0,False
+intellij-community,Bernhard Geisberger,10,0,False
+intellij-community,Bhavya Khandelwal,1,0,False
+intellij-community,Bogdan Kirilenko,94,0,False
+intellij-community,Boris Pristupa,1,0,False
+intellij-community,Brian McNamara,1,0,False
+intellij-community,Brian Norman,1,0,False
+intellij-community,Brian R. Jackson,1,0,False
+intellij-community,Brice Dutheil,9,0,False
+intellij-community,Bruno Kortowski,8,0,False
+intellij-community,Bulat Davletov,1,0,False
+intellij-community,Chris,1,0,False
+intellij-community,Chris Busillo,1,0,False
+intellij-community,Chris Lemaire,3,0,False
+intellij-community,Chris Woodward,1,0,False
+intellij-community,Christian Melchior,1,0,False
+intellij-community,Damian Baczyński,9,0,False
+intellij-community,Daniel Below,22,0,False
+intellij-community,Daniel Bertoldi,47,0,False
+intellij-community,Daniil Bubnov,18,0,False
+intellij-community,Daniil Kalinin,141,0,False
+intellij-community,Daniil Kogan,0,1,False
+intellij-community,Daniil Maslov,15,0,False
+intellij-community,Daniil Ovchinnikov,3,0,False
+intellij-community,Daniil Stankevych,11,0,False
+intellij-community,Daniil Tsarev,10,0,False
+intellij-community,Daniil.Timashov,3,0,False
+intellij-community,Danil Tereshchenko,5,0,False
+intellij-community,Darya Sharkova,2,0,False
+intellij-community,Darya.Rovdo,9,0,False
+intellij-community,David Lysenko,37,0,False
+intellij-community,Denis Bezrukov,3,0,False
+intellij-community,Denis Mashutin,48,0,False
+intellij-community,Denis Parfenov,1,0,False
+intellij-community,Denis Shabanov,1,0,False
+intellij-community,Denis Zaichenko,72,0,False
+intellij-community,Denis Zakharov,2,0,False
+intellij-community,Dennis.Scheffer,47,0,False
+intellij-community,Didier Loiseau,1,0,False
+intellij-community,Dima Golovkov,7,0,False
+intellij-community,Dima Kopfmann,29,0,False
+intellij-community,Dinu Blanovschi,10,0,False
+intellij-community,Dmitrii Batkóvich,11,0,False
+intellij-community,Dmitrii Denisov,2,0,False
+intellij-community,Dmitrii Gridin,125,0,False
+intellij-community,Dmitrii Matrokhin,3,0,False
+intellij-community,Dmitriy Dolovov,2,0,False
+intellij-community,Dmitriy Novozhilov,10,0,False
+intellij-community,Dmitriy Smirnov,6,0,False
+intellij-community,Dmitriy.Panov,61,0,False
+intellij-community,Dmitry Avdeev,24,0,False
+intellij-community,Dmitry Batkovich,250,0,False
+intellij-community,Dmitry Batrak,47,0,False
+intellij-community,Dmitry Jemerov,1,0,False
+intellij-community,Dmitry Kichinsky,189,0,False
+intellij-community,Dmitry Kozhevnikov,5,0,False
+intellij-community,Dmitry Nekrasov,1,0,False
+intellij-community,Dmitry Osinovskiy,23,0,False
+intellij-community,Dmitry Pogrebnoy,9,0,False
+intellij-community,Dmitry Timofeev,1,0,False
+intellij-community,Dmitry Yudin,17,0,False
+intellij-community,Dmitry Zhuravlev,101,0,False
+intellij-community,Dmitry.Barashev,1,0,False
+intellij-community,Dmitry.Neverov,11,0,False
+intellij-community,Dmitry.Yudin,39,0,False
+intellij-community,Dragoslav Tamindzija,14,0,False
+intellij-community,Dustin Feucht,3,0,False
+intellij-community,Edem Ibraimov,10,0,False
+intellij-community,Egor Andreevich,1,0,False
+intellij-community,Egor Baranov,1,0,False
+intellij-community,Egor Eliseev,31,0,False
+intellij-community,Egor Kukoverov,2,0,False
+intellij-community,Egor Lebedev,2,0,False
+intellij-community,Egor Ushakov,78,0,False
+intellij-community,Egor.Skrypnikov,62,0,False
+intellij-community,Ekaterina Berezhko,262,0,False
+intellij-community,Ekaterina Chernikova,13,0,False
+intellij-community,Ekaterina Semenova,1,0,False
+intellij-community,Ekaterina.Itsenko,27,0,False
+intellij-community,Eldar Abusalimov,2,0,False
+intellij-community,Eldar Isiangulov,3,1,False
+intellij-community,Elena Artamonova,16,0,False
+intellij-community,Elena Shaverdova,107,0,False
+intellij-community,Elijah Semyonov,1,0,False
+intellij-community,Emil Bartnik,1,0,False
+intellij-community,Eugene Auduchinok,2,0,False
+intellij-community,Eugene Gvozdetsky,1,0,False
+intellij-community,Eugene Kotelnikov,11,0,False
+intellij-community,Eugene Morozov,9,0,False
+intellij-community,Eugene Zhuravlev,48,0,False
+intellij-community,Evgenii Ilichev,294,0,False
+intellij-community,Evgenii Im,18,0,False
+intellij-community,Evgenii Novozhilov,20,0,False
+intellij-community,Evgenii Pasynkov,4,0,False
+intellij-community,Evgenii Zakharchenko,3,0,False
+intellij-community,Evgeniia Kirillova,7,0,False
+intellij-community,Evgeniy Stepanov,12,0,False
+intellij-community,Evgeniy Zhelenskiy,1,0,False
+intellij-community,Evgeniy.Stepanov,2,0,False
+intellij-community,Evgeny Shmakov,1,0,False
+intellij-community,Evgeny.Terekhin,4,0,False
+intellij-community,Fabio Gaiba,31,0,False
+intellij-community,Farida Rizaeva,1,0,False
+intellij-community,Fedor Isakov,6,1,False
+intellij-community,Filip Petrović,13,0,False
+intellij-community,Filipp Smorygo,2,0,False
+intellij-community,Francesco Protopapa,5,0,False
+intellij-community,Frederik Haselmeier,133,0,False
+intellij-community,Gabriele Pappalardo,1,0,False
+intellij-community,Gennadii Chursov,3,0,False
+intellij-community,Georgii Ustinov,129,0,False
+intellij-community,GitHub Action,1,0,False
+intellij-community,Gleb Marin,1,0,False
+intellij-community,Gleb Nazarov,2,0,False
+intellij-community,Gleb.Marin,5,0,False
+intellij-community,Gregory.Shrago,286,0,False
+intellij-community,Grigorii Kargin,0,2,False
+intellij-community,Grigorii Liullin,1,0,False
+intellij-community,Grigorii Solnyshkin,18,0,False
+intellij-community,Gustavo Fao Valvassori,19,0,False
+intellij-community,Harry Dalton,1,0,False
+intellij-community,Henry Wylde,13,0,False
+intellij-community,Herman Kirshin,2,2,False
+intellij-community,Igor Akhmetov,1,0,False
+intellij-community,Igor Manninen,1,0,False
+intellij-community,Ilia Brovarnik,0,3,False
+intellij-community,Ilia Epelbaum,13,0,False
+intellij-community,Ilia Kirianovskii,144,0,False
+intellij-community,Ilia Malakhov,97,6,False
+intellij-community,Ilia Permiashkin,457,2,False
+intellij-community,Ilia Smirnov,22,0,False
+intellij-community,Ilia Zakoulov,117,4,False
+intellij-community,Ilia.Shulgin,43,0,False
+intellij-community,Ilmir Usmanov,1,0,False
+intellij-community,Ilya,1,0,False
+intellij-community,Ilya Chernikov,4,0,False
+intellij-community,Ilya Goncharov,3,0,False
+intellij-community,Ilya Kazakevich,17,0,False
+intellij-community,Ilya Kirillov,10,0,False
+intellij-community,Ilya Korennoy,111,0,False
+intellij-community,Ilya Mikhaylov,1,0,False
+intellij-community,Ilya Misiukevich,9,0,False
+intellij-community,Ilya Muradyan,27,0,False
+intellij-community,Ilya.Kalibrov,1,0,False
+intellij-community,Ilya.Kazakevich,354,0,False
+intellij-community,Ilya.Komolkin,9,0,False
+intellij-community,Ilya.Usov,10,0,False
+intellij-community,Irina Fediaeva,47,0,False
+intellij-community,Iurii Akatov,1,0,False
+intellij-community,Ivan Efimov,4,0,False
+intellij-community,Ivan Kochurkin,8,0,False
+intellij-community,Ivan Kulikov,13,0,False
+intellij-community,Ivan Kylchik,1,0,False
+intellij-community,Ivan Matkov,15,1,False
+intellij-community,Ivan Migalev,11,0,False
+intellij-community,Ivan Pashchenko,9,0,False
+intellij-community,Ivan Posti,166,0,False
+intellij-community,Ivan Semenov,257,1,False
+intellij-community,Ivan Shakhov,1,0,False
+intellij-community,Ivan Shershnev,9,0,False
+intellij-community,Ivan.Yarkov,8,0,False
+intellij-community,Iveta Kovalenko,2,0,False
+intellij-community,JFronny,1,0,False
+intellij-community,Jacob Logsdon,1,0,False
+intellij-community,Jakob Gerhardt,97,0,False
+intellij-community,Jakub Andrzejewski,5,0,False
+intellij-community,Jakub Błach,2,0,False
+intellij-community,Jakub Chrzanowski,30,5,False
+intellij-community,Jakub Dolezal,11,0,False
+intellij-community,Jakub Senohrabek,8,0,False
+intellij-community,Jamilya Shurukhova,1,0,False
+intellij-community,Jan Kleprlik,2,0,False
+intellij-community,Jan Papesch,11,0,False
+intellij-community,Jinseong Jeon,2,0,False
+intellij-community,Jiri Sedlacek,8,0,False
+intellij-community,Joe Baker-Malone,1,0,False
+intellij-community,Joel Diaz,2,0,False
+intellij-community,Josh Free,0,1,False
+intellij-community,Josh Friend,1,0,False
+intellij-community,Julia Beliaeva,3,0,False
+intellij-community,Julia.Reshetnikova,2,0,False
+intellij-community,Junhyung Im,1,0,False
+intellij-community,Justin Kaeser,1,0,False
+intellij-community,Kajus Kuncaitis,177,0,False
+intellij-community,Kamil Doległo,2,0,False
+intellij-community,Karima Ichou,3,0,False
+intellij-community,Karol Lewandowski,69,0,False
+intellij-community,Kate Botsman,17,0,False
+intellij-community,Kiril Panayotov,11,0,False
+intellij-community,Kirill Bochkarev,56,0,False
+intellij-community,Kirill Karnaukhov,45,0,False
+intellij-community,Kirill Likhodedov,2,0,False
+intellij-community,Kirill Rakhman,15,0,False
+intellij-community,Kirill Shirokov,3,0,False
+intellij-community,Kirill Shulzhenko,4,0,False
+intellij-community,Kirill.Karnaukhov,1,0,False
+intellij-community,Kirill.Krylov,28,0,False
+intellij-community,Konstantin Aleev,22,0,False
+intellij-community,Konstantin Bulenkov,129,0,False
+intellij-community,Konstantin Hudyakov,533,0,False
+intellij-community,Konstantin Krukhmalev,12,0,False
+intellij-community,Konstantin Nisht,418,7,False
+intellij-community,Konstantin Ulitin,11,0,False
+intellij-community,Konstantin.Hudyakov,28,0,False
+intellij-community,Konstantin.Nisht,3,0,False
+intellij-community,Kostya Ripak,36,0,False
+intellij-community,Krystian Gajewski,1,0,False
+intellij-community,Krzysztof Pałucki,12,0,False
+intellij-community,Krzysztof Waclawik,4,0,False
+intellij-community,Leonid Bushuev,3,0,False
+intellij-community,Leonid Khachaturov,5,0,False
+intellij-community,Leonid Sandal,2,0,False
+intellij-community,Leonid Shalupov,26,0,False
+intellij-community,Lev Leontev,14,0,False
+intellij-community,Lev Shagalov,1,0,False
+intellij-community,Lev Stolpner,1,0,False
+intellij-community,Lev Zagnetin,13,1,False
+intellij-community,Lilith Oberhauser,4,0,False
+intellij-community,Liubov Afanaseva,8,0,False
+intellij-community,Liubov Polezhaeva,1,0,False
+intellij-community,Liudmila Kornilova,190,0,False
+intellij-community,Louis Vignier,106,0,False
+intellij-community,Luca Samore,1,0,False
+intellij-community,Ludwig Valda Vasquez,3,0,False
+intellij-community,Lyubomyr Bushko,1,0,False
+intellij-community,Maciej Procyk,10,0,False
+intellij-community,Madalin Valceleanu,1,0,False
+intellij-community,Maksim Banaev,21,0,False
+intellij-community,Maksim Lazeba,1,0,False
+intellij-community,Maksim Medvedev,2,0,False
+intellij-community,Maksim Zuev,251,0,False
+intellij-community,Maksim.Zheltoukhov,1,0,False
+intellij-community,Manuel Ceron,3,0,False
+intellij-community,Manuel Unterhofer,12,1,False
+intellij-community,Marat Dinmukhametov,2,0,False
+intellij-community,Marcin Laskowski,7,0,False
+intellij-community,Marcin Mikosik,36,0,False
+intellij-community,Marco Pennekamp,9,0,False
+intellij-community,Marcus Mews,36,0,False
+intellij-community,Maria Filipanova,44,0,False
+intellij-community,Maria Filippova,2,0,False
+intellij-community,Maria Sokolova,75,0,False
+intellij-community,Marina Mădăraș,81,0,False
+intellij-community,Mario San Roman Caraza,2,0,False
+intellij-community,Marius Erath,11,0,False
+intellij-community,Maros Sandor,3,0,False
+intellij-community,Mathias,45,0,False
+intellij-community,Mathias Boulay,23,0,False
+intellij-community,Matthew Gharrity,3,0,False
+intellij-community,Max Medvedev,569,0,False
+intellij-community,Maxim Kartashev,1,0,False
+intellij-community,Maxim Kolmakov,13,0,False
+intellij-community,Maxim Popov,27,0,False
+intellij-community,Maxim.Kolmakov,80,0,False
+intellij-community,Maxime Kudrinski,69,0,False
+intellij-community,Michael Golubev,3,0,False
+intellij-community,Michail Plushnikov,3,0,False
+intellij-community,Michał Kasprzyk,2,0,False
+intellij-community,Mihail Buryakov,87,0,False
+intellij-community,Mikhail Chernyavsky,3,0,False
+intellij-community,Mikhail Filippov,56,0,False
+intellij-community,Mikhail Glukhikh,3,0,False
+intellij-community,Mikhail Golubev,54,8,True
+intellij-community,Mikhail Meringov,1,0,False
+intellij-community,Mikhail Pyltsin,378,0,False
+intellij-community,Mikhail Sokolov,4,0,False
+intellij-community,Mikhail Zinchenko,35,0,False
+intellij-community,Mikhail.Ustinov,15,1,False
+intellij-community,Milica Sladakovic,80,0,False
+intellij-community,Milosz Piekutowski,1,0,False
+intellij-community,Mojtaba Chenani,4,0,False
+intellij-community,Morgan Bartholomew,336,0,False
+intellij-community,Natalia Murycheva,1,0,False
+intellij-community,Natalia.Murycheva,17,0,False
+intellij-community,Nataliya.Valtman,10,0,False
+intellij-community,Nebojsa Vuksic,18,0,False
+intellij-community,Nebojsa.Vuksic,4,0,False
+intellij-community,NichtStudioCode,1,0,False
+intellij-community,Nicolay Mitropolsky,9,3,False
+intellij-community,Nicolay.Mitropolsky,13,0,False
+intellij-community,Nikita Ashihmin,5,0,False
+intellij-community,Nikita Ashikhmin,38,2,False
+intellij-community,Nikita Biriukov,64,0,False
+intellij-community,Nikita Bosov,5,0,False
+intellij-community,Nikita Ivlev,1,0,False
+intellij-community,Nikita Katkov,198,0,False
+intellij-community,Nikita Kuchur,4,0,False
+intellij-community,Nikita Kudrin,8,0,False
+intellij-community,Nikita Mironov,8,0,False
+intellij-community,Nikita Paniukhin,36,0,False
+intellij-community,Nikita Pavlenko,39,0,False
+intellij-community,Nikita Skvortsov,9,0,False
+intellij-community,Nikita Tsarev,5,0,False
+intellij-community,Nikita Zaytsev,13,0,False
+intellij-community,Nikita.Ashihmin,17,0,False
+intellij-community,Nikita.Lyubimov,8,0,False
+intellij-community,Nikita.Skvortsov,55,0,False
+intellij-community,Nikola Kocić,2,0,False
+intellij-community,Nikola Micic,2,0,False
+intellij-community,Nikolai Bogdanov,2,0,False
+intellij-community,Nikolas Grottendieck,1,0,False
+intellij-community,Nikolay Chashnikov,568,0,False
+intellij-community,Nikolay Egorov,76,0,False
+intellij-community,Nikolay Kuznetsov,2,0,False
+intellij-community,Nikolay Lunyak,3,0,False
+intellij-community,Nikolay Rykunov,62,0,False
+intellij-community,Niyaz Nigmatullin,3,0,False
+intellij-community,Nurullokhon Gulomkodirov,40,0,False
+intellij-community,Oleg Makeev,29,0,False
+intellij-community,Oleg Taratukhin,2,0,False
+intellij-community,Olga Bondar,1,0,False
+intellij-community,Olga Klisho,49,0,False
+intellij-community,Olga Lavrenteva,2,0,False
+intellij-community,Olga.Lavrenteva,4,0,False
+intellij-community,Olga.Lavrichenko,3,0,False
+intellij-community,Olga.Vlasova,7,0,False
+intellij-community,Onur.Sahin,2,0,False
+intellij-community,Paul Thomson,1,0,False
+intellij-community,Pavel Gorgulov,2,0,False
+intellij-community,Pavel Karateev,9,0,False
+intellij-community,Pavel Kirpichenkov,67,0,False
+intellij-community,Pavel Porvatov,288,0,False
+intellij-community,Pavlo Bida,1,0,False
+intellij-community,Pavlo Skliar,31,2,False
+intellij-community,Peter Gromov,9,0,False
+intellij-community,Petr,168,0,False
+intellij-community,Petr Galunov,4,0,False
+intellij-community,Piotr Kasprowicz,62,0,False
+intellij-community,Piotr Tomiak,166,0,False
+intellij-community,Radu Nedelcu,174,0,False
+intellij-community,Resit Berkay Bozkurt,1,0,False
+intellij-community,Rival Abdrakhmanov,2,0,False
+intellij-community,Rodion Iafarov,11,0,False
+intellij-community,Roman Chertishchev,6,0,False
+intellij-community,Roman Golyshev,66,0,False
+intellij-community,Roman Grigorev,1,0,False
+intellij-community,Roman Shevchenko,413,0,False
+intellij-community,Roman Vasiliev,3,0,False
+intellij-community,Roman Venediktov,1,0,False
+intellij-community,Roman.Ivanitskii,8,0,False
+intellij-community,Ruslan Cheremin,383,0,False
+intellij-community,Ruslan Nabiullin,1,0,False
+intellij-community,Rustam Vishniakov,206,2,False
+intellij-community,Samuel Soukup,1,0,False
+intellij-community,Scott Faria,10,0,False
+intellij-community,Sebastian Sellmair,1,0,False
+intellij-community,Sebastiano Poggi,33,0,False
+intellij-community,Sergei Kharitontcev-Beglov,110,0,False
+intellij-community,Sergei Petukhov,5,0,False
+intellij-community,Sergei Petunin,1,0,False
+intellij-community,Sergei Sysoev,5,0,False
+intellij-community,Sergei Tachenov,539,0,False
+intellij-community,Sergei Vorobyov,176,0,False
+intellij-community,Sergej Jaskiewicz,1,0,False
+intellij-community,Sergey Balyakin,1,0,False
+intellij-community,Sergey Ignatov,18,0,False
+intellij-community,Sergey Pak,1,0,False
+intellij-community,Sergey Simonchik,89,0,False
+intellij-community,Sergey Stupin,3,0,False
+intellij-community,Sergey Vardanyan,2,0,False
+intellij-community,Sergey.Vardanyan,14,0,False
+intellij-community,Shumaf Lovpache,104,0,False
+intellij-community,Simon Barinka,1,0,False
+intellij-community,Simon Stratmann,1,0,False
+intellij-community,Slava Trenogin,4,4,False
+intellij-community,Sonakshi Saxena,1,0,False
+intellij-community,Stanislau Palyn,99,0,False
+intellij-community,Stanislav Alekseev,56,0,False
+intellij-community,Stanislav Erokhin,1,0,False
+intellij-community,Stanislav Ruban,4,0,False
+intellij-community,Stanislav Tikhomirov,1,0,False
+intellij-community,Stanislav Utikeev,13,0,False
+intellij-community,Stefan Grujicic,6,0,False
+intellij-community,Stefano Furi,3,0,False
+intellij-community,Suzy Kostumyan,23,0,False
+intellij-community,Tagir Valeev,309,0,False
+intellij-community,Tatiana Ber,3,0,False
+intellij-community,Tatiana Elfimova,175,0,False
+intellij-community,Tatiana.Ber,1,0,False
+intellij-community,Tijana Brkovic,30,0,False
+intellij-community,Timofey Solonin,3,0,False
+intellij-community,Timur Aliberdov,10,0,False
+intellij-community,Timur Malanin,5,0,False
+intellij-community,TimurMalanin,39,0,False
+intellij-community,Titouan Bion,52,0,False
+intellij-community,Tobias Kahlert,1,0,False
+intellij-community,Tomas Husak,3,0,False
+intellij-community,Tomasz Blachut,98,0,False
+intellij-community,Tomek Mańko,1,0,False
+intellij-community,Uladzislau Trybukhouski,52,0,False
+intellij-community,Vadim Salavatov,775,0,False
+intellij-community,Valeria Golovina,86,0,False
+intellij-community,Valerii Tepliakov,1,0,False
+intellij-community,Vasil Vasilev,6,0,False
+intellij-community,Veljko Dragic,2,0,False
+intellij-community,Vera Petrenkova,16,0,False
+intellij-community,Veronika Krasnova,1,0,False
+intellij-community,Viacheslav Ermakov,2,0,False
+intellij-community,Victor Matchenko,12,0,False
+intellij-community,Victor Turansky,5,0,False
+intellij-community,Victoria Petrakovich,105,0,False
+intellij-community,Victoria.Petrakovich,9,0,False
+intellij-community,Vidish Naik,2,0,False
+intellij-community,Viktor Tselov,5,0,False
+intellij-community,Violetta Goncharova,6,0,False
+intellij-community,Vishal Gupta,1,0,False
+intellij-community,Vitaliy Konovalov,2,0,False
+intellij-community,Vitaly Legchilkin,328,0,False
+intellij-community,Vlad Koshkin,153,0,False
+intellij-community,Vlad Minaev,1,0,False
+intellij-community,Vladimir Belov,1,0,False
+intellij-community,Vladimir Dolzhenko,345,0,False
+intellij-community,Vladimir Goncharov,1,0,False
+intellij-community,Vladimir Iakunin,37,0,False
+intellij-community,Vladimir Kharitonov,15,0,False
+intellij-community,Vladimir Krivosheev,1796,54,True
+intellij-community,Vladimir Lagunov,85,48,True
+intellij-community,Vladimir Lezhnev,1,0,False
+intellij-community,Vladimir Parfinenko,40,0,False
+intellij-community,Vladimir Zulin,4,0,False
+intellij-community,Vladimir.Koshelev,19,0,False
+intellij-community,Vladislav Annenkov,9,0,False
+intellij-community,Vladislav Beskrovny,17,0,False
+intellij-community,Vladislav Ertel,1,0,False
+intellij-community,Vladislav Protasov,81,0,False
+intellij-community,Vladislav Rassokhin,11,0,False
+intellij-community,Vladislav Sholokhov,3,0,False
+intellij-community,Vladislav Yaroshchuk,1,0,False
+intellij-community,Vladislav.Yaroshchuk,5,0,False
+intellij-community,Vojtech Balik,120,0,False
+intellij-community,Vyacheslav Karpukhin,47,0,False
+intellij-community,Vyacheslav Moklev,30,0,False
+intellij-community,Wellington Costa,2,0,False
+intellij-community,Wellington Pereira,3,0,False
+intellij-community,Wojciech Fijołek,1,0,False
+intellij-community,Wojciech Krystyniak,5,0,False
+intellij-community,Wojciech Litewka,1,0,False
+intellij-community,Yahor Berdnikau,10,0,False
+intellij-community,Yan Zhulanow,43,1,False
+intellij-community,Yann Cébron,11,0,False
+intellij-community,Youssef Shoaib,2,0,False
+intellij-community,Yulia Devyatkina,10,0,False
+intellij-community,Yuliya Karalenka,1,0,False
+intellij-community,Yuriy Artamonov,436,2,False
+intellij-community,Yuriy Mikhalev,2,0,False
+intellij-community,Yury Dynnikov,7,0,False
+intellij-community,Yury Khudyakov,1,0,False
+intellij-community,Zakhar Kaval,39,0,False
+intellij-community,Zakhar Koval,1,0,False
+intellij-community,aleksandr.komolkin,2,0,False
+intellij-community,aleksei-stafeev,6,0,False
+intellij-community,aleksei.priakhin,2,0,False
+intellij-community,aleksei.stafeev,3,0,False
+intellij-community,aleksey.maltsev,5,0,False
+intellij-community,alexey.afanasiev,3,0,False
+intellij-community,anton.spilnyy,2,0,False
+intellij-community,artem.chuguev,1,0,False
+intellij-community,bartlomiej.filipiuk,1,0,False
+intellij-community,berezhkoE,8,0,False
+intellij-community,bogdan.kirilenko,1,0,False
+intellij-community,bulatdavletov,16,0,False
+intellij-community,caiyunlei,1,0,False
+intellij-community,chbndrhnns,16,0,False
+intellij-community,daria.suvorova,25,0,False
+intellij-community,denis.kuznetsov,2,0,False
+intellij-community,denis.shvetsov,38,21,True
+intellij-community,denis.zaichenko,12,0,False
+intellij-community,dkashyn,1,0,False
+intellij-community,ekaterina.itsenko,3,0,False
+intellij-community,ernest.molczan,4,0,False
+intellij-community,ernesto.serize,10,0,False
+intellij-community,evgeny.bovykin,14,0,False
+intellij-community,fabrizio.scarponi,1,0,False
+intellij-community,fvoid,1,0,False
+intellij-community,george.lemeshko,1,0,False
+intellij-community,guoci,1,0,False
+intellij-community,helloeldar,3,0,False
+intellij-community,iliakondratev,4,0,False
+intellij-community,janbarari,1,0,False
+intellij-community,jetmano,1,0,False
+intellij-community,karinakazaryanJB,2,0,False
+intellij-community,kassak,5,0,False
+intellij-community,konrad.sztenderski,3,0,False
+intellij-community,lesia.matuzok,11,0,False
+intellij-community,maksim.semenov,3,0,False
+intellij-community,maxim.popov,3,1,False
+intellij-community,mibac138,1,0,False
+intellij-community,milena.arakelyan,1,0,False
+intellij-community,muravlevas,1,0,False
+intellij-community,nastia,7,0,False
+intellij-community,natalia.ponomareva,80,0,False
+intellij-community,pavel.mikhailovskii,5,0,False
+intellij-community,pavel.sergeev,2,0,False
+intellij-community,pavlo.bida.external,2,0,False
+intellij-community,qkqehenr7,1,0,False
+intellij-community,rustam.vishnyakov,3,0,False
+intellij-community,sergey.shkredov,2,0,False
+intellij-community,sergey.vasiliev,3,0,False
+intellij-community,teodor.irkhin,1,0,False
+intellij-community,tonimatasdev,1,0,False
+intellij-community,valentin.dorofeev,1,0,False
+intellij-community,vfilin,13,0,False
+intellij-community,vishalga-google,1,0,False
+intellij-community,vladimir.petrenko,9,0,False
+intellij-community,vladislav.shishov,40,0,False
+intellij-community,wangyuliang.05,1,0,False
+intellij-community,yakostro,1,0,False
+intellij-community,yude.jiang,1,0,False
+kotlin-web-site,Dmitry Khalanskiy,1,0,False
+kotlin-web-site,Leonid Startsev,1,0,False
+kotlin-web-site,Marat Akhin,0,1,False
+kotlin-web-site,andrei.ezerskii,2,0,False
+kotlin-web-site,nikpachoo,3,0,False
+kotlin-web-site,zoobestik,4,0,False

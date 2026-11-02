@@ -1,0 +1,81 @@
+
+=== ideavim ===
+git log --no-merges --since=2025-01-01T00:00:00Z -i -E --grep x3 : 500
+same grep, window filtered on committer time            : 500
+  by tool       : {'Claude': 498, 'Cursor': 2}
+  by pattern    : {'0': 316, '0+1': 184}  (0=Co-authored-by, 1=Generated with [..], 2=Assisted-by)
+  bot/agent author: 174  {'claude[bot]': 174}
+  pair (non-bot author)                 : 326
+  pair (non-bot author) with prod file  : 151
+  pair (non-bot) by tool                : {'Claude': 324, 'Cursor': 2}
+  pair (non-bot) with prod, by tool     : {'Claude': 150, 'Cursor': 1}
+  m2: group==pair 326, with prod_files>0 152; group==agent 183; rows 2288
+  SHA sets: fresh-only 0, m2-only 0, both 326
+  with prod files: fresh-only 0, m2-only 1, both 151
+  tool label crosstab on shared SHAs:
+    m2      Claude  Cursor
+    fresh                 
+    Claude     324       0
+    Cursor       1       1
+  prod-file count (old+new paths, --no-renames) differs on 3 of 326 shared SHAs (fresh, m2): [('12b65fa17f', 4, 5), ('8595d53983', 0, 1), ('bef0b4c32a', 151, 150)]
+  prod-file count (-M, new path once) differs on 2 SHAs (fresh, m2): [('12b65fa17f', 4, 5), ('8595d53983', 0, 1)]
+  window: 2506 non-merge commits, m2 rows 2288; bot/agent-account authors {'dependabot[bot]': 169, 'claude[bot]': 182, 'Claude': 1, 'jetbrains-junie[bot]': 2}
+  m2 group of those commits: {('dependabot[bot]', 'absent'): 169, ('claude[bot]', 'agent'): 182, ('Claude', 'agent'): 1, ('jetbrains-junie[bot]', 'absent'): 2}
+
+=== intellij-scala ===
+git log --no-merges --since=2025-01-01T00:00:00Z -i -E --grep x3 : 358
+same grep, window filtered on committer time            : 358
+  by tool       : {'Claude': 228, 'Codex': 129, 'Claude+Codex': 1}
+  by pattern    : {'0': 358}  (0=Co-authored-by, 1=Generated with [..], 2=Assisted-by)
+  bot/agent author: 0  {}
+  pair (non-bot author)                 : 358
+  pair (non-bot author) with prod file  : 239
+  pair (non-bot) by tool                : {'Claude': 228, 'Codex': 129, 'Claude+Codex': 1}
+  pair (non-bot) with prod, by tool     : {'Claude': 144, 'Codex': 94, 'Claude+Codex': 1}
+  m2: group==pair 361, with prod_files>0 239; group==agent 0; rows 4388
+  SHA sets: fresh-only 0, m2-only 3, both 358
+  with prod files: fresh-only 0, m2-only 0, both 239
+    m2-only 3cdab8c2d3 tool=Codex '1791569028|Dmitrii Naumenko|dmitrii.naumenko@jetbrains.com|[github] Allow manual PR-workflow runs on' lines=['Keep the pull-request trigger unchanged while allowing maintainers to run\\nthe same build and test job from a selected release branch. This does\\nnot add direct-push builds.\\n\\nCo-authored-by: Codex <noreply@openai.com>']
+    m2-only ba65d98aa1 tool=Claude '1764689461|Dmitrii Naumenko|dmitrii.naumenko@jetbrains.com|[test integration tests] print hanging pr' lines=['The code was generated with Claude Agent']
+    m2-only c6c0a408f6 tool=Codex '1791569031|Dmitrii Naumenko|dmitrii.naumenko@jetbrains.com|[github] Restrict GitHub build workflow t' lines=['The workflow checks out and tests code but does not modify repository\\nstate, so it declares the least privilege required by its steps.\\n\\nCo-authored-by: Codex <noreply@openai.com>']
+  tool label crosstab on shared SHAs:
+    m2            Claude  Codex
+    fresh                      
+    Claude           228      0
+    Claude+Codex       1      0
+    Codex              0    129
+  prod-file count (old+new paths, --no-renames) differs on 1 of 358 shared SHAs (fresh, m2): [('073bacb031', 2, 1)]
+  prod-file count (-M, new path once) differs on 0 SHAs (fresh, m2): []
+  window: 4390 non-merge commits, m2 rows 4388; bot/agent-account authors {'jetbrains-junie[bot]': 2}
+  m2 group of those commits: {('jetbrains-junie[bot]', 'absent'): 2}
+
+=== kotlin ===
+git log --no-merges --since=2025-01-01T00:00:00Z -i -E --grep x3 : 1217
+same grep, window filtered on committer time            : 1217
+  by tool       : {'Claude': 996, 'Junie': 214, 'Codex': 3, 'ChatGPT': 3, 'Copilot': 1}
+  by pattern    : {'0': 1216, '0+1': 1}  (0=Co-authored-by, 1=Generated with [..], 2=Assisted-by)
+  bot/agent author: 1  {'Copilot': 1}
+  pair (non-bot author)                 : 1216
+  pair (non-bot author) with prod file  : 864
+  pair (non-bot) by tool                : {'Claude': 996, 'Junie': 214, 'Codex': 3, 'ChatGPT': 3}
+  pair (non-bot) with prod, by tool     : {'Claude': 707, 'Junie': 155, 'Codex': 1, 'ChatGPT': 1}
+  m2: group==pair 1216, with prod_files>0 864; group==agent 14; rows 25063
+  SHA sets: fresh-only 0, m2-only 0, both 1216
+  with prod files: fresh-only 0, m2-only 0, both 864
+  tool label crosstab on shared SHAs:
+    m2       Claude  Codex  Junie
+    fresh                        
+    ChatGPT       0      3      0
+    Claude      996      0      0
+    Codex         0      3      0
+    Junie         0      0    214
+  prod-file count (old+new paths, --no-renames) differs on 14 of 1216 shared SHAs (fresh, m2): [('0014335b17', 3, 2), ('1a95665260', 35, 22), ('1b4c76387c', 18, 11), ('2d2deaf18e', 12, 11), ('48eeb8f35e', 77, 42), ('540c7625bc', 62, 42)]
+  prod-file count (-M, new path once) differs on 0 SHAs (fresh, m2): []
+  window: 25075 non-merge commits, m2 rows 25063; bot/agent-account authors {'copilot-swe-agent[bot]': 1, 'dependabot[bot]': 12, 'Copilot': 3, 'Junie': 10}
+  m2 group of those commits: {('copilot-swe-agent[bot]', 'agent'): 1, ('dependabot[bot]', 'absent'): 12, ('Copilot', 'agent'): 3, ('Junie', 'agent'): 10}
+
+llm_signals_summary.csv (all refs since 2021, different pattern list):
+    Repository  CommitsSince2021  AuthorshipCommits  MentionOnlyCommits
+       ideavim              7210                531                  36
+intellij-scala             23390                865                  17
+        kotlin             79148               1637                  60

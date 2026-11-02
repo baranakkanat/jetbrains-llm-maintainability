@@ -1,0 +1,48 @@
+=== 1. t(G-1) reference instead of normal ===
+                                                   row  clusters  p_normal    p_t  ci_t_low  ci_t_high  excludes_0_normal  excludes_0_t
+                                H1 follow-up fix (30d)        19    0.8247 0.8272   -0.0796     0.0983              False         False
+                                           H2 reverted        19    0.7739 0.7772   -0.0057     0.0044              False         False
+                          H3a spillover: comment share       114    0.3200 0.3221   -0.0269     0.0089              False         False
+                            H3b spillover: commit size       114    0.0061 0.0071   -0.3018    -0.0485               True          True
+                             log(lines changed) | base        19    0.0001 0.0011    0.2310     0.7803               True          True
+                    log(lines changed) | a_commit_type        19    0.0000 0.0005    0.2600     0.7795               True          True
+                      log(lines changed) | b_same_file        19    0.0083 0.0167    0.0760     0.6708               True          True
+                    log(lines changed) | c_claude_only        19    0.0000 0.0006    0.2913     0.8786               True          True
+                  log(lines changed) | d_since_2025_01        19    0.0000 0.0007    0.2533     0.7919               True          True
+                   Comment share of added lines | base        19    0.0062 0.0135    0.0119     0.0901               True          True
+          Comment share of added lines | a_commit_type        19    0.0008 0.0036    0.0214     0.0935               True          True
+            Comment share of added lines | b_same_file        19    0.1116 0.1290   -0.0096     0.0698              False         False
+          Comment share of added lines | c_claude_only        19    0.0000 0.0004    0.0368     0.1067               True          True
+        Comment share of added lines | d_since_2025_01        19    0.0052 0.0120    0.0127     0.0896               True          True
+           Complexity added to modified methods | base        19    0.0063 0.0138    0.0309     0.2374               True          True
+  Complexity added to modified methods | a_commit_type        19    0.0170 0.0282    0.0142     0.2224               True          True
+    Complexity added to modified methods | b_same_file        19    0.1776 0.1943   -0.0807     0.3698              False         False
+  Complexity added to modified methods | c_claude_only        19    0.0037 0.0096    0.0374     0.2344               True          True
+Complexity added to modified methods | d_since_2025_01        19    0.0456 0.0610   -0.0055     0.2197               True         False
+             Net complexity per 100 added lines | base        19    0.0114 0.0210  -71.5728    -6.6195               True          True
+    Net complexity per 100 added lines | a_commit_type        19    0.0090 0.0177  -71.5303    -7.7554               True          True
+      Net complexity per 100 added lines | b_same_file        19    0.2145 0.2304  -59.7666    15.3693              False         False
+    Net complexity per 100 added lines | c_claude_only        19    0.0219 0.0342  -75.3988    -3.2768               True          True
+  Net complexity per 100 added lines | d_since_2025_01        19    0.0004 0.0022  -69.6537   -17.9681               True          True
+
+=== 2. Variant (b): primary-file fixed effects in the small-sample correction ===
+                             outcome            version    n  fe_levels_counted   effect  se_script  se_factor  se_corrected  p_normal  p_t18
+                  log(lines changed)    singletons kept 4646               2337   0.3734     0.1416     1.4186        0.2008    0.0630 0.0794
+                  log(lines changed) singletons dropped 3116                807   0.3734     0.1416     1.1617        0.1645    0.0232 0.0357
+        Comment share of added lines    singletons kept 4416               2247   0.0301     0.0189     1.4272        0.0270    0.2649 0.2796
+        Comment share of added lines singletons dropped 2941                772   0.0301     0.0189     1.1646        0.0220    0.1719 0.1887
+Complexity added to modified methods    singletons kept 3179               1814   0.1445     0.1072     1.5267        0.1637    0.3772 0.3888
+Complexity added to modified methods singletons dropped 1944                579   0.1445     0.1072     1.1936        0.1280    0.2587 0.2736
+  Net complexity per 100 added lines    singletons kept 3451               1949 -22.1986    17.8816     1.5164       27.1149    0.4130 0.4237
+  Net complexity per 100 added lines singletons dropped 2118                616 -22.2012    17.8870     1.1877       21.2447    0.2960 0.3098
+
+=== 3. H1: raw gap vs within-developer gap (eligible commits) ===
+raw: human 0.2144, pair 0.2763, gap +0.0620
+within-author gap weighted by AI commits: +0.0196; authors with a higher rate on AI commits: 12 of 19
+rate by repository: {'ideavim': 0.2844, 'intellij-scala': 0.4172, 'kotlin': 0.1904}
+excluded by the 30-day cut-off: {'human': '195 of 3442 (6%)', 'pair': '263 of 1204 (22%)'}
+
+=== 4. Fix-subject commits that rename a production file (git log -M) ===
+ideavim: fix-subject commits 411; renaming a production file 2 (2 old paths)
+intellij-scala: fix-subject commits 1320; renaming a production file 14 (53 old paths)
+kotlin: fix-subject commits 2279; renaming a production file 16 (37 old paths)

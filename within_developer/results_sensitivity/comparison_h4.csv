@@ -1,0 +1,21 @@
+outcome,variant,main,sensitivity,n_main,n_sens
+log(lines changed),base,"+0.5056 [+0.2494, +0.7618]","+0.5057 [+0.2495, +0.7619]",4646,4645
+log(lines changed),a_commit_type,"+0.5197 [+0.2774, +0.7620]","+0.5198 [+0.2774, +0.7621]",4646,4645
+log(lines changed),b_same_file,"+0.3734 [+0.0960, +0.6509]","+0.3167 [+0.0504, +0.5830]",4646,4645
+log(lines changed),c_claude_only,"+0.5850 [+0.3110, +0.8589]","+0.5851 [+0.3111, +0.8590]",4400,4399
+log(lines changed),d_since_2025_01,"+0.5226 [+0.2714, +0.7738]","+0.5227 [+0.2715, +0.7739]",8443,8442
+Comment share of added lines,base,"+0.0510 [+0.0145, +0.0875]","+0.0510 [+0.0145, +0.0875]",4416,4416
+Comment share of added lines,a_commit_type,"+0.0574 [+0.0238, +0.0910]","+0.0574 [+0.0238, +0.0910]",4416,4416
+Comment share of added lines,b_same_file,"+0.0301 [-0.0070, +0.0672]","+0.0305 [-0.0075, +0.0686]",4416,4416
+Comment share of added lines,c_claude_only,"+0.0718 [+0.0392, +0.1044]","+0.0718 [+0.0392, +0.1044]",4176,4176
+Comment share of added lines,d_since_2025_01,"+0.0512 [+0.0153, +0.0870]","+0.0512 [+0.0153, +0.0870]",8062,8062
+Complexity added to modified methods,base,"+0.1341 [+0.0378, +0.2304]","+0.1341 [+0.0378, +0.2305]",3179,3179
+Complexity added to modified methods,a_commit_type,"+0.1183 [+0.0212, +0.2154]","+0.1183 [+0.0212, +0.2154]",3179,3179
+Complexity added to modified methods,b_same_file,"+0.1445 [-0.0656, +0.3546]","+0.1490 [-0.0402, +0.3383]",3179,3179
+Complexity added to modified methods,c_claude_only,"+0.1359 [+0.0440, +0.2278]","+0.1359 [+0.0440, +0.2278]",2991,2991
+Complexity added to modified methods,d_since_2025_01,"+0.1071 [+0.0021, +0.2122]","+0.1071 [+0.0021, +0.2122]",5664,5664
+Net complexity per 100 added lines,base,"-39.0962 [-69.3944, -8.7980]","-39.0964 [-69.3944, -8.7985]",3451,3451
+Net complexity per 100 added lines,a_commit_type,"-39.6428 [-69.3914, -9.8943]","-39.6434 [-69.3915, -9.8953]",3451,3451
+Net complexity per 100 added lines,b_same_file,"-22.1986 [-57.2466, +12.8494]","-21.8705 [-53.5371, +9.7962]",3451,3451
+Net complexity per 100 added lines,c_claude_only,"-39.3378 [-72.9800, -5.6957]","-39.3381 [-72.9798, -5.6965]",3256,3256
+Net complexity per 100 added lines,d_since_2025_01,"-43.8109 [-67.9203, -19.7015]","-43.8113 [-67.9205, -19.7022]",6104,6104
