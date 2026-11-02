@@ -1,0 +1,4 @@
+repo,status,prod_commits,pair_prod_commits,ai_active_months,first_ai_month,eligible_developers,eligible_commits
+intellij-community,ok,59577,202,10,2025-09,4,2104
+sbt-ide-settings,ok,1,0,0,,0,0
+kotlin-web-site,ok,208,1,1,2026-04,0,0

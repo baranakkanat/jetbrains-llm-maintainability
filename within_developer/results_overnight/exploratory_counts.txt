@@ -1,0 +1,60 @@
+=== AI-co-authored commits by tool ('' = not identified) ===
+        commits  developers  largest_developer_share
+tool                                                
+Claude      958          17                     0.34
+Codex        95           3                     0.98
+Cursor        1           1                     1.00
+Junie       150           7                     0.44 
+
+=== AI-co-authored commits by family ('' = not identified) ===
+        commits  developers  largest_developer_share
+family                                              
+            321          12                     0.29
+fable        97           7                     0.36
+opus        715          17                     0.45
+sonnet       71           6                     0.45 
+
+=== AI-co-authored commits by generation ('' = not identified) ===
+            commits  developers  largest_developer_share
+generation                                              
+                321          12                     0.29
+4.x             429          17                     0.26
+5.x             454          15                     0.49 
+
+=== Codex commits per developer ===
+repo            author          
+intellij-scala  Dmitrii Naumenko    93
+                Vasil Vasilev        1
+kotlin          Artem Olkov          1 
+
+=== Junie commits per developer ===
+repo    author              
+kotlin  Alexander Udalov        34
+        Grigorii.Solnyshkin      1
+        Ilya Chernikov          66
+        Ivan Kochurkin           6
+        Sebastian Sellmair      29
+        Svyatoslav Scherbina     1
+        Vladimir Sukharev       13 
+
+=== Claude model strings ===
+model
+Claude Opus 5 (1M context)        181
+Claude Opus 4.8 (1M context)      138
+Claude Opus 5.5                    91
+Claude Opus 4.5                    73
+Claude Opus 5.5 (1M context)       71
+Claude Opus 4.6 (1M context)       70
+(none)                             70
+Claude Fable 5.1                   53
+Claude Sonnet 4.6                  50
+Claude Opus 4.6                    47
+Claude Fable 5                     44
+Claude Opus 4.7 (1M context)       41
+Claude Sonnet 5                    12
+Claude Sonnet 4.5                   8
+Claude                              4
+Claude Opus 5                       2
+Codex                               1
+Claude Opus 4.8                     1
+Claude Sonnet 4.6 (1M context)      1
