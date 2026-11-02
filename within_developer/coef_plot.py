@@ -60,8 +60,8 @@ def main():
     plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 9,
                          "axes.edgecolor": GRID, "axes.labelcolor": INK_2,
                          "xtick.color": INK_2, "ytick.color": INK_2, "text.color": INK})
-    fig, axes = plt.subplots(3, 2, figsize=(11, 9.5), facecolor=SURFACE,
-                             gridspec_kw={"height_ratios": [1.3, 3, 3]})
+    fig, axes = plt.subplots(3, 2, figsize=(11, 8.8), facecolor=SURFACE,
+                             gridspec_kw={"height_ratios": [0.8, 3, 3]})
     for ax, (title, source, key, xlabel) in zip(axes.flat, PANELS):
         rows = rows_for(source, key, conf, h4, earlier)
         scale = 100 if key in PCT else 1
