@@ -73,7 +73,8 @@ def main(repo_path, repo_name, since="2025-01-01"):
                           "deleted": int(deleted) if deleted.isdigit() else 0,
                           "prod": prod, "rename_old": False})
             if old is not None:
-                # a rename touches the old path too; zero lines keep it out of the primary-file choice
+                # a rename touches the old path too; zero lines keep it out of the primary-file
+                # choice unless no file in the commit adds lines (then it can win a tie)
                 files.append({"sha": sha, "path": old, "added": 0, "deleted": 0,
                               "prod": old.endswith(CODE_EXT) and not TEST_PATH.search(old),
                               "rename_old": True})

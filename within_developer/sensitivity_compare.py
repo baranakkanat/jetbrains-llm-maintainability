@@ -8,9 +8,16 @@ analysis script.
 Usage: python sensitivity_compare.py > results_sensitivity/comparison.txt
 """
 
+import warnings
+
 import numpy as np
 import pandas as pd
+from scipy.stats import norm, t
 
+from analyze_overnight import fe_ols
+from inference_checks import drop_singletons
+
+warnings.filterwarnings("ignore")
 MAIN, SENS = "results_overnight", "results_sensitivity"
 
 
@@ -80,6 +87,38 @@ def main():
 
     out_conf.to_csv(f"{SENS}/comparison_confirmatory.csv", index=False)
     out_h4.to_csv(f"{SENS}/comparison_h4.csv", index=False)
+    primary_file_ties(MAIN, ".")
+    primary_file_ties(SENS, SENS)
+
+
+def primary_file_ties(results, fh_dir):
+    """Variant (b) picks the production file with most added lines; ties are broken by an
+    unstable sort, so adding rows to the file history can reshuffle them. Re-estimate
+    commit size in (b) with two deterministic tie-breaks."""
+    print(f"\n=== Variant (b): primary-file ties ({results}) ===")
+    core = pd.read_csv(f"{results}/overnight_core_commits.csv")
+    files = []
+    for r in core.repo.unique():
+        f = pd.read_csv(f"{fh_dir}/fh_{r}_files.csv", keep_default_na=False)
+        files.append(f[f["prod"].astype(str).str.lower() == "true"])
+    f = pd.concat(files)
+    top = f[f.added == f.groupby("sha").added.transform("max")]
+    ties = top.groupby("sha").size()
+    print(f"core commits whose top production files tie on added lines: "
+          f"{int(core.sha.map(ties).fillna(0).gt(1).sum())} of {len(core)}")
+    fes = ["author", "repo_month", "primary_file"]
+    for rule, ascending in [("alphabetically first path", True), ("alphabetically last path", False)]:
+        primary = top.sort_values("path", ascending=ascending).drop_duplicates("sha").set_index("sha").path
+        d = core.assign(primary_file=core.sha.map(primary)).dropna(subset=["primary_file"])
+        r = fe_ols(d, "log_size", ["is_pair"], [], fes)[0]
+        se = (r["ci_high"] - r["effect"]) / 1.96
+        dd = drop_singletons(d, fes)
+        k_fe = dd.repo_month.nunique() - 1 + dd.primary_file.nunique() - 1
+        se_r = se * np.sqrt((len(dd) - 1) / (len(dd) - 1 - k_fe)) / np.sqrt((len(dd) - 1) / (len(dd) - 1))
+        z = r["effect"] / se_r
+        print(f"  ties -> {rule}: log size {r['effect']:+.4f} [{r['ci_low']:+.4f}, {r['ci_high']:+.4f}] "
+              f"p={r['p']:.4f}; reghdfe-style SE {se_r:.4f}: p={2 * norm.sf(abs(z)):.4f}, "
+              f"t(18) p={2 * t.sf(abs(z), 18):.4f}")
 
 
 if __name__ == "__main__":

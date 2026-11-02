@@ -1,0 +1,60 @@
+Repos: ['ideavim', 'intellij-scala', 'kotlin']
+Production commits since 2025-01: 23224; in AI-active months: 11696; eligible developers: 19; their commits: 4645 (1203 AI-paired)
+
+[H1] follow-up fix within 30 days: human 0.215, pair 0.277 (n=4187)
+
+[H2] reverts:
+reverted  0.0000  1.0000
+group                   
+human       3430      12
+pair        1201       2
+     Fisher exact: odds ratio 0.476, p=0.5407
+
+[H3] adopters: 20, non-adopters: 94, commits: 22437
+                 added_comment_share  log_size
+period                                        
+labelled                      0.2034    3.6831
+post-unlabelled               0.1383    3.3625
+pre                           0.1089    3.3270
+     H3a spillover: comment share: post_labelled effect 0.0462 [0.0090, 0.0833]
+     H3b spillover: commit size: post_labelled effect 0.2953 [0.0983, 0.4924]
+
+=== CONFIRMATORY (BH across H1, H2, H3a, H3b) ===
+                  hypothesis            term  effect  ci_low  ci_high      p     n  clusters   p_BH
+      H1 follow-up fix (30d)         is_pair  0.0100 -0.0734   0.0935 0.8141  4187        19 0.8141
+                 H2 reverted         is_pair -0.0007 -0.0054   0.0040 0.7735  4645        19 0.8141
+H3a spillover: comment share post_unlabelled -0.0090 -0.0267   0.0087 0.3200 21475       114 0.6400
+  H3b spillover: commit size post_unlabelled -0.1751 -0.3004  -0.0498 0.0061 22437       114 0.0246
+
+=== H4 ROBUSTNESS of earlier findings ===
+                             outcome         variant   effect   ci_low  ci_high      p    n  clusters
+                  log(lines changed)            base   0.5057   0.2495   0.7619 0.0001 4645        19
+                  log(lines changed)   a_commit_type   0.5198   0.2774   0.7621 0.0000 4645        19
+                  log(lines changed)     b_same_file   0.3167   0.0504   0.5830 0.0197 4645        19
+                  log(lines changed)   c_claude_only   0.5851   0.3111   0.8590 0.0000 4399        19
+                  log(lines changed) d_since_2025_01   0.5227   0.2715   0.7739 0.0000 8442        19
+        Comment share of added lines            base   0.0510   0.0145   0.0875 0.0062 4416        19
+        Comment share of added lines   a_commit_type   0.0574   0.0238   0.0910 0.0008 4416        19
+        Comment share of added lines     b_same_file   0.0305  -0.0075   0.0686 0.1158 4416        19
+        Comment share of added lines   c_claude_only   0.0718   0.0392   0.1044 0.0000 4176        19
+        Comment share of added lines d_since_2025_01   0.0512   0.0153   0.0870 0.0052 8062        19
+Complexity added to modified methods            base   0.1341   0.0378   0.2305 0.0063 3179        19
+Complexity added to modified methods   a_commit_type   0.1183   0.0212   0.2154 0.0170 3179        19
+Complexity added to modified methods     b_same_file   0.1490  -0.0402   0.3383 0.1227 3179        19
+Complexity added to modified methods   c_claude_only   0.1359   0.0440   0.2278 0.0037 2991        19
+Complexity added to modified methods d_since_2025_01   0.1071   0.0021   0.2122 0.0456 5664        19
+  Net complexity per 100 added lines            base -39.0964 -69.3944  -8.7985 0.0114 3451        19
+  Net complexity per 100 added lines   a_commit_type -39.6434 -69.3915  -9.8953 0.0090 3451        19
+  Net complexity per 100 added lines     b_same_file -21.8705 -53.5371   9.7962 0.1758 3451        19
+  Net complexity per 100 added lines   c_claude_only -39.3381 -72.9798  -5.6965 0.0219 3256        19
+  Net complexity per 100 added lines d_since_2025_01 -43.8113 -67.9205 -19.7022 0.0004 6104        19
+
+Robust = same sign and CI excludes 0 in every variant:
+                                      same_sign  ci_excludes_0_all
+outcome                                                           
+Comment share of added lines               True              False
+Complexity added to modified methods       True              False
+Net complexity per 100 added lines         True              False
+log(lines changed)                         True               True
+
+[exploratory] H3a with non-adopters restricted to never-labelled developers: post_unlabelled -0.0075 [-0.0278, 0.0128] p=0.4713, n=18095

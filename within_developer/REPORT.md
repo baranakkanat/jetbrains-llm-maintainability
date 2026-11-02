@@ -25,8 +25,10 @@ everything below the "Exploratory" heading is exploratory.
 - **Of the four earlier findings, only commit size is robust** by the plan's
   rule: AI-co-authored commits are about 1.66x larger in the base model (log
   +0.51, 0.25 to 0.76) and 1.45x to 1.79x across the variants, with every CI
-  excluding zero. In variant (b) this depends on the small-sample correction
-  (see H4). Comment share (+5.1 pp), complexity added to modified methods
+  excluding zero. The variant (b) cell is the fragile one: across tie-breaking
+  rules for the primary file and the fixed-code sensitivity run, the (b)
+  estimate ranges from 0.32 to 0.39 and its reghdfe-style p from 0.015 to
+  0.045 (see H4 and "Sensitivity"). Comment share (+5.1 pp), complexity added to modified methods
   (+0.13) and net complexity per 100 added lines (-39) keep their sign in
   every variant but their CI includes zero when the comparison is restricted
   to commits whose main file is the same (variant b). "Robust" means robust
@@ -189,8 +191,9 @@ outcome and one regression. It took the core sample (19 developers, 4,646
 commits) and the AI-active months from the analysis' own
 `overnight_core_commits.csv` and did not re-estimate the H1-H3 models.
 
-The verification found three small defects in the mining code. Their measured
-or bounded reach is small:
+The verification found three small defects in the mining code. They were
+fixed after the main run and their effect is measured in "Sensitivity: fixed
+mining code" below; `results_overnight/` is unchanged:
 
 1. `*Test.kts` files count as production code (the test-name rule covers
    `.kt/.java/.scala` only). One path in the three repositories is affected
@@ -222,6 +225,81 @@ confirmatory p-values move only in the third decimal (H1 0.825 -> 0.827,
 H2 0.774 -> 0.777, H3a 0.320 -> 0.322, H3b 0.0061 -> 0.0071 with 114
 clusters). Computed in `results_overnight/inference_checks.txt`; the
 verification's `c_dummy_regression_output.txt` gives the same H4 result.
+
+## Sensitivity: fixed mining code
+
+A separately labelled rerun, `results_sensitivity/`, made after the main
+results were known. It uses the same clones and the same analysis script; only
+the mining code differs. Compared with the code that produced
+`results_overnight/` (the mining scripts as of commit 24d7497), it has four
+fixes:
+
+1. `*Test.kts` and `*Spec.kts` files are test code.
+2. A rename also records the old path (as a zero-line row), so a fix commit
+   that renames a file is linked to earlier commits on the old path.
+3. `jetbrains-junie[bot]` is classified as an agent instead of being dropped.
+4. `file_history.py` pins rename detection
+   (`git -c diff.renames=true -c diff.renameLimit=1000 log -M`) and its start
+   time (`--since=2025-01-01 00:00:00`). Without a time, git uses the current
+   time of day, so the commit list depended on when the script ran. Run at
+   21:26 it dropped two ideavim dependabot commits from the afternoon of
+   2025-01-01 that the 04:58 run kept. With the pinned time the commit sets
+   equal the main run's.
+
+Commands: `./run_sensitivity.sh`, then `python3 sensitivity_compare.py`,
+`python3 plan_conformance.py results_sensitivity` and
+`python3 inference_checks.py results_sensitivity`.
+
+What changes in the data:
+- The core sample loses one commit (the ideavim `Test.kts` commit), leaving
+  19 developers and 4,645 commits (1,203 AI-co-authored). The four junie-bot
+  commits enter as agents and are not in the core sample.
+- Among common core commits, the follow-up-fix outcome changes for one
+  (intellij-scala, unlabelled, 0 -> 1: the rename case the verification
+  found) and the prior-fix control for 11.
+- One ideavim commit's log size changes, because it also touched the `.kts`
+  test file. 8 ideavim values of net complexity per 100 added lines move
+  slightly (454.1 -> 454.7 and -36.5 -> -36.6), because the winsorizing
+  percentiles are computed over all mined commits of a repository, and in
+  ideavim those now differ.
+- 251 commits get a different primary file. 244 of them are commits whose
+  top production files tie on added lines. `analyze_overnight.py` breaks such
+  ties with an unstable sort, so adding rows reshuffles them. In 8 commits the
+  new primary file is a pre-rename path, which happens when no file in the
+  commit adds lines.
+
+| Test | Main | Sensitivity |
+|---|---|---|
+| H1 follow-up fix | +0.0094 [-0.0736, 0.0924], p_BH 0.825 | +0.0100 [-0.0734, 0.0935], p_BH 0.814 |
+| H2 reverted | -0.0007 [-0.0054, 0.0040], p_BH 0.825 | -0.0007 [-0.0054, 0.0040], p_BH 0.814 |
+| H3a comment-share spillover | -0.0090 [-0.0267, 0.0087], p_BH 0.640 | identical |
+| H3b size spillover | -0.1752 [-0.3004, -0.0499], p_BH 0.0245 | -0.1751 [-0.3004, -0.0498], p_BH 0.0246 |
+
+The plan-exact H2 (p = 0.782) and the BH-adjusted values agree as before. All
+H4 cells are identical to three decimals except variant (b): commit size
++0.317 [0.050, 0.583] (main +0.373), comment share +3.1 pp [-0.8, 6.9],
+complexity added +0.15 [-0.04, 0.34], net complexity -22 [-54, 10]. **Every
+H4 verdict is unchanged**: commit size is robust and the other three fail in
+(b).
+
+**Variant (b) for commit size is sensitive to arbitrary choices.** 424 core
+commits (9%) tie for the primary file. Re-estimating size in (b) with two
+deterministic tie-breaks (`sensitivity_compare.py`), and using the reghdfe
+convention (singleton files dropped, file effects counted):
+
+| File history | Tie-break | log size in (b) | p, reghdfe-style SE | p, same with t(18) |
+|---|---|---|---|---|
+| main | analysis (unstable sort) | +0.373 | 0.023 | 0.036 |
+| main | alphabetically first path | +0.381 | 0.015 | 0.025 |
+| main | alphabetically last path | +0.391 | 0.015 | 0.026 |
+| sensitivity | analysis (unstable sort) | +0.317 | 0.045 | 0.060 |
+| sensitivity | alphabetically first path | +0.316 | 0.021 | 0.033 |
+| sensitivity | alphabetically last path | +0.392 | 0.015 | 0.025 |
+
+With the normal reference that the analysis uses throughout, size in (b)
+excludes zero in all six versions. With t(18) it excludes zero in five of the
+six. The commit-size verdict therefore stands, but its (b) cell rests on a
+primary-file definition that the plan does not pin down for ties.
 
 ## Exploratory (not in the analysis plan's hypotheses)
 
@@ -344,10 +422,11 @@ to the pool pulls the pooled estimate just below conventional significance
     step-3 results existed (05:15-05:22 vs 05:40); its analysis ran after.
 11. **Mining defects found by the verification** (`*Test.kts` as production
     code, renamed files' old paths dropped, `jetbrains-junie[bot]` not labelled
-    as an agent) are documented above and were not fixed, because fixing them
-    would change the confirmatory data after the results were seen. Their
-    measured effect is one core commit and one follow-up in intellij-scala;
-    for kotlin only the bound above is known.
+    as an agent), plus the time-of-day dependence of `file_history.py`'s start
+    date, were fixed in the code after the main run (commits 305f43a and
+    7c462bc). The confirmatory results stay those of `results_overnight/`;
+    the fixed code was run as a separate sensitivity analysis, which changes
+    no conclusion (see "Sensitivity").
 12. **Labels slightly broader than the plan's wording**: the code also accepts
     `Assisted-by:` trailers, a prose "generated with Claude ..." line, and
     trailers preceded by a literal `\n`. This adds 3 intellij-scala commits,
@@ -390,7 +469,9 @@ to the pool pulls the pooled estimate just below conventional significance
 |---|---|
 | `ANALYSIS_PLAN.md`, `ANALYSIS_PLAN.sha256` | analysis plan, fixed and hashed before H1-H3 were run, and its hash |
 | `PROGRESS.md` | time-stamped log of the night, including the pre-results deviation note |
-| `run_mining.sh`, `file_history.py`, `mine_commits.py` | mining (step 2) |
+| `run_mining.sh`, `file_history.py`, `mine_commits.py` | mining (step 2); the two Python files now contain the fixes, and the versions that produced `results_overnight/` are those of commit 24d7497 |
+| `run_sensitivity.sh`, `sensitivity_compare.py` | sensitivity run with the fixed mining code and its comparison with the main run |
+| `signal_rescan.py`, `rescan_screen.py` | AI-signal rescan with the fuller patterns and screen of newly qualifying repositories |
 | `analyze_overnight.py` | the plan's tests H1-H4 (step 3) |
 | `plan_conformance.py` | plan-exact H2 and H4 verdict |
 | `inference_checks.py` | t(G-1) reference, variant (b) small-sample correction, H1 composition, rename bound (added after the results) |
@@ -399,11 +480,16 @@ to the pool pulls the pooled estimate just below conventional significance
 | `coef_plot.py` | the figure |
 | `verification/` | step 5, written independently of the analysis code |
 | `results_overnight/` | console output and CSVs of steps 3-4, the figure |
-| `results_exploratory/` | intellij-community output |
+| `results_sensitivity/` | sensitivity run: mined data, analysis output, comparison with the main run |
+| `results_exploratory/` | intellij-community output, signal rescan and its screen |
 | `m2_<repo>.csv`, `fh_<repo>_commits.csv` | mined data; `fh_<repo>_files.csv` is regenerated by `file_history.py` |
 | `results_2025-06/` | the earlier run (unchanged) |
 
-Reproduce from `within_developer/` with the repository's virtualenv active:
+To reproduce `results_overnight/`, first restore the mining code it was
+produced with (`git checkout 24d7497 -- file_history.py mine_commits.py`
+inside `within_developer/`). That code's start date depends on the time of
+day it runs, which affects only file-history commits from 2025-01-01 and
+none of the estimates. Then, with the repository's virtualenv active:
 
 ```bash
 ./run_mining.sh > mining.log 2>&1
@@ -412,4 +498,5 @@ python3 analyze_overnight.py ideavim intellij-scala kotlin > results_overnight/a
 
 then move `overnight_*.csv` into `results_overnight/` and run
 `plan_conformance.py`, `exploratory.py` (from inside `results_overnight/`) and
-`coef_plot.py`.
+`coef_plot.py`. With the current, fixed code, `./run_sensitivity.sh`
+reproduces `results_sensitivity/`.
