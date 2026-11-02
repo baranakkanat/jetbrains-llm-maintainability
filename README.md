@@ -184,3 +184,25 @@ python3 ai_vs_human.py           # hours, limited to repositories with labelled 
 
 Capiluppi et al. (2026). *From Code Velocity to Complexity: Evidence on GitHub
 Copilot's Role in Developer Productivity at ABN AMRO.* EASE 2026.
+
+---
+
+## Design 3: within-developer comparison
+
+Design 2 compares labelled and unlabelled commits within a repository. Design 3
+narrows that to the **same developer in the same months**: each developer's
+AI-co-authored production-code commits against their own unlabelled ones, with
+author and repository-month fixed effects and standard errors clustered by
+author. It runs on the three sampled repositories with hundreds of labelled
+commits (JetBrains/kotlin, intellij-scala, ideavim; 19 developers, 4,646
+commits since 2025-01, 1,204 AI-co-authored). The hypotheses were fixed and
+hashed in `within_developer/ANALYSIS_PLAN.md` before the analysis was run.
+
+In short: no difference in follow-up fixes or reverts; AI-co-authored commits
+are about 1.66x larger, robustly; their higher comment share and complexity
+differences do not survive a same-file comparison; and after adopting an
+assistant, developers' unlabelled commits get smaller, consistent with
+handing the larger tasks to the assistant.
+
+Data, confirmatory tests, robustness checks, exploratory results, deviations
+from the plan and limitations: [`within_developer/REPORT.md`](within_developer/REPORT.md).
