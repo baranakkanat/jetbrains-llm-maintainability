@@ -196,8 +196,8 @@ author and repository-month fixed effects and standard errors clustered by
 author. It runs on the three sampled repositories with hundreds of labelled
 commits (JetBrains/kotlin, intellij-scala, ideavim; 19 developers, 4,646
 commits in the AI-active months December 2025 to October 2026, 1,204 of them
-AI-co-authored). The hypotheses were fixed and hashed in
-`within_developer/ANALYSIS_PLAN.md` before the analysis was run.
+AI-co-authored). The analysis plan (`within_developer/ANALYSIS_PLAN.md`) was
+fixed and hashed before H1-H3 were run.
 
 In short: no detectable difference in follow-up fixes or reverts, though the
 follow-up-fix interval is wide and reverts are rare; AI-co-authored commits

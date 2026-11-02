@@ -10,12 +10,13 @@ Written before the overnight results were seen (see PROGRESS.md, 05:00).
      earlier run (results_2025-06) and the 95% CI excludes zero in each of the
      variants (a)-(d).
 
-Reads results_overnight/overnight_core_commits.csv, overnight_confirmatory.csv
-and overnight_h4.csv; writes results_overnight/plan_conformance.csv.
+Reads <results_dir>/overnight_core_commits.csv, overnight_confirmatory.csv
+and overnight_h4.csv; writes <results_dir>/plan_conformance.csv.
 
-Usage: python plan_conformance.py
+Usage: python plan_conformance.py [results_dir]   (default results_overnight)
 """
 
+import sys
 import warnings
 
 import numpy as np
@@ -25,7 +26,7 @@ from statsmodels.stats.multitest import multipletests
 from analyze_overnight import fe_ols
 
 warnings.filterwarnings("ignore")
-OUT = "results_overnight"
+OUT = sys.argv[1] if len(sys.argv) > 1 else "results_overnight"
 
 
 def main():

@@ -1,0 +1,31 @@
+Repositories whose AI-authored count changes with the fuller patterns: 16
+                                     FullName  AuthorshipCommits_original  AuthorshipCommits
+                             JetBrains/kotlin                        1637               2061
+                     JetBrains/intellij-scala                         865                867
+                 JetBrains/intellij-community                          95                306
+              JetBrains/compose-multiplatform                           6                 48
+                   JetBrains/intellij-plugins                          16                 29
+                    JetBrains/kotlin-web-site                          24                 25
+                     JetBrains/kotlinconf-app                          19                 22
+                            JetBrains/Exposed                          15                 16
+  JetBrains/intellij-platform-plugin-template                           0                 12
+                      JetBrains/godot-support                           1                 10
+                              JetBrains/skiko                           4                 10
+           JetBrains/intellij-plugin-verifier                           7                  8
+                              JetBrains/xodus                           1                  2
+JetBrains/teamcity-s3-artifact-storage-plugin                           0                  2
+                            JetBrains/ideolog                           0                  2
+                      JetBrains/pest-intellij                           0                  1
+
+>= 20 AI-authored commits under the fuller patterns: 9; not screened before: 3
+
+[JetBrains/intellij-plugins] cloning blobless
+    production commits since 2025-01-01: 3650 (13 pair); AI-active months: 3; eligible developers: 0
+
+[JetBrains/kotlinconf-app] cloning blobless
+    production commits since 2025-01-01: 494 (6 pair); AI-active months: 2; eligible developers: 0
+
+[JetBrains/compose-multiplatform] cloning blobless
+    production commits since 2025-01-01: 299 (2 pair); AI-active months: 2; eligible developers: 0
+
+Saved results_exploratory/rescan_screen.csv, rescan_authors.csv

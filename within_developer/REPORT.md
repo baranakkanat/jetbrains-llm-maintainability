@@ -1,8 +1,9 @@
 # Design 3: within-developer comparison of AI-co-authored and unlabelled commits
 
-Overnight run of 2026-11-02. Everything below the "Exploratory" heading is
-exploratory; only the four tests in the confirmatory table were pre-registered
-as hypotheses.
+Overnight run of 2026-11-02. The analysis plan (`ANALYSIS_PLAN.md`) was fixed
+and hashed before H1-H3 were run; it is not a formal pre-registration. Only
+the four tests in the confirmatory table are hypotheses from that plan;
+everything below the "Exploratory" heading is exploratory.
 
 ## Summary
 
@@ -66,15 +67,16 @@ as hypotheses.
   2026 (kotlin) and March 2026 (intellij-scala). In kotlin, the only
   AI-labelled production commits in July-October 2025 are 8 agent-bot commits.
 
-## Pre-registration
+## Analysis plan
 
-`ANALYSIS_PLAN.md` was not modified. `shasum -a 256 -c ANALYSIS_PLAN.sha256`
-returns `ANALYSIS_PLAN.md: OK` for SHA-256
-`420dd1d1a9b7267c56dae38e9b9b635fa3d842f391342fde64c29630d5fcd91e`, recorded
-as hashed at 2026-11-02T03:45:29Z (04:45 CET). The plan's own header says it
-was written at 04:50 CET, five minutes after the recorded hash time; the hash
-matches, so the content is fixed either way, but the two self-reported times
-disagree.
+`ANALYSIS_PLAN.md` was fixed and hashed before H1-H3 were run, and was not
+modified. `shasum -a 256 -c ANALYSIS_PLAN.sha256` returns
+`ANALYSIS_PLAN.md: OK` for SHA-256
+`420dd1d1a9b7267c56dae38e9b9b635fa3d842f391342fde64c29630d5fcd91e`, hashed at
+2026-11-02T03:45:29Z (04:45 CET).
+
+Note: the 04:50 CET in the plan's header was an estimate; the hash time
+(04:45 CET) is the correct one.
 
 Before the analysis was run, `analyze_overnight.py` was read against the plan
 and six differences were recorded in `PROGRESS.md` and committed
@@ -221,7 +223,7 @@ H2 0.774 -> 0.777, H3a 0.320 -> 0.322, H3b 0.0061 -> 0.0071 with 114
 clusters). Computed in `results_overnight/inference_checks.txt`; the
 verification's `c_dummy_regression_output.txt` gives the same H4 result.
 
-## Exploratory (not pre-registered)
+## Exploratory (not in the analysis plan's hypotheses)
 
 Each row compares the named subset of AI-co-authored commits with the same
 developers' unlabelled commits (author and repository-month fixed effects,
@@ -244,9 +246,8 @@ SE clustered by author, 19 clusters, no multiple-testing correction).
   The 5.x models appear later in time than the 4.x models; repository-month
   fixed effects absorb the common trend, but not a developer's own learning.
 - The plan also lists "agent-bot commits vs human commits" as exploratory.
-  The handoff's step 4 did not ask for it and it was not run; agent commits
-  have no human author, so they cannot enter the within-developer model
-  (ideavim has 183, kotlin 14).
+  It was skipped by decision: agent commits have no human author, so they
+  cannot enter the within-developer model (ideavim has 183, kotlin 14).
 
 **Other sampled repositories.** In the refreshed `llm_signals_summary.csv`
 three other sampled repositories have >= 20 AI-authored commits:
@@ -268,6 +269,25 @@ through an `openai` address, and count all refs since 2021. intellij-community
 scores 95 there but has 202 AI-co-authored production commits since 2025 by
 `mine_commits.py`'s patterns, so a sampled repository that labels mostly with
 Junie could have been missed.
+
+**Rescan with the fuller patterns** (`signal_rescan.py`, run on the evening of
+2026-11-02; the committed `llm_signals*.csv` are unchanged). The scan was
+rerun with `mine_commits.py`'s authorship patterns, which add Junie and Codex.
+It finds 4,067 AI-authored commits in 32 repositories, against 3,336 in 28
+with the original patterns. The counts are not strictly comparable because
+the rescan also includes commits made during 2026-11-02. The largest changes
+are kotlin (1,637 -> 2,061), intellij-community (95 -> 306) and
+compose-multiplatform (6 -> 48). Three repositories newly reach >= 20:
+
+| Repository | Original | Fuller | AI-co-authored production commits since 2025 | Eligible developers |
+|---|---|---|---|---|
+| compose-multiplatform | 6 | 48 | 2 | 0 |
+| intellij-plugins | 16 | 29 | 13 | 0 |
+| kotlinconf-app | 19 | 22 | 6 | 0 |
+
+None has a developer with >= 8 AI-co-authored and >= 8 unlabelled production
+commits, so the within-developer sample does not change
+(`results_exploratory/rescan_screen_output.txt`).
 
 | | intellij-community alone (X1) | Pooled with the three repositories (X2) |
 |---|---|---|
@@ -333,7 +353,7 @@ to the pool pulls the pooled estimate just below conventional significance
     trailers preceded by a literal `\n`. This adds 3 intellij-scala commits,
     none touching production code.
 13. **Agent-bot comparison** listed under the plan's exploratory analyses was
-    not run (see Exploratory).
+    skipped by decision (see Exploratory).
 
 ## Limitations
 
@@ -368,10 +388,10 @@ to the pool pulls the pooled estimate just below conventional significance
 
 | File | Content |
 |---|---|
-| `ANALYSIS_PLAN.md`, `ANALYSIS_PLAN.sha256` | pre-registered plan and its hash |
+| `ANALYSIS_PLAN.md`, `ANALYSIS_PLAN.sha256` | analysis plan, fixed and hashed before H1-H3 were run, and its hash |
 | `PROGRESS.md` | time-stamped log of the night, including the pre-results deviation note |
 | `run_mining.sh`, `file_history.py`, `mine_commits.py` | mining (step 2) |
-| `analyze_overnight.py` | pre-registered analysis (step 3) |
+| `analyze_overnight.py` | the plan's tests H1-H4 (step 3) |
 | `plan_conformance.py` | plan-exact H2 and H4 verdict |
 | `inference_checks.py` | t(G-1) reference, variant (b) small-sample correction, H1 composition, rename bound (added after the results) |
 | `exploratory.py`, `exploratory_counts.py` | E1-E3 and the developer counts behind them |

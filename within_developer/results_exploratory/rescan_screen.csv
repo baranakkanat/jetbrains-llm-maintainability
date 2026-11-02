@@ -1,0 +1,4 @@
+repo,status,ai_authored_original,ai_authored_full,prod_commits,pair_prod_commits,ai_active_months,eligible_developers,eligible_commits
+intellij-plugins,ok,16,29,3650,13,3,0,0
+kotlinconf-app,ok,19,22,494,6,2,0,0
+compose-multiplatform,ok,6,48,299,2,2,0,0

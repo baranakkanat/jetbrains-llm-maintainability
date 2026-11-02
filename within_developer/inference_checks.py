@@ -12,12 +12,14 @@
      commits rename a production file (file_history.py links them to the new
      path only).
 
-Reads results_overnight/overnight_core_commits.csv, overnight_confirmatory.csv,
+Reads <results_dir>/overnight_core_commits.csv, overnight_confirmatory.csv,
 overnight_h4.csv and the clones in repos/.
-Usage: python inference_checks.py > results_overnight/inference_checks.txt
+Usage: python inference_checks.py [results_dir] > <results_dir>/inference_checks.txt
+       (results_dir defaults to results_overnight)
 """
 
 import subprocess
+import sys
 import warnings
 
 import numpy as np
@@ -28,7 +30,7 @@ from analyze_overnight import H4_OUTCOMES, fe_ols
 from file_history import CODE_EXT, FIX_SUBJECT, TEST_PATH
 
 warnings.filterwarnings("ignore")
-OUT = "results_overnight"
+OUT = sys.argv[1] if len(sys.argv) > 1 else "results_overnight"
 G = 19
 
 
