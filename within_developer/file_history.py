@@ -2,7 +2,8 @@
 
 Reads `git log --numstat` (no file contents, so it runs in seconds) and writes:
   fh_<repo>_commits.csv : sha, date, author, subject, fix subject, reverted-by
-  fh_<repo>_files.csv   : sha, path, added, deleted, production flag
+  fh_<repo>_files.csv   : sha, path, added, deleted, production flag, rename_old
+                          (a renamed file also gets a zero-line row for its old path)
 
 Usage: python file_history.py <repo_path> <repo_name> [since]
 """
@@ -15,7 +16,7 @@ import pandas as pd
 
 CODE_EXT = (".kt", ".kts", ".java", ".scala")
 TEST_PATH = re.compile(r"(^|/)(test|tests|testData|testdata|test-data|testSrc|testResources)(/|$)"
-                       r"|Test[s]?\.(kt|java|scala)$|Spec\.(kt|scala)$")
+                       r"|Test[s]?\.(kt|kts|java|scala)$|Spec\.(kt|kts|scala)$")
 FIX_SUBJECT = re.compile(r"\b(fix|fixes|fixed|fixing|bug|crash|regression|broken|revert|reverts)\b",
                          re.I)
 REVERTS_SHA = re.compile(r"This reverts commit ([0-9a-f]{40})", re.I)
@@ -23,19 +24,26 @@ REVERT_SUBJECT = re.compile(r'^Revert "(.+)"\s*$')
 START, BODY, END = "\x01", "\x02", "\x03"
 
 
-def normalize_path(path):
-    """Resolve rename notation ('a/{x => y}/b' or 'x => y') to the new path."""
+def split_rename(path):
+    """Resolve rename notation ('a/{x => y}/b' or 'x => y') to (old path, new path).
+
+    The old path is None when the line is not a rename."""
     if " => " not in path:
-        return path
+        return None, path
     if "{" in path:
-        return re.sub(r"\{[^{}]*? => ([^{}]*?)\}", r"\1", path).replace("//", "/")
-    return path.split(" => ", 1)[1]
+        old = re.sub(r"\{([^{}]*?) => [^{}]*?\}", r"\1", path).replace("//", "/")
+        new = re.sub(r"\{[^{}]*? => ([^{}]*?)\}", r"\1", path).replace("//", "/")
+        return old, new
+    old, new = path.split(" => ", 1)
+    return old, new
 
 
 def main(repo_path, repo_name, since="2025-01-01"):
     fmt = f"{START}%H{BODY}%cI{BODY}%an{BODY}%B{END}"
-    out = subprocess.run(["git", "-C", repo_path, "log", "--no-merges", f"--since={since}",
-                          "--numstat", f"--pretty=format:{fmt}"],
+    # Rename detection is pinned so the result does not depend on the global git config.
+    out = subprocess.run(["git", "-C", repo_path, "-c", "diff.renames=true",
+                          "-c", "diff.renameLimit=1000", "log", "--no-merges", "-M",
+                          f"--since={since}", "--numstat", f"--pretty=format:{fmt}"],
                          capture_output=True, text=True, errors="replace", check=True).stdout
     commits, files = [], []
     for block in out.split(START)[1:]:
@@ -57,12 +65,17 @@ def main(repo_path, repo_name, since="2025-01-01"):
             if len(parts) != 3:
                 continue
             added, deleted, path = parts
-            path = normalize_path(path)
+            old, path = split_rename(path)
             prod = path.endswith(CODE_EXT) and not TEST_PATH.search(path)
             files.append({"sha": sha, "path": path,
                           "added": int(added) if added.isdigit() else 0,
                           "deleted": int(deleted) if deleted.isdigit() else 0,
-                          "prod": prod})
+                          "prod": prod, "rename_old": False})
+            if old is not None:
+                # a rename touches the old path too; zero lines keep it out of the primary-file choice
+                files.append({"sha": sha, "path": old, "added": 0, "deleted": 0,
+                              "prod": old.endswith(CODE_EXT) and not TEST_PATH.search(old),
+                              "rename_old": True})
     c = pd.DataFrame(commits)
     # Who reverted whom: by full hash, then by exact subject (unique earlier match).
     reverted_by = {}

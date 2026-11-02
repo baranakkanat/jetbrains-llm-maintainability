@@ -40,12 +40,12 @@ TOOL = [("claude", "Claude"), ("anthropic", "Claude"), ("codex", "Codex"),
         ("openai", "Codex"), ("chatgpt", "ChatGPT"), ("copilot", "Copilot"),
         ("cursor", "Cursor"), ("junie", "Junie"), ("gemini", "Gemini")]
 MODEL = re.compile(r"co-?authored-by:\s*([^<\n]+?)\s*<", re.I)
-AGENT_AUTHOR = re.compile(r"^(claude|copilot|codex|cursor|junie)(\[bot\]|-bot|\b)", re.I)
+AGENT_AUTHOR = re.compile(r"^(jetbrains-)?(claude|copilot|codex|cursor|junie)(\[bot\]|-bot|\b)", re.I)
 OTHER_BOT = re.compile(r"\[bot\]|dependabot|renovate|^ideavim bot$|teamcity|buildserver"
                        r"|^space$|automation|robot", re.I)
 CODE_EXT = (".kt", ".kts", ".java", ".scala")
 TEST_PATH = re.compile(r"(^|/)(test|tests|testData|testdata|test-data|testSrc|testResources)(/|$)"
-                       r"|Test[s]?\.(kt|java|scala)$|Spec\.(kt|scala)$")
+                       r"|Test[s]?\.(kt|kts|java|scala)$|Spec\.(kt|kts|scala)$")
 FIX = re.compile(r"\b(fix|fixes|fixed|fixing|bug|crash|regression|broken)\b", re.I)
 MAX_LINES, MAX_CHARS = 5000, 400_000
 
