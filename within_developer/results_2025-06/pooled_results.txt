@@ -1,0 +1,140 @@
+Production-code commits in AI-active months:
+group           agent  human  pair    All
+repo                                     
+ideavim            81    817   152   1050
+intellij-scala      0    871   239   1110
+kotlin             13  12104   864  12981
+All                94  13792  1255  15141
+
+AI-active window per repo:
+                    min      max  nunique
+repo                                     
+ideavim         2025-10  2026-10       13
+intellij-scala  2026-03  2026-10        8
+kotlin          2025-07  2026-10       14
+
+Tools / models among labelled commits:
+repo            tool   
+ideavim         Claude     232
+                Cursor       1
+intellij-scala  Claude     145
+                Codex       94
+kotlin          Claude     707
+                Codex        2
+                Copilot      3
+                Junie      165
+
+Authors with >= 8 AI-paired and >= 8 unlabelled commits: 20
+group                                human  pair
+repo           author                           
+ideavim        1grzyb1                 486    36
+               Alex Plate               86   112
+intellij-scala Andrei Sugak             62     9
+               Dmitrii Naumenko         85    95
+               Vasil Vasilev           163   134
+kotlin         Alexander Udalov        278    41
+               Anton Bannykh            20    10
+               Artem Olkov              58    22
+               Denis.Zharkov           145    28
+               Dmitrii Gridin          870   327
+               Dmitriy Novozhilov      773    75
+               Grigorii.Solnyshkin     293     9
+               Igor Chevdar            158    16
+               Ilya Chernikov           94    66
+               Ivan Kochurkin          356    91
+               Leonid Startsev          92    14
+               Sebastian Sellmair      172    29
+               Svyatoslav Scherbina     61    42
+               Vladimir Sukharev       158    28
+               Yan Zhulanow            157    30
+
+=== WITHIN-DEVELOPER: AI-paired vs own unlabelled commits (size, author and repo-month fixed effects) ===
+/tmp/claude-0/-home-claude/79864cb2-1b0a-59af-9d52-f8402031a954/scratchpad/analyze_pooled.py:80: SingularMatrixWarning: The design matrix is rank-deficient. The model parameters are not uniquely determined.
+  res = fit.fit(cov_type="cluster", cov_kwds={"groups": dd["author"]})
+/usr/local/lib/python3.13/site-packages/statsmodels/regression/linear_model.py:2121: RuntimeWarning: invalid value encountered in sqrt
+  return np.sqrt(np.diag(self.cov_params()))
+/tmp/claude-0/-home-claude/79864cb2-1b0a-59af-9d52-f8402031a954/scratchpad/analyze_pooled.py:80: SingularMatrixWarning: The design matrix is rank-deficient. The model parameters are not uniquely determined.
+  res = fit.fit(cov_type="cluster", cov_kwds={"groups": dd["author"]})
+/usr/local/lib/python3.13/site-packages/statsmodels/regression/linear_model.py:2121: RuntimeWarning: invalid value encountered in sqrt
+  return np.sqrt(np.diag(self.cov_params()))
+/tmp/claude-0/-home-claude/79864cb2-1b0a-59af-9d52-f8402031a954/scratchpad/analyze_pooled.py:80: SingularMatrixWarning: The design matrix is rank-deficient. The model parameters are not uniquely determined.
+  res = fit.fit(cov_type="cluster", cov_kwds={"groups": dd["author"]})
+/usr/local/lib/python3.13/site-packages/statsmodels/regression/linear_model.py:2121: RuntimeWarning: invalid value encountered in sqrt
+  return np.sqrt(np.diag(self.cov_params()))
+/tmp/claude-0/-home-claude/79864cb2-1b0a-59af-9d52-f8402031a954/scratchpad/analyze_pooled.py:80: SingularMatrixWarning: The design matrix is rank-deficient. The model parameters are not uniquely determined.
+  res = fit.fit(cov_type="cluster", cov_kwds={"groups": dd["author"]})
+/tmp/claude-0/-home-claude/79864cb2-1b0a-59af-9d52-f8402031a954/scratchpad/analyze_pooled.py:80: SingularMatrixWarning: The design matrix is rank-deficient. The model parameters are not uniquely determined.
+  res = fit.fit(cov_type="cluster", cov_kwds={"groups": dd["author"]})
+/tmp/claude-0/-home-claude/79864cb2-1b0a-59af-9d52-f8402031a954/scratchpad/analyze_pooled.py:80: SingularMatrixWarning: The design matrix is rank-deficient. The model parameters are not uniquely determined.
+  res = fit.fit(cov_type="cluster", cov_kwds={"groups": dd["author"]})
+/tmp/claude-0/-home-claude/79864cb2-1b0a-59af-9d52-f8402031a954/scratchpad/analyze_pooled.py:80: SingularMatrixWarning: The design matrix is rank-deficient. The model parameters are not uniquely determined.
+  res = fit.fit(cov_type="cluster", cov_kwds={"groups": dd["author"]})
+/usr/local/lib/python3.13/site-packages/statsmodels/regression/linear_model.py:2121: RuntimeWarning: invalid value encountered in sqrt
+  return np.sqrt(np.diag(self.cov_params()))
+/tmp/claude-0/-home-claude/79864cb2-1b0a-59af-9d52-f8402031a954/scratchpad/analyze_pooled.py:80: SingularMatrixWarning: The design matrix is rank-deficient. The model parameters are not uniquely determined.
+  res = fit.fit(cov_type="cluster", cov_kwds={"groups": dd["author"]})
+/tmp/claude-0/-home-claude/79864cb2-1b0a-59af-9d52-f8402031a954/scratchpad/analyze_pooled.py:80: SingularMatrixWarning: The design matrix is rank-deficient. The model parameters are not uniquely determined.
+  res = fit.fit(cov_type="cluster", cov_kwds={"groups": dd["author"]})
+/tmp/claude-0/-home-claude/79864cb2-1b0a-59af-9d52-f8402031a954/scratchpad/analyze_pooled.py:80: SingularMatrixWarning: The design matrix is rank-deficient. The model parameters are not uniquely determined.
+  res = fit.fit(cov_type="cluster", cov_kwds={"groups": dd["author"]})
+/usr/local/lib/python3.13/site-packages/statsmodels/regression/linear_model.py:2121: RuntimeWarning: invalid value encountered in sqrt
+  return np.sqrt(np.diag(self.cov_params()))
+   kind                              outcome    n  n_pair  authors  effect  ci_low  ci_high  std_effect     p  authors_lower  authors_higher  sign_p  p_BH
+  WHERE        Complexity of methods touched 4316     978       20  -0.040     NaN      NaN      -0.008   NaN              6              13   0.167   NaN
+  WHERE            Length of methods touched 4316     978       20  -2.034     NaN      NaN      -0.077   NaN             11               9   0.824   NaN
+   WHAT Complexity added to modified methods 3860     895       20   0.133     NaN      NaN       0.108   NaN              0               8   0.008   NaN
+   WHAT            Complexity of new methods 2189     507       20   0.184  -0.142    0.510       0.084 0.269              8               9   1.000   NaN
+   WHAT                Length of new methods 2189     507       20  -0.149  -1.514    1.216      -0.015 0.830              8              11   0.648   NaN
+   WHAT   Net complexity per 100 added lines 4246     954       20 -42.311 -69.196  -15.427      -0.168 0.002             10              10   1.000   NaN
+   WHAT         Comment share of added lines 5487    1154       20   0.053     NaN      NaN       0.245   NaN              2              15   0.002   NaN
+PROCESS                 Commit touches tests 5781    1214       20   0.061  -0.038    0.160       0.123 0.224              2               5   0.453   NaN
+PROCESS                     Message says fix 5781    1214       20   0.019  -0.037    0.076       0.064 0.506              1               2   1.000   NaN
+PROCESS                   log(lines changed) 5781    1214       20   0.501   0.242    0.760       0.326 0.000              7              12   0.359   NaN
+
+=== PER REPO, unadjusted: pair vs human ===
+          repo                              outcome  n_pair  median_human  median_pair  mean_human  mean_pair     p  p_BH
+       ideavim        Complexity of methods touched     112         3.500        2.077       6.364      3.358 0.000 0.000
+       ideavim            Length of methods touched     112        13.588       10.961      24.734     16.416 0.001 0.003
+       ideavim Complexity added to modified methods     106         0.000        0.000       0.237      0.210 0.658 0.814
+       ideavim            Complexity of new methods      55         2.333        2.154       2.983      2.780 0.256 0.451
+       ideavim                Length of new methods      55         7.981        8.000       9.851     11.489 0.614 0.814
+       ideavim   Net complexity per 100 added lines     103        18.750       19.802      41.872     63.343 0.822 0.851
+       ideavim         Comment share of added lines     134         0.163        0.140       0.196      0.233 0.876 0.876
+       ideavim                 Commit touches tests     152         1.000        0.000       0.594      0.336 0.000 0.000
+       ideavim                     Message says fix     152         0.000        0.000       0.137      0.145 0.802 0.851
+       ideavim                   log(lines changed)     152         3.714        3.541       3.605      3.537 0.464 0.696
+intellij-scala        Complexity of methods touched     189         4.000        3.250       6.458      5.189 0.008 0.023
+intellij-scala            Length of methods touched     189        15.846       14.600      21.951     24.345 0.531 0.759
+intellij-scala Complexity added to modified methods     175         0.000        0.000       0.223      0.122 0.019 0.046
+intellij-scala            Complexity of new methods     102         2.000        2.000       3.057      2.808 0.278 0.463
+intellij-scala                Length of new methods     102         7.667        7.500      10.158     10.025 0.821 0.851
+intellij-scala   Net complexity per 100 added lines     166         9.868        8.430      23.413     15.271 0.036 0.077
+intellij-scala         Comment share of added lines     224         0.000        0.084       0.116      0.182 0.000 0.000
+intellij-scala                 Commit touches tests     239         0.000        0.000       0.398      0.431 0.364 0.575
+intellij-scala                     Message says fix     239         0.000        0.000       0.303      0.360 0.095 0.178
+intellij-scala                   log(lines changed)     239         2.773        3.296       2.940      3.357 0.000 0.000
+        kotlin        Complexity of methods touched     712         2.298        2.400       3.890      3.365 0.748 0.851
+        kotlin            Length of methods touched     712        13.250       12.469      20.579     16.513 0.026 0.060
+        kotlin Complexity added to modified methods     647         0.000        0.000       0.248      0.268 0.678 0.814
+        kotlin            Complexity of new methods     370         1.556        1.718       2.375      2.600 0.011 0.030
+        kotlin                Length of new methods     370         7.333        7.743      10.822     10.498 0.645 0.814
+        kotlin   Net complexity per 100 added lines     718        47.059       38.798     162.889    114.528 0.002 0.005
+        kotlin         Comment share of added lines     837         0.000        0.132       0.118      0.202 0.000 0.000
+        kotlin                 Commit touches tests     864         0.000        1.000       0.464      0.532 0.000 0.000
+        kotlin                     Message says fix     864         0.000        0.000       0.083      0.064 0.043 0.086
+        kotlin                   log(lines changed)     864         3.296        3.807       3.375      3.812 0.000 0.000
+
+=== PER REPO, unadjusted: agent vs human ===
+   repo                              outcome  n_agent  median_human  median_agent  mean_human  mean_agent     p  p_BH
+ideavim        Complexity of methods touched       59         3.500         4.250       6.364       4.924 0.678 0.740
+ideavim            Length of methods touched       59        13.588        14.500      24.734      19.549 0.845 0.845
+ideavim Complexity added to modified methods       59         0.000         0.000       0.237       1.179 0.014 0.035
+ideavim   Net complexity per 100 added lines       29        18.750        26.316      41.872     148.496 0.473 0.631
+ideavim         Comment share of added lines       74         0.163         0.500       0.196       0.490 0.000 0.000
+ideavim                 Commit touches tests       81         1.000         0.000       0.594       0.296 0.000 0.000
+ideavim                     Message says fix       81         0.000         1.000       0.137       0.580 0.000 0.000
+ideavim                   log(lines changed)       81         3.714         1.609       3.605       1.791 0.000 0.000
+ kotlin         Comment share of added lines       13         0.000         0.000       0.118       0.442 0.145 0.249
+ kotlin                 Commit touches tests       13         0.000         1.000       0.464       0.538 0.590 0.709
+ kotlin                     Message says fix       13         0.000         0.000       0.083       0.231 0.054 0.109
+ kotlin                   log(lines changed)       13         3.296         2.398       3.375       2.903 0.244 0.365
