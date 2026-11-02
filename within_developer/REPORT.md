@@ -9,27 +9,34 @@ as hypotheses.
 - **No evidence that AI-co-authored commits need more follow-up fixes or get
   reverted more often** than the same developer's unlabelled commits in the
   same months (H1 +0.9 pp, 95% CI -7.4 to 9.2; H2 -0.07 pp, -0.54 to 0.40;
-  both BH-adjusted p = 0.82). Reverts are rare (14 in 4,646 commits), so H2
-  has little power.
+  both BH-adjusted p = 0.82). This is absence of evidence, not evidence of
+  equality: the H1 interval spans about 17 points on a base rate of 21%, and
+  reverts are so rare (14 in 4,646 commits) that H2 has little power.
 - **No comment-share spillover** to developers' unlabelled work after they
   start labelling AI commits (H3a -0.9 pp, -2.7 to 0.9; p_BH = 0.64).
 - **H3b is significant, but in the direction opposite to spillover**: after
   adoption, a developer's unlabelled commits are about 16% *smaller* than the
-  common trend predicts (log size -0.175, -0.300 to -0.050; p_BH = 0.025),
-  while their labelled commits are larger. This fits developers handing the
-  larger tasks to the assistant, not unlabelled work drifting toward the AI
-  profile.
+  common trend among non-adopters predicts (log size -0.175, -0.300 to
+  -0.050; p_BH = 0.025); in raw terms they stay about the same size, while
+  their labelled commits are larger. One reading, formed after the fact (the
+  test was designed for spillover), is that developers hand the larger tasks
+  to the assistant.
 - **Of the four earlier findings, only commit size is robust** by the plan's
-  rule: AI-co-authored commits are about 1.66x larger (log +0.51, 0.25 to 0.76)
-  in every variant. Comment share (+5.1 pp), complexity added to modified
-  methods (+0.13) and net complexity per 100 added lines (-39) keep their
-  sign in every variant but lose significance when the comparison is
-  restricted to commits whose main file is the same (variant b).
+  rule: AI-co-authored commits are about 1.66x larger in the base model (log
+  +0.51, 0.25 to 0.76) and 1.45x to 1.79x across the variants, with every CI
+  excluding zero. In variant (b) this depends on the small-sample correction
+  (see H4). Comment share (+5.1 pp), complexity added to modified methods
+  (+0.13) and net complexity per 100 added lines (-39) keep their sign in
+  every variant but their CI includes zero when the comparison is restricted
+  to commits whose main file is the same (variant b). "Robust" means robust
+  to specification on the same labelled commits as the earlier run, not a
+  replication on new data.
 - Exploratory: the comment-share difference is driven by Claude-labelled
   commits (+6.9 pp; Junie +1.9 pp, n.s.), with a larger point estimate for
-  Claude 5.x (+12.6 pp) than 4.x (+5.3 pp);
-  adding intellij-community (4 more developers) weakens it to +3.8 pp
-  (-0.1 to 7.7) while size and complexity hold.
+  Claude 5.x (+12.6 pp) than 4.x (+5.3 pp). Adding intellij-community
+  (4 more developers) weakens it to +3.8 pp (-0.1 to 7.7), while size and
+  complexity hold in the pooled estimate (in intellij-community alone the
+  size difference is about zero).
 
 ## Data and window
 
@@ -71,7 +78,7 @@ disagree.
 
 Before the analysis was run, `analyze_overnight.py` was read against the plan
 and six differences were recorded in `PROGRESS.md` and committed
-(commit 62864e9, 05:00 CET), together with `plan_conformance.py`, which
+(commit 62864e9, 05:01 CET), together with `plan_conformance.py`, which
 re-estimates the two that could change a conclusion. See "Deviations".
 
 ## Confirmatory results
@@ -88,10 +95,16 @@ by author, two-sided, Benjamini-Hochberg across the four tests.
 | H3b | log(lines changed), `post_unlabelled` | **-0.1752** | **-0.3004 to -0.0499** | 0.006 | **0.025** | 22,438 | 114 |
 
 - **H1.** Raw follow-up-fix rates are 21.4% for unlabelled and 27.6% for
-  AI-co-authored commits (3,247 and 941 eligible commits). The difference
-  disappears once commit size, number of production files and prior fix
-  activity on the same files are controlled within developer and month
-  (+0.9 pp). Commits from the last 30 days are excluded.
+  AI-co-authored commits (3,247 and 941 eligible commits). Most of this gap
+  comes from which developers and repositories contribute AI-co-authored
+  commits (the rate is 0.42 in intellij-scala and 0.19 in kotlin): within
+  developer, the gap weighted by AI-co-authored commits is +2.0 pp, and 12 of
+  19 developers have a higher rate on their AI-co-authored commits. With the
+  controls and month effects the estimate is +0.9 pp; its interval (-7.4 to
+  9.2) is compatible with no difference and with moderate differences either
+  way. The 30-day cut-off removes 22% of AI-co-authored but only 6% of
+  unlabelled commits, because labelled commits cluster in the last months
+  (`results_overnight/inference_checks.txt`).
 - **H2.** 12 of 3,442 unlabelled and 2 of 1,204 AI-co-authored commits were
   reverted. Fisher's exact test on the pooled table: odds ratio 0.48,
   p = 0.54. With 14 reverts the test can only rule out large differences.
@@ -135,6 +148,19 @@ point estimates for comment share and net complexity shrink by about 40% in
 (b); complexity added to modified methods does not shrink, its interval only
 widens.
 
+**Variant (b) and the small-sample correction.** `analyze_overnight.py` does
+not count absorbed fixed effects in the clustered small-sample correction.
+That is standard for author effects, which are nested in the author clusters,
+and negligible for the ~28 repository-month effects, but the 2,311
+primary-file effects are not nested in authors. Counting them
+(`inference_checks.py`, added after the results): with singleton files
+dropped first, as reghdfe does, the size SE grows by a factor of 1.16 and
+commit size in (b) still excludes zero (p = 0.023; 0.036 with t(18)); counting
+every singleton file as well grows it by 1.42 and gives p = 0.063. The robust
+verdict for commit size therefore holds under the usual convention but not
+under the most conservative count. The other three outcomes fail (b) either
+way.
+
 ![Within-developer effects](results_overnight/within_developer_effects.png)
 
 *Estimates of `pair` with 95% CIs. Grey: the earlier run on 2025-06 to 2026-11
@@ -153,11 +179,16 @@ scripts. Details, scripts and commit-level files are in `verification/`
 | (a) AI-co-authored commits, plain `git log --grep -i -E`, since 2025-01 (non-bot authors) | ideavim 326, intellij-scala 358, kotlin 1,216 | 326, 361, 1,216 | agree: identical SHA sets in ideavim and kotlin. The 3 extra intellij-scala commits touch no production code: two have a literal `\n` typed before `Co-authored-by: Codex`, and one says "generated with Claude Agent" in prose |
 | (a) ... touching production code | 151, 239, 864 | 152, 239, 864 | agree up to one ideavim commit, explained by bug 1 below |
 | (b) 30-day follow-up-fix rate, intellij-scala, eligible core commits | unlabelled 0.4316 (285), AI 0.4010 (192) | 0.4281, 0.4010 | agree: eligibility identical for all 548 rows, outcome identical for 476 of 477; the one difference is bug 2 below |
-| (c) H4 comment share, base, explicit author and repo-month dummies | 0.051006, SE 0.0187 | 0.051006, SE 0.0186 | agree: identical coefficient; the SE differs by 0.5% because the analysis does not count absorbed fixed effects in the small-sample correction |
+| (c) H4 comment share, base, explicit author and repo-month dummies | 0.051006, SE 0.0187 | 0.051006, SE 0.0186 | agree: identical coefficient; the SE differs by 0.5% because the analysis does not count absorbed fixed effects in the small-sample correction (where this matters more, in variant (b), see H4) |
 | (c) H4 log(lines changed), base, explicit dummies | 0.505621 | 0.505621 | agree |
 
-The verification found three small defects in the mining code. None changes a
-conclusion:
+Scope: the verification re-implemented the AI labels, the follow-up-fix
+outcome and one regression. It took the core sample (19 developers, 4,646
+commits) and the AI-active months from the analysis' own
+`overnight_core_commits.csv` and did not re-estimate the H1-H3 models.
+
+The verification found three small defects in the mining code. Their measured
+or bounded reach is small:
 
 1. `*Test.kts` files count as production code (the test-name rule covers
    `.kt/.java/.scala` only). One path in the three repositories is affected
@@ -166,22 +197,29 @@ conclusion:
 2. `file_history.py` keeps only the new path of a renamed file. A fix commit
    that renames and edits a file is therefore not linked to earlier commits on
    the old path; in intellij-scala this loses 1 of about 200 follow-ups.
+   Only 2, 14 and 16 fix-subject commits since 2025 rename a production file
+   in ideavim, intellij-scala and kotlin (`inference_checks.py`), which bounds
+   how many follow-up links can be missing; kotlin's effect was not measured
+   commit by commit.
 3. `jetbrains-junie[bot]` commits (2 in ideavim, 2 in intellij-scala) are
    dropped as "other bots" instead of being labelled `agent`. Only agent
    counts are affected, and agents are not analysed.
 
-The tool labels have two cosmetic slips that do not change who is in which
-group: three kotlin commits with ChatGPT trailers are labelled Codex (an
-`openai` address is checked before `chatgpt`), and one commit is labelled
-Claude because its subject mentions Claude.
+The tool labels have three slips that do not change who is in which group but
+do touch E1: three kotlin commits with ChatGPT trailers are labelled Codex (an
+`openai` address is checked before `chatgpt`), one commit is labelled Claude
+because its subject mentions Claude, and one intellij-scala core commit with
+both a Codex and a Claude trailer counts as Claude only.
 
 **Inference with t(18) instead of the normal approximation.** With 19
 clusters a t reference is the more cautious choice. Recomputing every
 19-cluster interval with t(18) changes one H4 cell: complexity added to
 modified methods in variant (d) goes from p = 0.046 to p = 0.061. That outcome
 already fails robustness in variant (b), so no verdict changes, and the four
-confirmatory p-values move only in the third decimal (H3b 0.006 -> 0.007,
-with 114 clusters).
+confirmatory p-values move only in the third decimal (H1 0.825 -> 0.827,
+H2 0.774 -> 0.777, H3a 0.320 -> 0.322, H3b 0.0061 -> 0.0071 with 114
+clusters). Computed in `results_overnight/inference_checks.txt`; the
+verification's `c_dummy_regression_output.txt` gives the same H4 result.
 
 ## Exploratory (not pre-registered)
 
@@ -216,10 +254,20 @@ intellij-community (95), sbt-ide-settings (25) and kotlin-web-site (24).
 Only intellij-community has eligible developers (4; sbt-ide-settings has one
 production commit since 2025, kotlin-web-site one AI-co-authored production
 commit). Mining all of intellij-community's ~60,000 production commits since
-2025 was not feasible overnight, so `mine_selected.py` mined exactly the
-commits the within-developer model uses (the 4 developers' commits and every
+2025 was not feasible overnight, so `mine_selected.py` mined the commits the
+within-developer model needs from it (the 4 developers' commits and every
 AI-labelled commit since 2025-09-01, 4,173 commits) with `mine_commits.py`'s
-metric code unchanged.
+metric code unchanged. In X2, two AI-labelled intellij-community commits by
+developers who are eligible in another repository enter the core sample
+without their unlabelled intellij-community commits, because developers are
+matched by name across repositories; the effect is negligible.
+
+Caveat on the screen: the candidate list comes from `llm_signals_summary.csv`,
+as the handoff specifies. Its patterns do not name Junie, catch Codex only
+through an `openai` address, and count all refs since 2021. intellij-community
+scores 95 there but has 202 AI-co-authored production commits since 2025 by
+`mine_commits.py`'s patterns, so a sampled repository that labels mostly with
+Junie could have been missed.
 
 | | intellij-community alone (X1) | Pooled with the three repositories (X2) |
 |---|---|---|
@@ -233,10 +281,11 @@ metric code unchanged.
 
 X1 rests on 4 clusters, one of which (1,842 unlabelled commits) dominates, so
 its intervals are not reliable; per-developer medians are in
-`results_exploratory/intellij_community_per_developer.csv`. In intellij-community
-the comment-share difference has the opposite sign (by median, two of the
-four developers comment their AI-co-authored commits less), and adding it to
-the pool pulls the pooled estimate just below conventional significance
+`results_exploratory/intellij_community_per_developer.csv`. The negative
+comment-share estimate in X1 is weak evidence of an opposite sign: by median
+the four developers split two and two, and the dominant developer comments
+AI-co-authored commits more (median 0.21 vs 0.03). Adding intellij-community
+to the pool pulls the pooled estimate just below conventional significance
 (p = 0.056).
 
 ## Deviations from the plan
@@ -252,7 +301,8 @@ the pool pulls the pooled estimate just below conventional significance
    within repository, inherited from the earlier run, is not in the plan.
 5. **AI-active months** are defined by `pair` commits only; the earlier run
    also counted agent-bot commits. This narrows kotlin's window from
-   2025-07..2026-10 to 2026-01..2026-10 and removes one developer.
+   2025-07..2026-10 to 2026-01..2026-10 and ideavim's from 2025-10..2026-10
+   to 2025-12..2026-10, and removes one developer.
 6. **Inference** uses the normal approximation with 19 clusters (114 for H3),
    which is somewhat anti-conservative; a t(18) reference widens the
    19-cluster intervals by about 7% and changes no verdict (see
@@ -267,13 +317,23 @@ the pool pulls the pooled estimate just below conventional significance
    pass-through in that clone only. kotlin's only LFS pattern is `*.jpg`.
 10. **Added after seeing results, exploratory only**: the developer counts
     behind each tool and model group (`exploratory_counts.py`), the
-    primary-file diagnostic for variant (b), the t(18) sensitivity check and
-    the selective mining of intellij-community.
+    primary-file diagnostic and the small-sample correction check for
+    variant (b), the t(18) check, the H1 composition and the rename bound
+    (`inference_checks.py`), and the intellij-community analysis. The
+    intellij-community screen and mining were designed and run before the
+    step-3 results existed (05:15-05:22 vs 05:40); its analysis ran after.
 11. **Mining defects found by the verification** (`*Test.kts` as production
     code, renamed files' old paths dropped, `jetbrains-junie[bot]` not labelled
     as an agent) are documented above and were not fixed, because fixing them
     would change the confirmatory data after the results were seen. Their
-    measured effect is one core commit and one follow-up in intellij-scala.
+    measured effect is one core commit and one follow-up in intellij-scala;
+    for kotlin only the bound above is known.
+12. **Labels slightly broader than the plan's wording**: the code also accepts
+    `Assisted-by:` trailers, a prose "generated with Claude ..." line, and
+    trailers preceded by a literal `\n`. This adds 3 intellij-scala commits,
+    none touching production code.
+13. **Agent-bot comparison** listed under the plan's exploratory analyses was
+    not run (see Exploratory).
 
 ## Limitations
 
@@ -282,8 +342,9 @@ the pool pulls the pooled estimate just below conventional significance
   differences toward zero.
 - **Developers choose what to delegate.** The comparison describes the code
   produced with an assistant, not the effect of an assistant on a given task.
-  H3b suggests the selection is real: unlabelled commits shrink as labelled
-  ones grow.
+  H3b is consistent with such selection (unlabelled commits shrink relative to
+  the trend as labelled ones grow), but that is a post hoc reading of one
+  coefficient from a test designed for spillover.
 - **JetBrains only**, three repositories (four in X2), 19 developers, of whom
   14 work on kotlin. Kotlin/Java/Scala code only.
 - **Lexical comment metric.** A line counts as a comment if it starts with
@@ -312,6 +373,7 @@ the pool pulls the pooled estimate just below conventional significance
 | `run_mining.sh`, `file_history.py`, `mine_commits.py` | mining (step 2) |
 | `analyze_overnight.py` | pre-registered analysis (step 3) |
 | `plan_conformance.py` | plan-exact H2 and H4 verdict |
+| `inference_checks.py` | t(G-1) reference, variant (b) small-sample correction, H1 composition, rename bound (added after the results) |
 | `exploratory.py`, `exploratory_counts.py` | E1-E3 and the developer counts behind them |
 | `other_repos_check.py`, `mine_selected.py`, `exploratory_intellij_community.py` | step 4 screen and intellij-community extension |
 | `coef_plot.py` | the figure |

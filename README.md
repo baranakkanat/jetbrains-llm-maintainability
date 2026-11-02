@@ -195,14 +195,19 @@ AI-co-authored production-code commits against their own unlabelled ones, with
 author and repository-month fixed effects and standard errors clustered by
 author. It runs on the three sampled repositories with hundreds of labelled
 commits (JetBrains/kotlin, intellij-scala, ideavim; 19 developers, 4,646
-commits since 2025-01, 1,204 AI-co-authored). The hypotheses were fixed and
-hashed in `within_developer/ANALYSIS_PLAN.md` before the analysis was run.
+commits in the AI-active months December 2025 to October 2026, 1,204 of them
+AI-co-authored). The hypotheses were fixed and hashed in
+`within_developer/ANALYSIS_PLAN.md` before the analysis was run.
 
-In short: no difference in follow-up fixes or reverts; AI-co-authored commits
-are about 1.66x larger, robustly; their higher comment share and complexity
-differences do not survive a same-file comparison; and after adopting an
-assistant, developers' unlabelled commits get smaller, consistent with
-handing the larger tasks to the assistant.
+In short: no detectable difference in follow-up fixes or reverts, though the
+follow-up-fix interval is wide and reverts are rare; AI-co-authored commits
+are about 1.66x larger, and that holds in every robustness variant (on the
+same commits, so this is robustness to specification, not a replication);
+their higher comment share and complexity differences lose significance in a
+same-file comparison; and after adopting an assistant, developers'
+unlabelled commits are smaller than the common trend predicts, which is
+consistent with, but does not show, handing the larger tasks to the
+assistant.
 
 Data, confirmatory tests, robustness checks, exploratory results, deviations
 from the plan and limitations: [`within_developer/REPORT.md`](within_developer/REPORT.md).
