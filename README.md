@@ -46,11 +46,19 @@ Six measures, computed per file or per commit and aggregated per repository-mont
 | Metric | Attribute it proxies | Source |
 |---|---|---|
 | Comment density | Readability / documentation | `metrics.py` |
-| Average lines changed per commit | Generation tendency | PyDriller |
-| Bug-fix commit ratio | Maintainability | commit message keywords |
-| Cyclomatic complexity | Maintainability | lizard |
-| Average function length | Cognitive load | lizard |
-| Deletion/addition ratio | Authorship signal | PyDriller |
+| Average lines changed per commit | Generation tendency | `git log --numstat`, every commit |
+| Bug-fix commit ratio | Maintainability | commit message keywords, every commit |
+| Cyclomatic complexity | Maintainability | lizard, sampled commits |
+| Average function length | Cognitive load | lizard, sampled commits |
+| Deletion/addition ratio | Authorship signal | `git log --numstat`, every commit |
+
+`mine_fast.py` computes these from git directly instead of through PyDriller,
+which re-parses every file of every commit and would take days on this sample.
+The three commit-level metrics use every non-merge commit since 2019. The three
+file-content metrics use a seeded random sample of up to 10 commits per
+repository-month (up to 15 code files each); months with fewer commits use all
+of them. On ideavim the line and bug-fix figures match PyDriller's month by
+month.
 
 Two measurement bugs were found and fixed; results produced before this point
 are not comparable with results produced after it.
@@ -75,10 +83,10 @@ are not comparable with results produced after it.
 * Mann-Whitney U, two-sided, on monthly values.
 * Cohen's d with pooled standard deviation, reported for every comparison.
 * **Benjamini-Hochberg FDR correction across every test performed.** With
-  199 repositories and 6 metrics the design runs on the order of a thousand
-  tests; at an uncorrected α = 0.05 roughly 50 of them are expected to come
-  back "significant" from chance alone. Uncorrected counts are not reported as
-  findings.
+  199 repositories and 6 metrics the design could run up to 1,194 tests; 330
+  had enough data, and at an uncorrected α = 0.05 about 16 of those are
+  expected to come back "significant" from chance alone. Uncorrected counts
+  are not reported as findings.
 * A repository/metric pair is tested only when at least 6 monthly observations
   exist on each side of the window.
 * Absolute change is reported alongside percentage change. Percentage change is
@@ -89,9 +97,9 @@ are not comparable with results produced after it.
 ### How results are counted
 
 The denominator is the **whole sample**, not the subset that reached
-significance. "87% of repositories with significant findings support the
-hypothesis" is circular: it selects on the outcome and then reports a rate
-within the selection. The honest statement has the form *N of 199
+significance. "63% of the repositories with a significant maintainability
+change moved towards degradation" (12 of 19) is circular: it selects on the
+outcome and then reports a rate within the selection. The honest statement has the form *N of 199
 repositories show a significant change consistent with degradation*.
 
 ---
@@ -133,6 +141,50 @@ effect of assistance on arbitrary code.
 
 ---
 
+## Results: design 1 on all 199 repositories
+
+Corrected measurements, post-LLM window capped at December 2025.
+
+| | |
+|---|---|
+| Sampled repositories | 199 |
+| With any commit since 2019 | 190 |
+| Testable on at least one metric (6+ active months in both periods) | 64 |
+| Repository/metric pairs tested | 330 |
+| False positives expected at p < 0.05 | ~16 |
+| Significant, uncorrected | 92 |
+| Significant after Benjamini-Hochberg | 50, in 26 repositories |
+
+On the three maintainability proxies (bug-fix ratio, cyclomatic complexity,
+function length), 19 repositories changed significantly: 10 moved only towards
+degradation, 7 only towards improvement, and 2 (intellij-plugin-verifier,
+sbt-idea-plugin) moved both ways on different metrics. That makes **12 of 190
+active repositories (6.3%) with at least one change towards degradation** and
+**9 of 190 (4.7%) with at least one change towards improvement**.
+Per metric the significant changes split both ways:
+
+| Metric | Down | Up |
+|---|---|---|
+| Comment density | 4 | 7 |
+| Lines per commit | 3 | 5 |
+| Bug-fix ratio | 6 | 9 |
+| Cyclomatic complexity | 4 | 1 |
+| Function length | 2 | 4 |
+| Deletion/addition ratio | 3 | 2 |
+
+The data show no consistent, sample-wide degradation after 2022. The largest
+single constraint is activity: two thirds of the sample had too few active
+months after 2022 to be tested at all, which is the survivorship problem in
+concrete form.
+
+Figures are in `figures/`: `heatmap.png` (every significant effect),
+`direction_summary.png` (per-metric counts over all 199), `trends.png` and
+`trend_*.png` (cross-repository medians over time). The AI-authorship figure
+is `ai_authorship.png` in the repository root, made by `ai_authorship_counts.py`
+and `ai_authorship_chart.py` from default-branch history.
+
+---
+
 ## Known limitations
 
 1. **No causal claim.** Neither design randomises assistance.
@@ -156,11 +208,13 @@ effect of assistance on arbitrary code.
 | File | Purpose |
 |---|---|
 | `metrics.py` | comment density and complexity, all languages, with size guards |
+| `mine_fast.py` | mines the 199 repositories into monthly aggregates (`cache_monthly/`) |
 | `before_after.py` | design 1: date-based before/after, FDR-corrected |
+| `make_charts.py` | every figure in `figures/` |
+| `before_after_table.csv` | every test, with Cohen's d and FDR-adjusted p-values |
 | `llm_signal_mining.py` | scans commit histories for assistant authorship trailers |
 | `ai_vs_human.py` | design 2: within-repository AI vs human comparison |
-| `fdr_correction.py` | applies BH correction to an existing results table |
-| `analysis4.py` | legacy pipeline, kept for the time-series charts |
+| `analysis4.py` | legacy pipeline; its charts used both measurement defects above |
 | `sampled_repos.json` | the 199 drawn repositories |
 | `population_with_ids.json` | the 411 eligible repositories with their IDs |
 
@@ -171,12 +225,14 @@ python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
 python3 llm_signal_mining.py     # minutes: blobless clones, commit metadata only
-python3 before_after.py          # hours: full history mining, resumable via cache
+python3 mine_fast.py             # about an hour: shallow clones since 2019
+python3 before_after.py          # seconds once cache_monthly/ is filled
+python3 make_charts.py           # writes figures/
 python3 ai_vs_human.py           # hours, limited to repositories with labelled commits
 ```
 
-`before_after.py` caches each repository's monthly aggregates under
-`cache_monthly/`, so an interrupted run resumes instead of restarting.
+Both miners cache per repository, so an interrupted run resumes instead of
+restarting.
 
 ---
 
