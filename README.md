@@ -83,10 +83,10 @@ are not comparable with results produced after it.
 * Mann-Whitney U, two-sided, on monthly values.
 * Cohen's d with pooled standard deviation, reported for every comparison.
 * **Benjamini-Hochberg FDR correction across every test performed.** With
-  199 repositories and 6 metrics the design runs on the order of a thousand
-  tests; at an uncorrected α = 0.05 roughly 50 of them are expected to come
-  back "significant" from chance alone. Uncorrected counts are not reported as
-  findings.
+  199 repositories and 6 metrics the design could run up to 1,194 tests; 330
+  had enough data, and at an uncorrected α = 0.05 about 16 of those are
+  expected to come back "significant" from chance alone. Uncorrected counts
+  are not reported as findings.
 * A repository/metric pair is tested only when at least 6 monthly observations
   exist on each side of the window.
 * Absolute change is reported alongside percentage change. Percentage change is
@@ -97,9 +97,9 @@ are not comparable with results produced after it.
 ### How results are counted
 
 The denominator is the **whole sample**, not the subset that reached
-significance. "87% of repositories with significant findings support the
-hypothesis" is circular: it selects on the outcome and then reports a rate
-within the selection. The honest statement has the form *N of 199
+significance. "63% of the repositories with a significant maintainability
+change moved towards degradation" (12 of 19) is circular: it selects on the
+outcome and then reports a rate within the selection. The honest statement has the form *N of 199
 repositories show a significant change consistent with degradation*.
 
 ---
