@@ -12,3 +12,4 @@ cache_ai_vs_human/
 cache_files.csv
 cache_commits.csv
 .venv*/
+.claude/
