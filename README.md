@@ -156,8 +156,11 @@ Corrected measurements, post-LLM window capped at December 2025.
 | Significant after Benjamini-Hochberg | 50, in 26 repositories |
 
 On the three maintainability proxies (bug-fix ratio, cyclomatic complexity,
-function length), 12 repositories moved in the direction of degradation and 7
-in the direction of improvement: **12 of 190 active repositories (6.3%)**.
+function length), 19 repositories changed significantly: 10 moved only towards
+degradation, 7 only towards improvement, and 2 (intellij-plugin-verifier,
+sbt-idea-plugin) moved both ways on different metrics. That makes **12 of 190
+active repositories (6.3%) with at least one change towards degradation** and
+**9 of 190 (4.7%) with at least one change towards improvement**.
 Per metric the significant changes split both ways:
 
 | Metric | Down | Up |
