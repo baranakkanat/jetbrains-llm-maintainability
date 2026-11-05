@@ -433,6 +433,21 @@ to the pool pulls the pooled estimate just below conventional significance
     none touching production code.
 13. **Agent-bot comparison** listed under the plan's exploratory analyses was
     skipped by decision (see Exploratory).
+14. **Bot filter false positive, found after the main run.** The other-bot
+    rule in `mine_commits.py` matches "robot" anywhere in an author name, so
+    one intellij-community developer whose surname contains it was dropped as
+    a bot. They have 127 commits in the mined window (from 2025-09), 114 of
+    them touching production code, and none AI-co-authored. With no
+    AI-co-authored commit they could not have been an eligible developer
+    (>= 8 of each; in the AI-active months they have 80 unlabelled production
+    commits), and they define no AI-active month. Follow-up fixes already
+    count commits by every author. In ideavim, intellij-scala and kotlin the
+    rule matches only automation accounts (`dependabot[bot]`, `IdeaVim Bot`)
+    and the agent account `jetbrains-junie[bot]` (deviation 11), so the
+    confirmatory data are untouched. No reported number changes and no
+    sensitivity rerun was needed (`bot_filter_check.py`,
+    `bot_filter_check.txt`). The rule was not changed, so that the current
+    code still reproduces `results_sensitivity/`.
 
 ## Limitations
 
@@ -475,6 +490,7 @@ to the pool pulls the pooled estimate just below conventional significance
 | `analyze_overnight.py` | the plan's tests H1-H4 (step 3) |
 | `plan_conformance.py` | plan-exact H2 and H4 verdict |
 | `inference_checks.py` | t(G-1) reference, variant (b) small-sample correction, H1 composition, rename bound (added after the results) |
+| `bot_filter_check.py`, `bot_filter_check.txt` | every author the other-bot rule dropped, with their commits and eligibility (deviation 14) |
 | `exploratory.py`, `exploratory_counts.py` | E1-E3 and the developer counts behind them |
 | `other_repos_check.py`, `mine_selected.py`, `exploratory_intellij_community.py` | step 4 screen and intellij-community extension |
 | `coef_plot.py` | the figure |
