@@ -33,8 +33,7 @@ def messages(repo, shas):
     return dict(record.split("\x1f", 1) for record in out.split("\x1e")[1:])
 
 
-def main():
-    pd.set_option("display.width", 200)
+def table():
     rows = []
     for repo in REPOS:
         commits = pd.read_csv(f"fh_{repo}_commits.csv", dtype=str, keep_default_na=False)
@@ -58,8 +57,13 @@ def main():
                          "AI-co-authored": int(mine.is_pair.sum()),
                          "AI-active prod: AI-co-authored": pair, "AI-active prod: unlabelled": human,
                          "eligible": pair >= MIN_EACH and human >= MIN_EACH})
+    return pd.DataFrame(rows)
+
+
+def main():
+    pd.set_option("display.width", 200)
     print("Authors dropped by the other-bot rule in the main run (fh_<repo>_commits.csv windows)")
-    print(pd.DataFrame(rows).to_string(index=False))
+    print(table().to_string(index=False))
 
 
 if __name__ == "__main__":
