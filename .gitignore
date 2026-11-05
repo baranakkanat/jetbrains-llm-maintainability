@@ -17,3 +17,4 @@ cache_commits.csv
 # anonymised replication package (build_replication_package.py); never committed
 replication_package/
 replication_package.zip
+paper/
