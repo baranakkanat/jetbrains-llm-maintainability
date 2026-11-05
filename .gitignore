@@ -13,3 +13,7 @@ cache_files.csv
 cache_commits.csv
 .venv*/
 .claude/
+
+# anonymised replication package (build_replication_package.py); never committed
+replication_package/
+replication_package.zip

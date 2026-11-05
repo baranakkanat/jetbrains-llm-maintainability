@@ -1,0 +1,10 @@
+Authors dropped by the other-bot rule in the main run (fh_<repo>_commits.csv windows)
+              repo                 author  rule match  commits  production  AI-co-authored  AI-active prod: AI-co-authored  AI-active prod: unlabelled  eligible
+           ideavim            IdeaVim Bot IdeaVim Bot       47           0               0                               0                           0     False
+           ideavim        dependabot[bot]  dependabot      169         141               0                               0                          36     False
+           ideavim   jetbrains-junie[bot]       [bot]        2           0               0                               0                           0     False
+    intellij-scala   jetbrains-junie[bot]       [bot]        2           0               0                               0                           0     False
+            kotlin        dependabot[bot]  dependabot       12           0               0                               0                           0     False
+intellij-community PyCharm Automation Bot  Automation       92           0               0                               0                           0     False
+intellij-community        Dmitry Drobotov       robot      127         114               0                               0                          80     False
+intellij-community               TeamCity    TeamCity       88           0               0                               0                           0     False
